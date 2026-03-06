@@ -55,8 +55,8 @@
 
         /* Header */
         .header { background: var(--white); padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
-        .header-content { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
-        .logo { display: flex; align-items: center; flex-shrink: 0; }
+        .header-content { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 30px; }
+        .logo { display: flex; align-items: center; justify-content: center; }
         .logo img { height: 260px; width: auto; object-fit: contain; }
         .nav { display: flex; gap: 32px; align-items: center; }
         .nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); position: relative; padding: 8px 0; white-space: nowrap; letter-spacing: 0.3px; }
@@ -298,6 +298,8 @@
             .topbar-content { justify-content: center; text-align: center; }
             .topbar-left { justify-content: center; gap: 15px; }
             .topbar-item { font-size: 0.8rem; }
+            .header-content { display: flex; justify-content: space-between; }
+            .logo { justify-content: flex-start; }
             .logo img { height: 175px; }
             .nav { display: none; }
             .mobile-menu-btn { display: block; }
