@@ -336,6 +336,81 @@
             .footer-links h4::after { left: 50%; transform: translateX(-50%); }
 
         }
+
+    /* ── Privacy Policy Modal ── */
+    dialog.privacy-modal {
+        border: none;
+        border-radius: 12px;
+        padding: 0;
+        max-width: 780px;
+        width: calc(100% - 40px);
+        max-height: 85vh;
+        box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+        overflow: hidden;
+    }
+    dialog.privacy-modal::backdrop {
+        background: rgba(0,0,0,0.55);
+        backdrop-filter: blur(2px);
+    }
+    .privacy-modal-header {
+        position: sticky;
+        top: 0;
+        background: var(--primary);
+        color: var(--white);
+        padding: 22px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+    .privacy-modal-header h2 {
+        margin: 0;
+        font-size: 1.3rem;
+        font-family: var(--font-heading);
+        color: var(--white);
+    }
+    .privacy-modal-close {
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 1.5rem;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0 4px;
+        opacity: 0.85;
+        transition: opacity 0.2s;
+    }
+    .privacy-modal-close:hover { opacity: 1; }
+    .privacy-modal-body {
+        padding: 32px;
+        overflow-y: auto;
+        max-height: calc(85vh - 72px);
+        font-size: 0.93rem;
+        line-height: 1.75;
+        color: var(--text);
+    }
+    .privacy-modal-body h3 {
+        font-family: var(--font-heading);
+        color: var(--primary);
+        font-size: 1.05rem;
+        margin: 28px 0 8px;
+    }
+    .privacy-modal-body h3:first-child { margin-top: 0; }
+    .privacy-modal-body p { margin: 0 0 12px; }
+    .privacy-modal-body ul {
+        margin: 0 0 12px 20px;
+        padding: 0;
+    }
+    .privacy-modal-body ul li { margin-bottom: 6px; }
+    .privacy-modal-body .effective-date {
+        font-size: 0.85rem;
+        color: #777;
+        margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+        .privacy-modal-body { padding: 20px; }
+        .privacy-modal-header { padding: 18px 20px; }
+    }
     </style>
 </head>
 <body>
@@ -900,7 +975,7 @@
                         <div class="form-group">
                             <label class="consent-label">
                                 <input type="checkbox" required>
-                                <span>I consent to the collection, use, storage, and processing of my personal information for the purpose of evaluating or fulfilling my request made through this form. I understand this will be handled in accordance with the <a href="#" style="color:var(--primary);">Privacy Notice</a>.</span>
+                                <span>I consent to the collection, use, storage, and processing of my personal information for the purpose of evaluating or fulfilling my request made through this form. I understand this will be handled in accordance with the <a href="#" class="js-privacy" style="color:var(--primary);">Privacy Notice</a>.</span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width:100%;">Submit Message</button>
@@ -958,15 +1033,110 @@
                         <li><a href="#careers">Careers</a></li>
                         <li><a href="#resources">Wellness Resources</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">Privacy Notice</a></li>
+                        <li><a href="#" class="js-privacy">Privacy Notice</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Regina's Loving Arms Home Health Care. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care. All Rights Reserved. | <a href="#" class="js-privacy">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <dialog id="privacyModal" class="privacy-modal" aria-modal="true" aria-labelledby="privacyModalTitle">
+        <div class="privacy-modal-header">
+            <h2 id="privacyModalTitle">Privacy Policy &amp; Notice of Privacy Practices</h2>
+            <button class="privacy-modal-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="privacy-modal-body">
+            <p class="effective-date"><strong>Effective Date:</strong> January 1, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> January 1, 2026</p>
+
+            <h3>1. Who We Are</h3>
+            <p>Regina's Loving Arms Home Health Care ("Company," "we," "us," or "our") is a home health care agency located at 2020 N Lincoln Park West, Suite 18H, Chicago, IL 60614. We provide skilled nursing, home health aide, live-in care, and related health and personal care services to clients in the Chicago metropolitan area.</p>
+            <p>This Privacy Policy describes how we collect, use, disclose, and protect personal information—including protected health information ("PHI")—in connection with our services and this website. It also serves as our Notice of Privacy Practices as required by the Health Insurance Portability and Accountability Act of 1996 ("HIPAA") and the HITECH Act.</p>
+
+            <h3>2. Information We Collect</h3>
+            <p>We may collect the following categories of personal and health-related information:</p>
+            <ul>
+                <li><strong>Contact &amp; Identity Information:</strong> Name, address, phone number, email address, and date of birth.</li>
+                <li><strong>Protected Health Information (PHI):</strong> Medical history, diagnoses, treatment plans, medications, insurance information, and other health-related data necessary to provide care.</li>
+                <li><strong>Payment Information:</strong> Insurance policy details, Medicare/Medicaid identifiers, and billing information.</li>
+                <li><strong>Website Usage Data:</strong> IP address, browser type, pages visited, and referring URLs collected via cookies and similar technologies for site analytics.</li>
+                <li><strong>Communications:</strong> Information you voluntarily submit through our contact form, email, or phone inquiries.</li>
+            </ul>
+
+            <h3>3. How We Use Your Information</h3>
+            <p>We use personal information, including PHI, for the following purposes:</p>
+            <ul>
+                <li><strong>Treatment:</strong> To coordinate, provide, manage, and improve care services delivered to you or your family member.</li>
+                <li><strong>Payment:</strong> To bill and collect payment from you, your insurer, Medicare, or Medicaid for services rendered.</li>
+                <li><strong>Healthcare Operations:</strong> For quality assessment, staff training, accreditation, compliance, and business management activities.</li>
+                <li><strong>Communications:</strong> To respond to inquiries, schedule services, and send appointment reminders or care-related notices.</li>
+                <li><strong>Legal Compliance:</strong> To comply with applicable federal and Illinois state laws, regulations, and court orders.</li>
+                <li><strong>Safety:</strong> To prevent or lessen a serious and imminent threat to the health or safety of a person or the public.</li>
+            </ul>
+
+            <h3>4. HIPAA — Your Rights Regarding Your Health Information</h3>
+            <p>As a HIPAA-covered entity, we are required by law to maintain the privacy of your PHI, to provide you with this Notice, and to follow the terms of this Notice. You have the following rights with respect to your PHI:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> You may request a copy of your health records in electronic or paper form. We will provide access within 30 days of your request.</li>
+                <li><strong>Right to Amend:</strong> You may request correction of inaccurate or incomplete PHI. We may deny the request in certain circumstances but will document your request.</li>
+                <li><strong>Right to an Accounting of Disclosures:</strong> You may request a list of certain disclosures we have made of your PHI, excluding disclosures for treatment, payment, or operations.</li>
+                <li><strong>Right to Request Restrictions:</strong> You may ask us to limit how we use or disclose your PHI. We are not required to agree to all restrictions, but we will accommodate reasonable requests.</li>
+                <li><strong>Right to Confidential Communications:</strong> You may request that we contact you in a specific way (e.g., only by mail to a certain address).</li>
+                <li><strong>Right to a Copy of This Notice:</strong> You may request a paper copy of this Notice at any time.</li>
+                <li><strong>Right to File a Complaint:</strong> You may file a complaint with us or with the U.S. Department of Health and Human Services Office for Civil Rights if you believe your privacy rights have been violated. We will not retaliate against you for filing a complaint.</li>
+            </ul>
+
+            <h3>5. Permitted Disclosures of PHI</h3>
+            <p>We may use or disclose your PHI without your written authorization in the following circumstances:</p>
+            <ul>
+                <li>To other healthcare providers involved in your treatment (physicians, hospitals, pharmacies).</li>
+                <li>To insurance companies, Medicare, or Medicaid for payment processing.</li>
+                <li>As required by federal or Illinois state law, including mandatory reporting obligations.</li>
+                <li>To public health authorities for disease reporting, adverse event reporting, or product recalls.</li>
+                <li>To law enforcement officials when required by court order, warrant, or applicable law.</li>
+                <li>To avert a serious threat to public health or safety.</li>
+                <li>For oversight activities such as audits and inspections by government agencies.</li>
+            </ul>
+            <p>Any other use or disclosure of your PHI not described above requires your written authorization, which you may revoke at any time by contacting us in writing.</p>
+
+            <h3>6. Illinois Law — Additional Protections</h3>
+            <p>In addition to HIPAA, we comply with applicable Illinois privacy laws, including:</p>
+            <ul>
+                <li><strong>Illinois Personal Information Protection Act (815 ILCS 530):</strong> We implement reasonable security measures to protect personal information and will notify you in the event of a data breach in the manner and timeframe required by Illinois law.</li>
+                <li><strong>Illinois Mental Health and Developmental Disabilities Confidentiality Act (740 ILCS 110):</strong> Mental health records receive the highest level of confidentiality protection and will not be disclosed without specific written consent except as permitted by law.</li>
+                <li><strong>Illinois AIDS Confidentiality Act (410 ILCS 305):</strong> HIV/AIDS-related information is strictly confidential and will only be disclosed with written consent or as expressly permitted by statute.</li>
+            </ul>
+
+            <h3>7. Data Security</h3>
+            <p>We implement appropriate administrative, physical, and technical safeguards to protect your personal information and PHI from unauthorized access, use, alteration, or destruction, as required by HIPAA's Security Rule (45 CFR Parts 160 and 164). These measures include access controls, encryption where appropriate, staff training, and regular risk assessments.</p>
+
+            <h3>8. Website Cookies &amp; Analytics</h3>
+            <p>Our website may use cookies and similar technologies to analyze traffic and improve user experience. Website usage data collected is not PHI and is handled separately from your health information. You may disable cookies through your browser settings; doing so will not affect your ability to receive our services.</p>
+
+            <h3>9. Children's Privacy</h3>
+            <p>This website is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13 through this website. Care services for minor clients are conducted under the written authorization of a parent or legal guardian.</p>
+
+            <h3>10. Changes to This Notice</h3>
+            <p>We reserve the right to change the terms of this Privacy Policy and Notice of Privacy Practices at any time. Changes will apply to PHI we already hold as well as information we receive in the future. We will post the revised Notice on our website and will make the new Notice available upon request. The effective date at the top of this Notice indicates when it was last revised.</p>
+
+            <h3>11. Contact Us</h3>
+            <p>To exercise any of your privacy rights, to request a paper copy of this Notice, or to submit a complaint or question, please contact us:</p>
+            <p>
+                <strong>Regina's Loving Arms Home Health Care</strong><br>
+                Privacy Officer<br>
+                2020 N Lincoln Park West, Suite 18H<br>
+                Chicago, IL 60614<br>
+                Phone: <a href="tel:+17732484698" style="color:var(--primary);">(773) 248-4698</a>
+            </p>
+            <p>To file a complaint with the U.S. Department of Health and Human Services:</p>
+            <p>Office for Civil Rights, U.S. Department of Health &amp; Human Services<br>
+            200 Independence Avenue, S.W., Washington, D.C. 20201<br>
+            Toll-free: 1-877-696-6775 &nbsp;|&nbsp; <strong>hhs.gov/ocr/privacy</strong></p>
+        </div>
+    </dialog>
 
     <script>
         const slides = document.querySelectorAll('.hero-slide');
@@ -980,6 +1150,7 @@
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
+                if (this.classList.contains('js-privacy')) return;
                 e.preventDefault();
                 const href = this.getAttribute('href');
                 if (href === '#') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
@@ -1009,6 +1180,21 @@
                 const icon = menuBtn.querySelector('i');
                 icon.classList.replace('fa-times', 'fa-bars');
             });
+        });
+
+        // Privacy Policy Modal
+        const privacyModal = document.getElementById('privacyModal');
+        document.querySelectorAll('.js-privacy').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                privacyModal.showModal();
+            });
+        });
+        privacyModal.querySelector('.privacy-modal-close').addEventListener('click', () => {
+            privacyModal.close();
+        });
+        privacyModal.addEventListener('click', e => {
+            if (e.target === privacyModal) privacyModal.close();
         });
     </script>
 </body>
