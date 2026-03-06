@@ -55,8 +55,9 @@
 
         /* Header */
         .header { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); overflow: visible; }
-        .header-content { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 30px; }
-        .logo { display: flex; align-items: center; justify-content: center; min-width: 0; }
+        .header-content { display: flex; align-items: center; gap: 30px; }
+        .logo-wrapper { flex: 1; display: flex; align-items: center; justify-content: center; min-width: 0; }
+        .logo { display: flex; align-items: center; }
         .logo img { height: 165px; width: auto; max-width: 100%; object-fit: contain; }
         .nav { display: flex; gap: 32px; align-items: center; }
         .nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); position: relative; padding: 8px 0; white-space: nowrap; letter-spacing: 0.3px; }
@@ -300,7 +301,7 @@
             .topbar-item { font-size: 0.8rem; }
             .addr-city { display: block; }
             .header-content { display: flex; justify-content: space-between; }
-            .logo { justify-content: flex-start; }
+            .logo-wrapper { flex: 0 0 auto; justify-content: flex-start; }
             .logo img { height: 110px; }
             .nav { display: none; }
             .nav.nav--open {
@@ -373,9 +374,11 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
-                </a>
+                <div class="logo-wrapper">
+                    <a href="#" class="logo">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
+                    </a>
+                </div>
                 <nav class="nav">
                     <a href="#about" class="active">About Us</a>
                     <a href="#services">Our Services</a>
