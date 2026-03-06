@@ -52,15 +52,12 @@
         .topbar-item { display: flex; align-items: center; gap: 10px; font-weight: 500; }
         .topbar-item i { color: var(--secondary); font-size: 1rem; }
         .topbar-item a:hover { color: var(--secondary); }
-        .topbar-right { display: flex; gap: 12px; }
-        .topbar-right a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; }
-        .topbar-right a:hover { background: var(--secondary); transform: translateY(-2px); }
 
         /* Header */
         .header { background: var(--white); padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
         .header-content { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
         .logo { display: flex; align-items: center; flex-shrink: 0; }
-        .logo img { height: 165px; width: auto; max-width: 540px; object-fit: contain; }
+        .logo img { height: 72px; width: auto; object-fit: contain; }
         .nav { display: flex; gap: 32px; align-items: center; }
         .nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); position: relative; padding: 8px 0; white-space: nowrap; letter-spacing: 0.3px; }
         .nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--primary); transition: var(--transition); border-radius: 2px; }
@@ -86,7 +83,7 @@
 
         /* Stats Bar */
         .stats-bar { background: var(--primary-dark); padding: 30px 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; }
         .stat-item { color: var(--white); padding: 10px; }
         .stat-number { display: block; font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; color: var(--secondary); line-height: 1; margin-bottom: 6px; }
         .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.85; }
@@ -230,15 +227,6 @@
         .resource-content a { color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
         .resource-content a:hover { gap: 10px; }
 
-        /* Locations */
-        .locations { padding: 100px 0; background: var(--bg-light); }
-        .locations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .location-card { background: var(--white); border-radius: 20px; padding: 35px; text-align: center; transition: var(--transition); border: 2px solid transparent; }
-        .location-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); }
-        .location-card i { width: 70px; height: 70px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--white); margin: 0 auto 20px; }
-        .location-card h3 { font-size: 1.4rem; color: var(--text-dark); margin-bottom: 15px; }
-        .location-card p { color: var(--text-light); margin-bottom: 20px; }
-        .location-card a { color: var(--primary); font-weight: 600; }
 
         /* Contact */
         .contact { padding: 100px 0; background: var(--white); }
@@ -273,11 +261,9 @@
         /* Footer */
         .footer { background: var(--text-dark); color: var(--white); padding: 80px 0 30px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
-        .footer-about .logo img { height: 120px; width: auto; max-width: 400px; filter: brightness(0) invert(1); }
+        .footer-about .logo { background: var(--white); border-radius: 10px; padding: 8px 14px; display: inline-flex; }
+        .footer-about .logo img { height: 64px; width: auto; object-fit: contain; }
         .footer-about p { color: rgba(255,255,255,0.8); margin: 20px 0 25px; }
-        .footer-social { display: flex; gap: 12px; }
-        .footer-social a { width: 42px; height: 42px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
-        .footer-social a:hover { background: var(--primary); }
         .footer-links h4 { font-size: 1.1rem; margin-bottom: 25px; position: relative; padding-bottom: 15px; }
         .footer-links h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: var(--secondary); }
         .footer-links ul { list-style: none; }
@@ -291,13 +277,13 @@
         @media (max-width: 1280px) {
             .nav { gap: 22px; }
             .nav a { font-size: 0.9rem; }
-            .logo img { height: 145px; max-width: 460px; }
+            .logo img { height: 65px; }
             .header-phone { font-size: 1rem; }
             .header .btn-primary { padding: 10px 20px; font-size: 0.8rem; }
             .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 1024px) {
-            .logo img { height: 125px; max-width: 380px; }
+            .logo img { height: 60px; }
             .nav { gap: 18px; }
             .nav a { font-size: 0.85rem; }
             .header-phone { display: none; }
@@ -315,7 +301,7 @@
             .topbar-content { justify-content: center; text-align: center; }
             .topbar-left { justify-content: center; gap: 15px; }
             .topbar-item { font-size: 0.8rem; }
-            .logo img { height: 105px; max-width: 320px; }
+            .logo img { height: 54px; }
             .nav { display: none; }
             .mobile-menu-btn { display: block; }
             .header-cta .btn-primary { display: none; }
@@ -325,15 +311,15 @@
             .hero-buttons { justify-content: center; }
             .section-header h2 { font-size: 2rem; }
             .services-preview-grid { grid-template-columns: repeat(2, 1fr); }
-            .services-grid, .values-grid, .testimonials-grid, .resources-grid, .locations-grid, .approach-grid { grid-template-columns: 1fr; }
+            .services-grid, .values-grid, .testimonials-grid, .resources-grid, .approach-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .serve-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
-            .footer-about .logo img { height: 90px; }
+            .footer-about .logo img { height: 54px; }
             .footer-links h4::after { left: 50%; transform: translateX(-50%); }
-            .footer-social { justify-content: center; }
+
         }
     </style>
 </head>
@@ -357,11 +343,6 @@
                         <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
                     </div>
                 </div>
-                <div class="topbar-right">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
             </div>
         </div>
     </div>
@@ -371,7 +352,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1ODAgMTcwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMkE3RDdEO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxRjVGNUY7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBmaWxsPSJ1cmwoI2dyYWQpIiB3aWR0aD0iNTgwIiBoZWlnaHQ9IjE3MCIgcng9IjgiLz4KICA8dGV4dCB4PSIyOTAiIHk9IjYyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIGZvbnQtd2VpZ2h0PSJib2xkIj5SZWdpbmEncyBMb3ZpbmcgQXJtczwvdGV4dD4KICA8bGluZSB4MT0iODAiIHkxPSI3OCIgeDI9IjUwMCIgeTI9Ijc4IiBzdHJva2U9IiNDOUEyMjciIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgeD0iMjkwIiB5PSIxMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE4IiBmaWxsPSIjRTBDMTVBIiBsZXR0ZXItc3BhY2luZz0iMyI+SE9NRSBIRUFMVEggQ0FSRTwvdGV4dD4KICA8dGV4dCB4PSIyOTAiIHk9IjEzNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC43NSkiIGxldHRlci1zcGFjaW5nPSIxIj5DaGljYWdvIEFyZWEgIOKAoiAgTG92ZSwgQ29tcGFzc2lvbiAmYW1wOyBTYWZldHk8L3RleHQ+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI4NSIgcj0iMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTIyNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8dGV4dCB4PSI1MCIgeT0iODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0UwQzE1QSI+UjwvdGV4dD4KICA8dGV4dCB4PSI1MCIgeT0iOTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjgpIj5MQTwvdGV4dD4KICA8Y2lyY2xlIGN4PSI1MzAiIGN5PSI4NSIgcj0iMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTIyNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8dGV4dCB4PSI1MzAiIHk9IjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiNFMEMxNUEiPlI8L3RleHQ+CiAgPHRleHQgeD0iNTMwIiB5PSI5NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOCkiPkxBPC90ZXh0Pgo8L3N2Zz4=" alt="Regina's Loving Arms Home Health Care">
+                    <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
                 </a>
                 <nav class="nav">
                     <a href="#about" class="active">About Us</a>
@@ -432,11 +413,6 @@
                     <i class="fas fa-users"></i>
                     <span class="stat-number">500+</span>
                     <span class="stat-label">Clients Served</span>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span class="stat-number">3</span>
-                    <span class="stat-label">Office Locations</span>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-clock"></i>
@@ -890,36 +866,6 @@
         </div>
     </section>
 
-    <!-- Locations -->
-    <section class="locations">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Locations</span>
-                <h2>Where We Serve</h2>
-                <p>Conveniently located throughout the Chicago area, we're always close by and ready to serve you and your family.</p>
-            </div>
-            <div class="locations-grid">
-                <div class="location-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Evanston Office</h3>
-                    <p>1325 Howard St., #301 &amp; 303<br>Evanston, IL 60202</p>
-                    <a href="tel:3127735553">312-773-5553</a>
-                </div>
-                <div class="location-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Joliet Office</h3>
-                    <p>1000 Essington Rd, 1st Floor<br>Joliet, IL 60435</p>
-                    <a href="tel:3127735553">312-773-5553</a>
-                </div>
-                <div class="location-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Bolingbrook Office</h3>
-                    <p>684 W Boughton Rd, Suite 204<br>Bolingbrook, IL 60440</p>
-                    <a href="tel:3127735553">312-773-5553</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -1031,15 +977,9 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <a href="#" class="logo">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1ODAgMTcwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMkE3RDdEO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxRjVGNUY7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBmaWxsPSJ1cmwoI2dyYWQpIiB3aWR0aD0iNTgwIiBoZWlnaHQ9IjE3MCIgcng9IjgiLz4KICA8dGV4dCB4PSIyOTAiIHk9IjYyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0id2hpdGUiIGZvbnQtd2VpZ2h0PSJib2xkIj5SZWdpbmEncyBMb3ZpbmcgQXJtczwvdGV4dD4KICA8bGluZSB4MT0iODAiIHkxPSI3OCIgeDI9IjUwMCIgeTI9Ijc4IiBzdHJva2U9IiNDOUEyMjciIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgeD0iMjkwIiB5PSIxMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE4IiBmaWxsPSIjRTBDMTVBIiBsZXR0ZXItc3BhY2luZz0iMyI+SE9NRSBIRUFMVEggQ0FSRTwvdGV4dD4KICA8dGV4dCB4PSIyOTAiIHk9IjEzNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC43NSkiIGxldHRlci1zcGFjaW5nPSIxIj5DaGljYWdvIEFyZWEgIOKAoiAgTG92ZSwgQ29tcGFzc2lvbiAmYW1wOyBTYWZldHk8L3RleHQ+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI4NSIgcj0iMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTIyNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8dGV4dCB4PSI1MCIgeT0iODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0UwQzE1QSI+UjwvdGV4dD4KICA8dGV4dCB4PSI1MCIgeT0iOTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIxMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjgpIj5MQTwvdGV4dD4KICA8Y2lyY2xlIGN4PSI1MzAiIGN5PSI4NSIgcj0iMjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTIyNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8dGV4dCB4PSI1MzAiIHk9IjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiNFMEMxNUEiPlI8L3RleHQ+CiAgPHRleHQgeD0iNTMwIiB5PSI5NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOCkiPkxBPC90ZXh0Pgo8L3N2Zz4=" alt="Regina's Loving Arms Home Health Care">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
                     </a>
                     <p>Your trusted partner for compassionate in-home care throughout the Chicago area. We bring quality medical care and supportive services directly to your doorstep.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>About Us</h4>
