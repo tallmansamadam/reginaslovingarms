@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Regina's Loving Arms Home Health Care, LLC</title>
+    <meta name="description" content="Join the Regina's Loving Arms team. We're hiring compassionate nurses, caregivers, therapists, and care coordinators who believe home care can change lives.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="resources/styles.css">
+    <style>
+        .culture-section { padding: 100px 0; background: var(--white); }
+        .culture-pull { background: var(--accent); border-radius: 24px; padding: 60px; margin-top: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .culture-pull-text h3 { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+        .culture-pull-text p { color: var(--text-light); font-size: 1.05rem; line-height: 1.85; margin-bottom: 20px; }
+        .culture-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+        .culture-stat { background: var(--white); border-radius: 16px; padding: 25px; text-align: center; box-shadow: var(--shadow); }
+        .culture-stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--primary); display: block; }
+        .culture-stat-label { font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+        .process-section { padding: 100px 0; background: var(--bg-cream); }
+        .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
+        .process-step { text-align: center; padding: 30px 20px; position: relative; }
+        .process-step:not(:last-child)::after { content: ''; position: absolute; top: 40px; right: -10%; width: 20%; height: 2px; background: var(--secondary); opacity: 0.4; }
+        .process-num { width: 70px; height: 70px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--white); margin: 0 auto 20px; }
+        .process-step h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 10px; }
+        .process-step p { font-size: 0.88rem; color: var(--text-light); line-height: 1.7; }
+        @media (max-width: 1024px) {
+            .culture-pull { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .process-step::after { display: none; }
+        }
+        @media (max-width: 768px) {
+            .culture-pull { padding: 35px; }
+            .culture-stats { grid-template-columns: 1fr 1fr; }
+            .process-steps { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <div class="topbar-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>2020 N Lincoln Park West, Suite 18H,<span class="addr-city"> Chicago, IL 60614</span></span>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:3127735553">312-773-5553</a>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="careers.html" class="active">Careers</a>
+                    <a href="resources.html">Wellness Resources</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+                <div class="header-cta">
+                    <a href="tel:3127735553" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>312-773-5553</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Request Service</a>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <img class="page-hero-bg" src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=1920&q=80" alt="Healthcare team">
+        <div class="page-hero-overlay" style="background: linear-gradient(135deg, rgba(201,162,39,0.72) 0%, rgba(42,125,125,0.72) 100%);"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Careers</span>
+                </div>
+                <span class="section-label">Join Our Team</span>
+                <h1>Do Work That<br>Genuinely Matters</h1>
+                <p>At Regina's Loving Arms, caregiving isn't just a job — it's a calling. We're looking for professionals who believe that exceptional home care has the power to transform lives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="culture-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Life at Regina's</span>
+                <h2>A Place Where You Can Thrive</h2>
+                <p>We take care of our team the same way our team takes care of clients — with consistency, respect, and genuine investment in their wellbeing.</p>
+            </div>
+            <div class="culture-pull">
+                <div class="culture-pull-text">
+                    <h3>More Than an Employer. A Community.</h3>
+                    <p>From the moment you join Regina's Loving Arms, you become part of a close-knit professional family. We know your name, we know your strengths, and we actively invest in your development. You'll never feel like just a number on a scheduling board.</p>
+                    <p>Our leadership team has decades of combined clinical and home care experience, and they lead by example — remaining accessible, responsive, and genuinely committed to making Regina's Loving Arms the best place to build a career in home health care in Chicago.</p>
+                    <a href="#openings" class="btn btn-primary">View Open Positions</a>
+                </div>
+                <div class="culture-stats">
+                    <div class="culture-stat">
+                        <span class="culture-stat-num">96%</span>
+                        <span class="culture-stat-label">Staff Retention Rate</span>
+                    </div>
+                    <div class="culture-stat">
+                        <span class="culture-stat-num">15+</span>
+                        <span class="culture-stat-label">Years Average Leadership Experience</span>
+                    </div>
+                    <div class="culture-stat">
+                        <span class="culture-stat-num">100%</span>
+                        <span class="culture-stat-label">Supervised Clinical Onboarding</span>
+                    </div>
+                    <div class="culture-stat">
+                        <span class="culture-stat-num">24/7</span>
+                        <span class="culture-stat-label">Support for Staff in the Field</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Why Join Us</span>
+                <h2>Benefits That Reflect Our Values</h2>
+                <p>We believe the people who care for our clients deserve to be cared for in return. Here's what we offer.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Competitive Compensation</h3>
+                    <p>We pay above-market rates because we believe talented, dedicated caregivers deserve to be valued financially. Regular performance reviews ensure your compensation grows with your experience.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Full-time, part-time, and PRN positions available across all shifts. We work with your schedule — not against it — because we know life outside of work matters.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Ongoing Training &amp; CEUs</h3>
+                    <p>We invest in your professional growth through paid continuing education, in-house skills training, and access to certifications that advance your career trajectory.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Health &amp; Wellness Benefits</h3>
+                    <p>Eligible full-time employees receive comprehensive health benefits including medical, dental, and vision coverage, because your health matters as much as our clients'.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                    <h3>Supportive Team Culture</h3>
+                    <p>You'll never work in isolation. Our supervisory nurses, care coordinators, and leadership team are available around the clock to provide guidance and support when you need it.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Clear Career Pathways</h3>
+                    <p>We promote from within and create personalized development plans for every team member. Many of our care coordinators and supervisors began their careers as front-line caregivers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="openings" id="openings">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Now Hiring</span>
+                <h2>Open Positions</h2>
+                <p>We are actively recruiting compassionate, qualified professionals across these roles. Don't see exactly what you're looking for? Reach out anyway — we're always interested in exceptional people.</p>
+            </div>
+            <div class="jobs-grid">
+
+                <div class="job-card">
+                    <div class="job-icon"><i class="fas fa-user-nurse"></i></div>
+                    <div class="job-info">
+                        <h3>Registered Nurse (RN)</h3>
+                        <div class="job-meta">
+                            <span class="job-tag">Full-Time</span>
+                            <span class="job-tag">Part-Time</span>
+                            <span class="job-tag">PRN</span>
+                        </div>
+                        <p>Deliver skilled nursing care including assessments, wound management, medication reconciliation, and care coordination for a diverse caseload of home-based clients. Active IL RN license required.</p>
+                        <a href="#apply" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-icon"><i class="fas fa-syringe"></i></div>
+                    <div class="job-info">
+                        <h3>Licensed Practical Nurse (LPN)</h3>
+                        <div class="job-meta">
+                            <span class="job-tag">Full-Time</span>
+                            <span class="job-tag">Part-Time</span>
+                        </div>
+                        <p>Provide direct client care under RN supervision, including wound care, medication administration, and vital signs monitoring. Active IL LPN license and home health experience preferred.</p>
+                        <a href="#apply" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="job-info">
+                        <h3>Certified Nursing Assistant (CNA)</h3>
+                        <div class="job-meta">
+                            <span class="job-tag">Full-Time</span>
+                            <span class="job-tag">Part-Time</span>
+                            <span class="job-tag">Overnight</span>
+                        </div>
+                        <p>Assist clients with activities of daily living, personal care, and mobility. Work under nursing supervision in a home environment. IL CNA certification required. 1+ year experience preferred.</p>
+                        <a href="#apply" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-icon"><i class="fas fa-hands-helping"></i></div>
+                    <div class="job-info">
+                        <h3>Home Health Aide (HHA)</h3>
+                        <div class="job-meta">
+                            <span class="job-tag">Full-Time</span>
+                            <span class="job-tag">Part-Time</span>
+                            <span class="job-tag">Live-In</span>
+                        </div>
+                        <p>Provide hands-on personal care, companionship, light housekeeping, and meal preparation for clients in their homes. HHA certification or equivalent training required.</p>
+                        <a href="#apply" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-icon"><i class="fas fa-dumbbell"></i></div>
+                    <div class="job-info">
+                        <h3>Physical / Occupational Therapist</h3>
+                        <div class="job-meta">
+                            <span class="job-tag">Part-Time</span>
+                            <span class="job-tag">PRN</span>
+                            <span class="job-tag">Contract</span>
+                        </div>
+                        <p>Conduct home-based therapy evaluations and treatment sessions, develop individualized rehabilitation plans, and document outcomes for Medicare/Medicaid compliance. Active IL PT or OT license required.</p>
+                        <a href="#apply" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="job-info">
+                        <h3>Care Coordinator</h3>
+                        <div class="job-meta">
+                            <span class="job-tag">Full-Time</span>
+                            <span class="job-tag">Office-Based</span>
+                        </div>
+                        <p>Serve as the operational hub between clients, families, clinical staff, and physicians. Manage scheduling, care transitions, and intake. Strong communication skills and home health background required.</p>
+                        <a href="#apply" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.85rem;">Apply Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How It Works</span>
+                <h2>Our Hiring Process</h2>
+                <p>We keep it simple, transparent, and respectful of your time. Most candidates complete the process within two weeks.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-num">1</div>
+                    <h3>Submit Your Application</h3>
+                    <p>Complete the short application form below. Tell us about your experience, availability, and what draws you to home health care.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">2</div>
+                    <h3>Phone Screening</h3>
+                    <p>A member of our team will reach out within 2–3 business days for a brief phone conversation to learn more about you and answer your questions.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">3</div>
+                    <h3>In-Person Interview</h3>
+                    <p>Meet our hiring team at our Chicago office. We'll review your credentials, discuss your goals, and walk through what working with us looks like day to day.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-num">4</div>
+                    <h3>Onboarding &amp; Orientation</h3>
+                    <p>Once an offer is extended, you'll complete a thorough onboarding and clinical orientation program designed to set you up for success from your very first day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="apply-form" id="apply">
+        <div class="container">
+            <div class="apply-form-inner">
+                <div class="section-header" style="margin-bottom: 40px;">
+                    <span class="section-label">Apply Today</span>
+                    <h2>Start Your Application</h2>
+                    <p>Fill out the form below and a member of our team will be in touch within 2–3 business days.</p>
+                </div>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="a-fname">First Name *</label>
+                            <input type="text" id="a-fname" required placeholder="Jane">
+                        </div>
+                        <div class="form-group">
+                            <label for="a-lname">Last Name *</label>
+                            <input type="text" id="a-lname" required placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="a-email">Email Address *</label>
+                            <input type="email" id="a-email" required placeholder="jane@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="a-phone">Phone Number *</label>
+                            <input type="tel" id="a-phone" required placeholder="(312) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="a-position">Position of Interest *</label>
+                            <select id="a-position" required>
+                                <option value="">Select a position...</option>
+                                <option>Registered Nurse (RN)</option>
+                                <option>Licensed Practical Nurse (LPN)</option>
+                                <option>Certified Nursing Assistant (CNA)</option>
+                                <option>Home Health Aide (HHA)</option>
+                                <option>Physical / Occupational Therapist</option>
+                                <option>Care Coordinator</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="a-avail">Availability *</label>
+                            <select id="a-avail" required>
+                                <option value="">Select availability...</option>
+                                <option>Full-Time</option>
+                                <option>Part-Time</option>
+                                <option>PRN / As Needed</option>
+                                <option>Live-In</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="a-exp">Years of Experience in Home Health / Healthcare *</label>
+                        <select id="a-exp" required>
+                            <option value="">Select...</option>
+                            <option>Less than 1 year</option>
+                            <option>1–3 years</option>
+                            <option>3–5 years</option>
+                            <option>5–10 years</option>
+                            <option>10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="a-message">Tell Us About Yourself</label>
+                        <textarea id="a-message" placeholder="Share your background, certifications, and what draws you to working with Regina's Loving Arms..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="consent-label">
+                            <input type="checkbox" required>
+                            I confirm that the information provided is accurate and I consent to be contacted by Regina's Loving Arms regarding this application.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo"><img src="resources/Logo.png" alt="Regina's Loving Arms"></a>
+                    <p>Providing compassionate, clinically excellent home health care throughout the Chicago metropolitan area since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="resources.html">Wellness Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Home Nursing</a></li>
+                        <li><a href="services.html">Caregiver Services</a></li>
+                        <li><a href="services.html">Pediatric Care</a></li>
+                        <li><a href="services.html">Rehabilitation Therapy</a></li>
+                        <li><a href="services.html">Companion Care</a></li>
+                        <li><a href="services.html">24-Hour Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:3127735553"><i class="fas fa-phone-alt" style="margin-right:8px;color:var(--secondary);"></i>312-773-5553</a></li>
+                        <li><a href="mailto:info@reginaslovingarms.com"><i class="fas fa-envelope" style="margin-right:8px;color:var(--secondary);"></i>info@reginaslovingarms.com</a></li>
+                        <li style="color:rgba(255,255,255,0.8);"><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--secondary);"></i>2020 N Lincoln Park West, Suite 18H, Chicago, IL 60614</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="#" class="js-privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.nav');
+        if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+    </script>
+</body>
+</html>

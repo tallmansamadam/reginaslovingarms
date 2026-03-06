@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Resources | Regina's Loving Arms Home Health Care, LLC</title>
+    <meta name="description" content="Access expert wellness resources from Regina's Loving Arms — covering medication management, fall prevention, nutrition, caregiver support, mental health, and Illinois senior programs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="resources/styles.css">
+    <style>
+        .resources-expanded { padding: 100px 0; background: var(--bg-light); }
+        .resources-expanded-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .resource-card-full { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
+        .resource-card-full:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .resource-card-header { padding: 35px 35px 25px; }
+        .resource-icon-wrap { width: 68px; height: 68px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; margin-bottom: 20px; }
+        .resource-card-full h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 12px; }
+        .resource-card-full p { color: var(--text-light); font-size: 0.92rem; line-height: 1.75; margin-bottom: 18px; }
+        .resource-tips { border-top: 1px solid var(--bg-light); padding: 20px 35px 30px; }
+        .resource-tips h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--primary); font-family: 'Inter', sans-serif; font-weight: 700; margin-bottom: 14px; }
+        .resource-tips ul { list-style: none; }
+        .resource-tips ul li { color: var(--text-light); font-size: 0.88rem; padding: 5px 0; padding-left: 18px; position: relative; }
+        .resource-tips ul li::before { content: ''; position: absolute; left: 0; top: 13px; width: 7px; height: 7px; background: var(--secondary); border-radius: 50%; }
+        .external-links { padding: 100px 0; background: var(--white); }
+        .ext-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .ext-link-card { border: 2px solid var(--bg-light); border-radius: 16px; padding: 30px; display: flex; gap: 20px; align-items: flex-start; transition: var(--transition); }
+        .ext-link-card:hover { border-color: var(--primary); transform: translateY(-4px); }
+        .ext-link-icon { width: 50px; height: 50px; background: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.3rem; flex-shrink: 0; }
+        .ext-link-info h4 { font-size: 1rem; color: var(--text-dark); margin-bottom: 6px; }
+        .ext-link-info p { font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; line-height: 1.6; }
+        .ext-link-info a { font-size: 0.85rem; color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+        .ext-link-info a:hover { gap: 10px; }
+        .newsletter { padding: 100px 0; background: var(--primary); }
+        .newsletter-inner { max-width: 650px; margin: 0 auto; text-align: center; color: var(--white); }
+        .newsletter-inner h2 { font-size: 2.2rem; margin-bottom: 18px; }
+        .newsletter-inner p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 35px; }
+        .newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+        .newsletter-form input { flex: 1; padding: 14px 20px; border: none; border-radius: 50px; font-family: 'Inter', sans-serif; font-size: 1rem; }
+        .newsletter-form input:focus { outline: 2px solid var(--secondary); }
+        .newsletter-form button { background: var(--secondary); color: var(--white); border: none; border-radius: 50px; padding: 14px 28px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: var(--transition); white-space: nowrap; }
+        .newsletter-form button:hover { background: #B8921F; }
+        .resource-disclaimer { padding: 40px 0; background: var(--bg-cream); }
+        .resource-disclaimer-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+        .resource-disclaimer-inner p { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; }
+        @media (max-width: 1024px) {
+            .resources-expanded-grid { grid-template-columns: repeat(2, 1fr); }
+            .ext-links-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .resources-expanded-grid { grid-template-columns: 1fr; }
+            .ext-links-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form input, .newsletter-form button { border-radius: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <div class="topbar-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>2020 N Lincoln Park West, Suite 18H,<span class="addr-city"> Chicago, IL 60614</span></span>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:3127735553">312-773-5553</a>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="resources.html" class="active">Wellness Resources</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+                <div class="header-cta">
+                    <a href="tel:3127735553" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>312-773-5553</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Request Service</a>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <img class="page-hero-bg" src="https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?w=1920&q=80" alt="Wellness and health resources">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Wellness Resources</span>
+                </div>
+                <span class="section-label">Knowledge &amp; Guidance</span>
+                <h1>Resources to Help You<br>Live Well at Home</h1>
+                <p>Practical, expert-informed guidance for clients, families, and caregivers navigating health, aging, and in-home care — from the clinical team at Regina's Loving Arms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Grid -->
+    <section class="resources-expanded">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Wellness Topics</span>
+                <h2>Guides &amp; Best Practices</h2>
+                <p>Our clinical team has compiled these resources to support the health, safety, and independence of everyone in our care community.</p>
+            </div>
+            <div class="resources-expanded-grid">
+
+                <div class="resource-card-full">
+                    <div class="resource-card-header">
+                        <div class="resource-icon-wrap" style="background:#E8F5F5;"><i class="fas fa-pills" style="color:var(--primary);"></i></div>
+                        <h3>Medication Management</h3>
+                        <p>Managing multiple medications safely is one of the most common challenges facing older adults and individuals with chronic illness. Poor medication adherence is a leading cause of preventable hospitalizations — and it's almost always avoidable with the right systems and support in place.</p>
+                    </div>
+                    <div class="resource-tips">
+                        <h4>Key Strategies</h4>
+                        <ul>
+                            <li>Use a weekly pill organizer and set daily phone reminders</li>
+                            <li>Keep a current medication list accessible at all times</li>
+                            <li>Review all medications with your physician at every visit</li>
+                            <li>Never stop or adjust doses without medical guidance</li>
+                            <li>Ask your pharmacist about potential drug interactions</li>
+                            <li>Store medications at proper temperatures, away from moisture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resource-card-full">
+                    <div class="resource-card-header">
+                        <div class="resource-icon-wrap" style="background:#FDF5E0;"><i class="fas fa-shoe-prints" style="color:var(--secondary);"></i></div>
+                        <h3>Fall Prevention at Home</h3>
+                        <p>Falls are the leading cause of injury-related hospitalizations among adults over 65 — but the majority are preventable. A combination of environmental modifications, physical conditioning, and appropriate supervision dramatically reduces fall risk and gives clients and families greater peace of mind at home.</p>
+                    </div>
+                    <div class="resource-tips">
+                        <h4>Prevention Steps</h4>
+                        <ul>
+                            <li>Remove throw rugs and address uneven flooring</li>
+                            <li>Install grab bars in bathrooms and near stairs</li>
+                            <li>Ensure all areas of the home are well-lit</li>
+                            <li>Review medications that may cause dizziness or imbalance</li>
+                            <li>Wear properly fitting, non-slip footwear at all times</li>
+                            <li>Pursue balance and strength exercises with a physical therapist</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resource-card-full">
+                    <div class="resource-card-header">
+                        <div class="resource-icon-wrap" style="background:#F0FAF0;"><i class="fas fa-apple-alt" style="color:#3A8A3A;"></i></div>
+                        <h3>Nutrition for Older Adults</h3>
+                        <p>Nutritional needs shift significantly with age. Adequate protein, calcium, vitamin D, and hydration are critical for maintaining muscle mass, bone density, immune function, and cognitive health. Yet many older adults are chronically under-nourished — often without awareness from themselves or their families.</p>
+                    </div>
+                    <div class="resource-tips">
+                        <h4>Nutrition Priorities</h4>
+                        <ul>
+                            <li>Prioritize lean protein at every meal to preserve muscle</li>
+                            <li>Increase fiber intake through vegetables, fruit, and whole grains</li>
+                            <li>Drink at least 6–8 cups of water daily — thirst sensation diminishes with age</li>
+                            <li>Limit sodium, added sugars, and processed foods</li>
+                            <li>Discuss vitamin D and B12 supplementation with your physician</li>
+                            <li>Watch for unintentional weight loss — it warrants prompt attention</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resource-card-full">
+                    <div class="resource-card-header">
+                        <div class="resource-icon-wrap" style="background:#F5EDF8;"><i class="fas fa-brain" style="color:#8A3AB9;"></i></div>
+                        <h3>Mental Health &amp; Emotional Wellness</h3>
+                        <p>Depression and anxiety affect nearly one in three older adults — yet they are among the most under-diagnosed and under-treated conditions in this population. Emotional health is inseparable from physical health, and addressing it proactively leads to better outcomes across every dimension of care.</p>
+                    </div>
+                    <div class="resource-tips">
+                        <h4>Supporting Emotional Wellbeing</h4>
+                        <ul>
+                            <li>Maintain regular social contact — isolation accelerates decline</li>
+                            <li>Discuss mood changes openly with healthcare providers</li>
+                            <li>Engage in purposeful activities that provide meaning and structure</li>
+                            <li>Consider counseling or therapy — it is effective at any age</li>
+                            <li>Spend time outdoors when possible; sunlight improves mood significantly</li>
+                            <li>For family members: watch for withdrawal, appetite changes, and apathy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resource-card-full">
+                    <div class="resource-card-header">
+                        <div class="resource-icon-wrap" style="background:#FFF0F0;"><i class="fas fa-user-friends" style="color:#C0392B;"></i></div>
+                        <h3>Support for Family Caregivers</h3>
+                        <p>Family caregivers are the invisible backbone of the home care system — and they are frequently exhausted, overwhelmed, and operating without adequate support. Caregiver burnout is real, and it has serious consequences for both caregiver and client. Seeking help is not a failure — it is an act of love and good judgment.</p>
+                    </div>
+                    <div class="resource-tips">
+                        <h4>For Families Providing Care</h4>
+                        <ul>
+                            <li>Accept help — caregiving is not meant to be a solo endeavor</li>
+                            <li>Use respite care services to protect your own health and relationships</li>
+                            <li>Connect with a local or online caregiver support group</li>
+                            <li>Set realistic expectations and practice self-compassion</li>
+                            <li>Communicate openly with siblings and family members about shared responsibilities</li>
+                            <li>Contact our care coordinators — we can help create a plan that gives you relief</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resource-card-full">
+                    <div class="resource-card-header">
+                        <div class="resource-icon-wrap" style="background:#E8F5F5;"><i class="fas fa-file-medical" style="color:var(--primary);"></i></div>
+                        <h3>Knowing Your Home Care Rights</h3>
+                        <p>Every client receiving home health care services is protected by a robust set of federal and state rights. Understanding these rights empowers you to advocate for the quality and type of care you deserve — and to speak up confidently when something isn't right.</p>
+                    </div>
+                    <div class="resource-tips">
+                        <h4>Your Key Rights Include</h4>
+                        <ul>
+                            <li>The right to be treated with dignity and respect at all times</li>
+                            <li>The right to participate in and approve your own care plan</li>
+                            <li>The right to be informed about all services and associated costs</li>
+                            <li>The right to refuse any service or treatment</li>
+                            <li>The right to privacy and confidentiality of your health information</li>
+                            <li>The right to file a grievance without fear of retaliation</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- External Links -->
+    <section class="external-links">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Helpful Links</span>
+                <h2>Programs &amp; Organizations</h2>
+                <p>These trusted organizations provide additional support, programs, and information for older adults, people with disabilities, and their families in Illinois.</p>
+            </div>
+            <div class="ext-links-grid">
+                <div class="ext-link-card">
+                    <div class="ext-link-icon"><i class="fas fa-building-columns"></i></div>
+                    <div class="ext-link-info">
+                        <h4>Illinois Department on Aging</h4>
+                        <p>State-supported programs for older Illinois residents, including the Community Care Program, which helps fund in-home services for eligible seniors.</p>
+                        <a href="https://aging.illinois.gov" target="_blank" rel="noopener">Visit Illinois Aging <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="ext-link-card">
+                    <div class="ext-link-icon"><i class="fas fa-hospital"></i></div>
+                    <div class="ext-link-info">
+                        <h4>Medicare Home Health Benefits</h4>
+                        <p>Learn about Medicare-covered home health services including skilled nursing, therapy, and home health aide services following qualifying hospitalizations.</p>
+                        <a href="https://www.medicare.gov/coverage/home-health-services" target="_blank" rel="noopener">Medicare.gov <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="ext-link-card">
+                    <div class="ext-link-icon"><i class="fas fa-id-card"></i></div>
+                    <div class="ext-link-info">
+                        <h4>Illinois Medicaid (HFS)</h4>
+                        <p>The Illinois Department of Healthcare and Family Services administers Medicaid benefits for low-income individuals and families, including home health services.</p>
+                        <a href="https://hfs.illinois.gov" target="_blank" rel="noopener">Visit HFS Illinois <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="ext-link-card">
+                    <div class="ext-link-icon"><i class="fas fa-ribbon"></i></div>
+                    <div class="ext-link-info">
+                        <h4>Alzheimer's Association</h4>
+                        <p>Comprehensive resources for individuals living with Alzheimer's disease and dementia, including caregiver guides, local support groups, and a 24/7 helpline.</p>
+                        <a href="https://www.alz.org" target="_blank" rel="noopener">Alz.org <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="ext-link-card">
+                    <div class="ext-link-icon"><i class="fas fa-hands-holding-child"></i></div>
+                    <div class="ext-link-info">
+                        <h4>Family Caregiver Alliance</h4>
+                        <p>National organization providing education, services, and advocacy for the more than 90 million Americans who care for a loved one with chronic illness or disability.</p>
+                        <a href="https://www.caregiver.org" target="_blank" rel="noopener">Caregiver.org <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="ext-link-card">
+                    <div class="ext-link-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div class="ext-link-info">
+                        <h4>HHS Office for Civil Rights</h4>
+                        <p>File a HIPAA complaint or learn more about your health information privacy rights with the U.S. Department of Health and Human Services.</p>
+                        <a href="https://www.hhs.gov/ocr/privacy" target="_blank" rel="noopener">HHS.gov/OCR <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <span class="section-label" style="background:rgba(255,255,255,0.15);color:var(--secondary);">Stay Informed</span>
+                <h2>Wellness Tips in Your Inbox</h2>
+                <p>Subscribe to our monthly newsletter for practical home care guidance, caregiver tips, and updates from our clinical team — delivered directly to your inbox.</p>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p style="font-size:0.8rem;opacity:0.7;margin-top:16px;">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="resource-disclaimer">
+        <div class="container">
+            <div class="resource-disclaimer-inner">
+                <p><strong>Medical Disclaimer:</strong> The wellness resources provided on this page are intended for general informational purposes only and do not constitute medical advice. Always consult a qualified healthcare professional before making changes to medications, care routines, or treatment plans. If you have questions about a specific client's care, please contact our team directly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-strip">
+        <div class="container">
+            <h2>Have Questions About Home Care?</h2>
+            <p>Our care coordinators are available to discuss your situation, explain your options, and help you build a care plan — at no cost and with no obligation.</p>
+            <div class="cta-strip-buttons">
+                <a href="contact.html" class="btn btn-secondary">Contact Us Today</a>
+                <a href="tel:3127735553" class="btn btn-outline">Call 312-773-5553</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo"><img src="resources/Logo.png" alt="Regina's Loving Arms"></a>
+                    <p>Providing compassionate, clinically excellent home health care throughout the Chicago metropolitan area since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="resources.html">Wellness Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Home Nursing</a></li>
+                        <li><a href="services.html">Caregiver Services</a></li>
+                        <li><a href="services.html">Pediatric Care</a></li>
+                        <li><a href="services.html">Rehabilitation Therapy</a></li>
+                        <li><a href="services.html">Companion Care</a></li>
+                        <li><a href="services.html">24-Hour Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:3127735553"><i class="fas fa-phone-alt" style="margin-right:8px;color:var(--secondary);"></i>312-773-5553</a></li>
+                        <li><a href="mailto:info@reginaslovingarms.com"><i class="fas fa-envelope" style="margin-right:8px;color:var(--secondary);"></i>info@reginaslovingarms.com</a></li>
+                        <li style="color:rgba(255,255,255,0.8);"><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--secondary);"></i>2020 N Lincoln Park West, Suite 18H, Chicago, IL 60614</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="#" class="js-privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.nav');
+        if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+    </script>
+</body>
+</html>
