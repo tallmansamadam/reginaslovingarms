@@ -54,10 +54,10 @@
         .topbar-item a:hover { color: var(--secondary); }
 
         /* Header */
-        .header { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        .header { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); overflow: visible; }
         .header-content { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 30px; }
         .logo { display: flex; align-items: center; justify-content: center; min-width: 0; }
-        .logo img { height: 100px; width: auto; max-width: 100%; object-fit: contain; }
+        .logo img { height: 130px; width: auto; max-width: 100%; object-fit: contain; }
         .nav { display: flex; gap: 32px; align-items: center; }
         .nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); position: relative; padding: 8px 0; white-space: nowrap; letter-spacing: 0.3px; }
         .nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--primary); transition: var(--transition); border-radius: 2px; }
@@ -274,13 +274,13 @@
         @media (max-width: 1280px) {
             .nav { gap: 22px; }
             .nav a { font-size: 0.9rem; }
-            .logo img { height: 92px; }
+            .logo img { height: 120px; }
             .header-phone { font-size: 1rem; }
             .header .btn-primary { padding: 10px 20px; font-size: 0.8rem; }
             .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 1024px) {
-            .logo img { height: 84px; }
+            .logo img { height: 110px; }
             .nav { gap: 18px; }
             .nav a { font-size: 0.85rem; }
             .header-phone { display: none; }
@@ -301,10 +301,32 @@
             .addr-city { display: block; }
             .header-content { display: flex; justify-content: space-between; }
             .logo { justify-content: flex-start; }
-            .logo img { height: 72px; }
+            .logo img { height: 90px; }
             .nav { display: none; }
+            .nav.nav--open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                box-shadow: 0 8px 24px rgba(42,125,125,0.15);
+                z-index: 999;
+                gap: 0;
+                padding: 6px 0;
+            }
+            .nav.nav--open a {
+                padding: 13px 24px;
+                border-bottom: 1px solid #eef4f4;
+                font-size: 1rem;
+                white-space: normal;
+            }
+            .nav.nav--open a:last-child { border-bottom: none; }
             .mobile-menu-btn { display: block; }
             .header-cta .btn-primary { display: none; }
+            .topbar-left .topbar-item:first-child { align-items: flex-start; }
+            .topbar-left .topbar-item:first-child i { margin-top: 3px; }
             .hero { min-height: 520px; }
             .hero-content { text-align: center; }
             .hero-content h1 { font-size: 2.2rem; }
@@ -1025,6 +1047,22 @@
             header.style.boxShadow = window.pageYOffset > 100
                 ? '0 4px 30px rgba(42,125,125,0.15)'
                 : '0 4px 20px rgba(42,125,125,0.1)';
+        });
+
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.nav');
+        menuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('nav--open');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('nav--open');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.replace('fa-times', 'fa-bars');
+            });
         });
     </script>
 </body>
