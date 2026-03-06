@@ -54,10 +54,10 @@
         .topbar-item a:hover { color: var(--secondary); }
 
         /* Header */
-        .header { background: var(--white); padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        .header { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
         .header-content { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 30px; }
-        .logo { display: flex; align-items: center; justify-content: center; }
-        .logo img { height: 260px; width: auto; object-fit: contain; }
+        .logo { display: flex; align-items: center; justify-content: center; min-width: 0; }
+        .logo img { height: 100px; width: auto; max-width: 100%; object-fit: contain; }
         .nav { display: flex; gap: 32px; align-items: center; }
         .nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); position: relative; padding: 8px 0; white-space: nowrap; letter-spacing: 0.3px; }
         .nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--primary); transition: var(--transition); border-radius: 2px; }
@@ -274,13 +274,13 @@
         @media (max-width: 1280px) {
             .nav { gap: 22px; }
             .nav a { font-size: 0.9rem; }
-            .logo img { height: 240px; }
+            .logo img { height: 92px; }
             .header-phone { font-size: 1rem; }
             .header .btn-primary { padding: 10px 20px; font-size: 0.8rem; }
             .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 1024px) {
-            .logo img { height: 210px; }
+            .logo img { height: 84px; }
             .nav { gap: 18px; }
             .nav a { font-size: 0.85rem; }
             .header-phone { display: none; }
@@ -300,7 +300,7 @@
             .topbar-item { font-size: 0.8rem; }
             .header-content { display: flex; justify-content: space-between; }
             .logo { justify-content: flex-start; }
-            .logo img { height: 175px; }
+            .logo img { height: 72px; }
             .nav { display: none; }
             .mobile-menu-btn { display: block; }
             .header-cta .btn-primary { display: none; }
@@ -996,7 +996,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Regina's Loving Arms Home Health Care. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
