@@ -1035,23 +1035,18 @@
                         <li><a href="#careers">Careers</a></li>
                         <li><a href="#resources">Wellness Resources</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#" class="js-privacy">Privacy Notice</a></li>
+                        <li><a href="privacy.html">Privacy Notice</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="#" class="js-privacy">Privacy Policy</a></p>
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="privacy.html">Privacy Policy &amp; Terms</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Modal -->
-    <dialog id="privacyModal" class="privacy-modal" aria-modal="true" aria-labelledby="privacyModalTitle">
-        <div class="privacy-modal-header">
-            <h2 id="privacyModalTitle">Privacy Policy &amp; Notice of Privacy Practices</h2>
-            <button class="privacy-modal-close" aria-label="Close">&times;</button>
-        </div>
-        <div class="privacy-modal-body">
+    <!-- Privacy policy moved to privacy.html -->
+    <div style="display:none">
             <p class="effective-date"><strong>Effective Date:</strong> January 1, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> January 1, 2026</p>
 
             <h3>1. Who We Are</h3>
@@ -1138,7 +1133,7 @@
             200 Independence Avenue, S.W., Washington, D.C. 20201<br>
             Toll-free: 1-877-696-6775 &nbsp;|&nbsp; <strong>hhs.gov/ocr/privacy</strong></p>
         </div>
-    </dialog>
+    </div>
 
     <script>
         const slides = document.querySelectorAll('.hero-slide');
@@ -1152,7 +1147,6 @@
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                if (this.classList.contains('js-privacy')) return;
                 e.preventDefault();
                 const href = this.getAttribute('href');
                 if (href === '#') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
@@ -1184,20 +1178,6 @@
             });
         });
 
-        // Privacy Policy Modal
-        const privacyModal = document.getElementById('privacyModal');
-        document.querySelectorAll('.js-privacy').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                privacyModal.showModal();
-            });
-        });
-        privacyModal.querySelector('.privacy-modal-close').addEventListener('click', () => {
-            privacyModal.close();
-        });
-        privacyModal.addEventListener('click', e => {
-            if (e.target === privacyModal) privacyModal.close();
-        });
     </script>
 </body>
 </html>
