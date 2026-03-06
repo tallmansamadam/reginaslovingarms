@@ -1,0 +1,59 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+
+<!-- Gradients -->
+<defs>
+  <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#2d6f73"></stop>
+    <stop offset="100%" stop-color="#7fc7a5"></stop>
+  </linearGradient>
+
+  <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#b8923f"></stop>
+    <stop offset="100%" stop-color="#e6d39a"></stop>
+  </linearGradient>
+</defs>
+
+<!-- Icon -->
+<g transform="translate(120,150) scale(1.2)">
+
+  <!-- House outline -->
+  <path d="M60 120 L60 40 L140 -20 L220 40 L220 120" fill="none" stroke="url(#tealGrad)" stroke-width="16" stroke-linejoin="round"></path>
+
+  <!-- Hands -->
+  <path d="M40 120
+           C40 170, 90 200, 140 200
+           C190 200, 240 170, 240 120
+           L210 120
+           C210 155, 180 175, 140 175
+           C100 175, 70 155, 70 120 Z" fill="url(#goldGrad)"></path>
+
+  <!-- Heart -->
+  <path d="
+        M140 80
+        C140 60 170 60 170 85
+        C170 105 140 120 140 120
+        C140 120 110 105 110 85
+        C110 60 140 60 140 80
+        Z" fill="url(#goldGrad)"></path>
+
+</g>
+
+<!-- Text -->
+<g font-family="Georgia, Times New Roman, serif" text-anchor="start">
+
+  <text x="420" y="210" font-size="64" fill="url(#goldGrad)" letter-spacing="2">
+        REGINA’S
+  </text>
+
+  <text x="420" y="300" font-size="96" fill="#0f5b63" font-weight="500" letter-spacing="2">
+        LOVING ARMS
+  </text>
+
+  <text x="420" y="370" font-size="44" fill="url(#goldGrad)" letter-spacing="8">
+        HOME HEALTH CARE
+  </text>
+
+</g>
+
+</svg>
