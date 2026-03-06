@@ -54,7 +54,8 @@
         .topbar-item a:hover { color: var(--secondary); }
 
         /* Header */
-        .header { background: var(--white); padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        .header { background: var(--white); padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .header--hidden { transform: translateY(-100%); }
         .header-content { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
         .logo { display: flex; align-items: center; flex-shrink: 0; }
         .logo img { height: 200px; width: auto; object-fit: contain; }
@@ -1025,11 +1026,19 @@
             });
         });
 
+        let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
-            header.style.boxShadow = window.pageYOffset > 100
+            const current = window.pageYOffset;
+            header.style.boxShadow = current > 100
                 ? '0 4px 30px rgba(42,125,125,0.15)'
                 : '0 4px 20px rgba(42,125,125,0.1)';
+            if (current > lastScroll && current > 80) {
+                header.classList.add('header--hidden');
+            } else {
+                header.classList.remove('header--hidden');
+            }
+            lastScroll = current;
         });
     </script>
 </body>
