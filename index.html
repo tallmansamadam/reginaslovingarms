@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
+    <link rel="stylesheet" href="resources/styles.css">
+    <style>/* Index-only overrides — shared styles live in resources/styles.css */
         :root {
             --primary: #2A7D7D;
             --primary-dark: #1F5F5F;
@@ -443,23 +444,23 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-wrapper">
-                    <a href="#" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
                     </a>
                 </div>
                 <nav class="nav">
-                    <a href="#about" class="active">About Us</a>
-                    <a href="#services">Our Services</a>
-                    <a href="#careers">Careers</a>
-                    <a href="#resources">Wellness Resources</a>
-                    <a href="#contact">Contact Us</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="resources.html">Wellness Resources</a>
+                    <a href="contact.html">Contact Us</a>
                 </nav>
                 <div class="header-cta">
                     <a href="tel:3127735553" class="header-phone">
                         <i class="fas fa-phone-alt"></i>
                         <span>312-773-5553</span>
                     </a>
-                    <a href="#contact" class="btn btn-primary">Request Service</a>
+                    <a href="contact.html" class="btn btn-primary">Request Service</a>
                 </div>
                 <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
             </div>
@@ -486,8 +487,8 @@
                 <h1>Nursing and Caregiving with Love, Compassion,<br>and Safety</h1>
                 <p>In every moment, we prioritize love, compassion, and safety. Your trusted partner for quality in-home care throughout the Chicago area — bringing exceptional care directly to your door.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-secondary">Request Service</a>
-                    <a href="#services" class="btn btn-outline">Our Services</a>
+                    <a href="contact.html" class="btn btn-secondary">Request Service</a>
+                    <a href="services.html" class="btn btn-outline">Our Services</a>
                 </div>
             </div>
         </div>
@@ -1002,7 +1003,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="#" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
                     </a>
                     <p>Your trusted partner for compassionate in-home care throughout the Chicago area. We bring quality medical care and supportive services directly to your doorstep.</p>
@@ -1034,23 +1035,18 @@
                         <li><a href="#careers">Careers</a></li>
                         <li><a href="#resources">Wellness Resources</a></li>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#" class="js-privacy">Privacy Notice</a></li>
+                        <li><a href="privacy.html">Privacy Notice</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="#" class="js-privacy">Privacy Policy</a></p>
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="privacy.html">Privacy Policy &amp; Terms</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Privacy Policy Modal -->
-    <dialog id="privacyModal" class="privacy-modal" aria-modal="true" aria-labelledby="privacyModalTitle">
-        <div class="privacy-modal-header">
-            <h2 id="privacyModalTitle">Privacy Policy &amp; Notice of Privacy Practices</h2>
-            <button class="privacy-modal-close" aria-label="Close">&times;</button>
-        </div>
-        <div class="privacy-modal-body">
+    <!-- Privacy policy moved to privacy.html -->
+    <div style="display:none">
             <p class="effective-date"><strong>Effective Date:</strong> January 1, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> January 1, 2026</p>
 
             <h3>1. Who We Are</h3>
@@ -1137,7 +1133,7 @@
             200 Independence Avenue, S.W., Washington, D.C. 20201<br>
             Toll-free: 1-877-696-6775 &nbsp;|&nbsp; <strong>hhs.gov/ocr/privacy</strong></p>
         </div>
-    </dialog>
+    </div>
 
     <script>
         const slides = document.querySelectorAll('.hero-slide');
@@ -1151,7 +1147,6 @@
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                if (this.classList.contains('js-privacy')) return;
                 e.preventDefault();
                 const href = this.getAttribute('href');
                 if (href === '#') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
@@ -1183,20 +1178,6 @@
             });
         });
 
-        // Privacy Policy Modal
-        const privacyModal = document.getElementById('privacyModal');
-        document.querySelectorAll('.js-privacy').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                privacyModal.showModal();
-            });
-        });
-        privacyModal.querySelector('.privacy-modal-close').addEventListener('click', () => {
-            privacyModal.close();
-        });
-        privacyModal.addEventListener('click', e => {
-            if (e.target === privacyModal) privacyModal.close();
-        });
     </script>
 </body>
 </html>

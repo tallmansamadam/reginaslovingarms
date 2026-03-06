@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Regina's Loving Arms Home Health Care, LLC</title>
+    <meta name="description" content="Contact Regina's Loving Arms Home Health Care in Chicago. Request a free care assessment, ask a question, or learn about our services. Call 312-773-5553.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="resources/styles.css">
+    <style>
+        .contact-full { padding: 100px 0; background: var(--white); }
+        .contact-full-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; align-items: start; }
+        .contact-intro h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 18px; }
+        .contact-intro > p { color: var(--text-light); font-size: 1.05rem; line-height: 1.85; margin-bottom: 40px; }
+        .contact-details-stack { display: flex; flex-direction: column; gap: 28px; margin-bottom: 50px; }
+        .hours-box { background: var(--bg-light); border-radius: 16px; padding: 28px 30px; }
+        .hours-box h4 { font-size: 1rem; color: var(--primary); margin-bottom: 16px; font-family: 'Inter', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .hours-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+        .hours-row:last-child { border-bottom: none; }
+        .hours-row span:first-child { color: var(--text-dark); font-weight: 500; }
+        .hours-row span:last-child { color: var(--text-light); }
+        .service-areas-box { background: var(--accent); border-radius: 16px; padding: 28px 30px; }
+        .service-areas-box h4 { font-size: 1rem; color: var(--primary); margin-bottom: 14px; font-family: 'Inter', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .area-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .area-tag { background: var(--white); color: var(--primary); padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; }
+        .contact-form-wrap { background: var(--bg-light); border-radius: 24px; padding: 50px 45px; box-shadow: var(--shadow-lg); }
+        .contact-form-wrap h3 { font-size: 1.7rem; color: var(--primary); margin-bottom: 8px; }
+        .contact-form-wrap > p { color: var(--text-light); margin-bottom: 30px; font-size: 0.95rem; }
+        .quick-contact { padding: 80px 0; background: var(--primary); }
+        .quick-contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .quick-card { background: rgba(255,255,255,0.1); border-radius: 16px; padding: 35px 25px; text-align: center; color: var(--white); transition: var(--transition); }
+        .quick-card:hover { background: rgba(255,255,255,0.18); }
+        .quick-card i { font-size: 2.2rem; color: var(--secondary); margin-bottom: 15px; display: block; }
+        .quick-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .quick-card p, .quick-card a { font-size: 0.92rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
+        .quick-card a:hover { color: var(--secondary); }
+        @media (max-width: 1024px) {
+            .contact-full-grid { grid-template-columns: 1fr; }
+            .quick-contact-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+        }
+        @media (max-width: 768px) {
+            .contact-form-wrap { padding: 30px 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <div class="topbar-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>2020 N Lincoln Park West, Suite 18H,<span class="addr-city"> Chicago, IL 60614</span></span>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:3127735553">312-773-5553</a>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="resources.html">Wellness Resources</a>
+                    <a href="contact.html" class="active">Contact Us</a>
+                </nav>
+                <div class="header-cta">
+                    <a href="tel:3127735553" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>312-773-5553</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Request Service</a>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <img class="page-hero-bg" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80" alt="Contact Regina's Loving Arms">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Contact Us</span>
+                </div>
+                <span class="section-label">We're Here to Help</span>
+                <h1>Let's Start a<br>Conversation</h1>
+                <p>Whether you need immediate care, are planning ahead, or simply have questions — our care coordinators are ready to listen, advise, and help you take the next step.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Cards -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="quick-contact-grid">
+                <div class="quick-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us Directly</h3>
+                    <p>Speak with a care coordinator right now. We answer calls Monday–Friday and are available for urgent matters 24/7.</p>
+                    <a href="tel:3127735553" style="display:block;margin-top:14px;font-size:1.3rem;font-weight:700;color:var(--secondary);">312-773-5553</a>
+                </div>
+                <div class="quick-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Send Us an Email</h3>
+                    <p>Prefer to write? Send us your questions or request information about services. We respond to all emails within one business day.</p>
+                    <a href="mailto:info@reginaslovingarms.com" style="display:block;margin-top:14px;font-weight:600;color:var(--secondary);">info@reginaslovingarms.com</a>
+                </div>
+                <div class="quick-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Our Office</h3>
+                    <p>Our Chicago office is available for in-person consultations by appointment. We'd love to meet you and discuss your care needs face to face.</p>
+                    <p style="margin-top:14px;color:var(--secondary);font-weight:600;">2020 N Lincoln Park West<br>Suite 18H, Chicago, IL 60614</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form + Info -->
+    <section class="contact-full">
+        <div class="container">
+            <div class="contact-full-grid">
+
+                <!-- Left: Info -->
+                <div class="contact-intro">
+                    <span class="section-label">Get in Touch</span>
+                    <h2>How Can We Help You?</h2>
+                    <p>Every family's situation is different. Whether you're seeking care for a parent, planning ahead for yourself, recovering from a recent hospitalization, or navigating a new diagnosis — we're here to provide clear guidance and compassionate support, starting with your very first call.</p>
+
+                    <div class="contact-details-stack">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:3127735553">312-773-5553</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Office Address</h4>
+                                <p>2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hours-box">
+                        <h4>Office Hours</h4>
+                        <div class="hours-row"><span>Monday – Friday</span><span>8:00 AM – 6:00 PM</span></div>
+                        <div class="hours-row"><span>Saturday</span><span>9:00 AM – 2:00 PM</span></div>
+                        <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+                        <div class="hours-row"><span>Urgent Care Line</span><span>24 Hours / 7 Days</span></div>
+                    </div>
+
+                    <div class="service-areas-box" style="margin-top: 25px;">
+                        <h4>Service Areas</h4>
+                        <div class="area-tags">
+                            <span class="area-tag">Chicago</span>
+                            <span class="area-tag">Evanston</span>
+                            <span class="area-tag">Oak Park</span>
+                            <span class="area-tag">Cicero</span>
+                            <span class="area-tag">Berwyn</span>
+                            <span class="area-tag">Skokie</span>
+                            <span class="area-tag">Naperville</span>
+                            <span class="area-tag">Schaumburg</span>
+                            <span class="area-tag">Arlington Heights</span>
+                            <span class="area-tag">Joliet</span>
+                            <span class="area-tag">Aurora</span>
+                            <span class="area-tag">Elgin</span>
+                        </div>
+                        <p style="font-size:0.82rem;color:var(--text-light);margin-top:14px;">Don't see your area? Call us — we may still be able to help.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-wrap">
+                    <h3>Request a Free Care Assessment</h3>
+                    <p>Complete the form below and a care coordinator will contact you within one business day — often the same day.</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-fname">First Name *</label>
+                                <input type="text" id="c-fname" required placeholder="Jane">
+                            </div>
+                            <div class="form-group">
+                                <label for="c-lname">Last Name *</label>
+                                <input type="text" id="c-lname" required placeholder="Smith">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-email">Email Address *</label>
+                                <input type="email" id="c-email" required placeholder="jane@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="c-phone">Phone Number *</label>
+                                <input type="tel" id="c-phone" required placeholder="(312) 000-0000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-relation">Your Relationship to the Client *</label>
+                            <select id="c-relation" required>
+                                <option value="">Select...</option>
+                                <option>I am the client</option>
+                                <option>Adult child / family member</option>
+                                <option>Spouse or partner</option>
+                                <option>Healthcare provider / referral</option>
+                                <option>Social worker / case manager</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-service">Service of Interest *</label>
+                            <select id="c-service" required>
+                                <option value="">Select a service...</option>
+                                <option>Home Nursing</option>
+                                <option>Caregiver Services</option>
+                                <option>Pediatric Care</option>
+                                <option>Rehabilitation Therapy</option>
+                                <option>Companion Care</option>
+                                <option>24-Hour / Live-In Care</option>
+                                <option>Not sure — need guidance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-urgency">How Soon Is Care Needed? *</label>
+                            <select id="c-urgency" required>
+                                <option value="">Select...</option>
+                                <option>Immediately (within 48 hours)</option>
+                                <option>Within the next week</option>
+                                <option>Within the next month</option>
+                                <option>Planning ahead (no immediate need)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-message">Tell Us About Your Situation</label>
+                            <textarea id="c-message" placeholder="Please share any relevant details about the care needed, current health status, location, or questions you'd like us to address..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="consent-label">
+                                <input type="checkbox" required>
+                                I consent to be contacted by Regina's Loving Arms regarding my care inquiry. I understand this information will be kept confidential in accordance with HIPAA regulations.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;padding:16px;">Submit My Request</button>
+                        <p style="text-align:center;margin-top:14px;font-size:0.82rem;color:var(--text-light);">We respond within one business day. For urgent needs, please call <a href="tel:3127735553" style="color:var(--primary);font-weight:600;">312-773-5553</a>.</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliations -->
+    <section class="affiliations">
+        <div class="container">
+            <div class="affiliations-inner">
+                <h3>Licensed, Trusted &amp; Compliant</h3>
+                <div class="affiliation-badges">
+                    <div class="affiliation-badge">
+                        <i class="fas fa-building-columns"></i>
+                        <span>Illinois Department<br>on Aging (IDoA)</span>
+                    </div>
+                    <div class="affiliation-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>HIPAA Compliant<br>Agency</span>
+                    </div>
+                    <div class="affiliation-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>State of Illinois<br>Licensed &amp; Insured</span>
+                    </div>
+                    <div class="affiliation-badge">
+                        <i class="fas fa-user-nurse"></i>
+                        <span>Clinically Supervised<br>Care Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo"><img src="resources/Logo.png" alt="Regina's Loving Arms"></a>
+                    <p>Providing compassionate, clinically excellent home health care throughout the Chicago metropolitan area since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="resources.html">Wellness Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Home Nursing</a></li>
+                        <li><a href="services.html">Caregiver Services</a></li>
+                        <li><a href="services.html">Pediatric Care</a></li>
+                        <li><a href="services.html">Rehabilitation Therapy</a></li>
+                        <li><a href="services.html">Companion Care</a></li>
+                        <li><a href="services.html">24-Hour Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:3127735553"><i class="fas fa-phone-alt" style="margin-right:8px;color:var(--secondary);"></i>312-773-5553</a></li>
+                        <li><a href="mailto:info@reginaslovingarms.com"><i class="fas fa-envelope" style="margin-right:8px;color:var(--secondary);"></i>info@reginaslovingarms.com</a></li>
+                        <li style="color:rgba(255,255,255,0.8);"><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--secondary);"></i>2020 N Lincoln Park West, Suite 18H, Chicago, IL 60614</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="privacy.html">Privacy Policy &amp; Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.nav');
+        if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+    </script>
+</body>
+</html>
