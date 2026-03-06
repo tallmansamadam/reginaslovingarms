@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Regina's Loving Arms Home Health Care, LLC</title>
+    <meta name="description" content="Learn about Regina's Loving Arms — our founding story, mission, core values, and the compassionate team behind Chicagoland's most trusted home health care agency.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="resources/styles.css">
+    <style>
+        .founder-quote { background: var(--accent); border-left: 5px solid var(--secondary); border-radius: 0 12px 12px 0; padding: 30px 35px; margin: 40px 0; }
+        .founder-quote blockquote { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--primary); line-height: 1.7; font-style: italic; margin-bottom: 15px; }
+        .founder-quote cite { font-size: 0.9rem; color: var(--text-light); font-style: normal; font-weight: 600; }
+        .values-icon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; padding: 100px 0; background: var(--bg-light); }
+        .value-icon-card { background: var(--white); border-radius: 20px; padding: 40px 30px; box-shadow: var(--shadow); text-align: center; transition: var(--transition); }
+        .value-icon-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .value-icon { width: 75px; height: 75px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 2rem; margin: 0 auto 22px; }
+        .value-icon-card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 12px; }
+        .value-icon-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+        .timeline { padding: 100px 0; background: var(--white); }
+        .timeline-inner { max-width: 800px; margin: 0 auto; }
+        .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 30px; margin-bottom: 50px; align-items: start; }
+        .timeline-year { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--secondary); text-align: right; padding-top: 5px; }
+        .timeline-body { border-left: 3px solid var(--accent); padding-left: 30px; position: relative; }
+        .timeline-body::before { content: ''; position: absolute; left: -9px; top: 8px; width: 16px; height: 16px; background: var(--primary); border-radius: 50%; border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--primary); }
+        .timeline-body h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 10px; }
+        .timeline-body p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+        @media (max-width: 768px) {
+            .values-icon-grid { grid-template-columns: 1fr; padding: 60px 0; }
+            .timeline-item { grid-template-columns: 1fr; gap: 10px; }
+            .timeline-year { text-align: left; font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <div class="topbar-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>2020 N Lincoln Park West, Suite 18H,<span class="addr-city"> Chicago, IL 60614</span></span>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:3127735553">312-773-5553</a>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="about.html" class="active">About Us</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="resources.html">Wellness Resources</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+                <div class="header-cta">
+                    <a href="tel:3127735553" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>312-773-5553</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Request Service</a>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <img class="page-hero-bg" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1920&q=80" alt="Caring nurse with patient">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>About Us</span>
+                </div>
+                <span class="section-label">Our Story</span>
+                <h1>Care That Comes<br>From the Heart</h1>
+                <p>Founded on the belief that every person deserves dignified, compassionate care in the comfort of their own home — no matter their age, condition, or circumstance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="about" style="padding-bottom: 60px;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&q=80" alt="Compassionate home health care">
+                </div>
+                <div class="about-content">
+                    <span class="section-label">Who We Are</span>
+                    <h2>Built on a Promise to Serve</h2>
+                    <p>Regina's Loving Arms Home Health Care, LLC was born from a deeply personal calling. After two decades of clinical nursing experience — and witnessing firsthand how the right care at the right moment can transform a life — our founder set out to build an agency rooted not in transactions, but in relationships.</p>
+                    <p>We serve clients across the Chicago metropolitan area with a singular focus: to provide the kind of care we would want for our own family members. That means attentive listening, clinical excellence, and an unwavering commitment to the dignity and independence of every individual in our care.</p>
+                    <p>Today, Regina's Loving Arms is a trusted partner for hundreds of families navigating the challenges of aging, chronic illness, recovery, and disability — and we carry that responsibility with humility and pride.</p>
+
+                    <div class="founder-quote">
+                        <blockquote>"I started this agency because I believed home care could be more than a service — it could be a lifeline. Every client we serve is someone's mother, father, grandparent, or child. We never forget that."</blockquote>
+                        <cite>— Regina, Founder &amp; CEO</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Journey</span>
+                <h2>Milestones That Define Us</h2>
+                <p>Every chapter of our story reflects a deeper commitment to the communities we serve.</p>
+            </div>
+            <div class="timeline-inner">
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-body">
+                        <h3>Founded with a Vision</h3>
+                        <p>Regina's Loving Arms is established in Chicago, IL with a small team of dedicated caregivers and a mission to provide home care that genuinely changes lives.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2013</div>
+                    <div class="timeline-body">
+                        <h3>Illinois Department on Aging Affiliation</h3>
+                        <p>We formally partner with the Illinois Department on Aging (IDoA), expanding access to state-supported programs for seniors across the Chicago metropolitan area.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-body">
+                        <h3>Pediatric Care Program Launched</h3>
+                        <p>Recognizing a critical gap in quality pediatric home care, we launch a specialized program serving children with complex medical needs and their families.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-body">
+                        <h3>24-Hour Care Expansion</h3>
+                        <p>We introduce around-the-clock live-in care services, ensuring that clients with the highest levels of need can remain safely and comfortably at home.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-body">
+                        <h3>500+ Families Served</h3>
+                        <p>A milestone we celebrate with profound gratitude — five hundred families who trusted us during some of life's most vulnerable moments. Their stories continue to drive everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section style="background: var(--bg-light); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What Guides Us</span>
+                <h2>Our Core Values</h2>
+                <p>These six principles shape every interaction, every care plan, and every decision we make.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;" class="values-icon-grid-inner">
+                <div class="value-icon-card">
+                    <div class="value-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Compassion</h3>
+                    <p>We approach every client with genuine empathy — listening deeply, responding thoughtfully, and always leading with kindness over protocol.</p>
+                </div>
+                <div class="value-icon-card">
+                    <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Integrity</h3>
+                    <p>We do what we say and say what we mean. Families trust us with their most vulnerable loved ones — that trust is sacred and non-negotiable.</p>
+                </div>
+                <div class="value-icon-card">
+                    <div class="value-icon"><i class="fas fa-star"></i></div>
+                    <h3>Excellence</h3>
+                    <p>We hold ourselves to the highest clinical and professional standards, continuously investing in training, technology, and best practices.</p>
+                </div>
+                <div class="value-icon-card">
+                    <div class="value-icon"><i class="fas fa-user"></i></div>
+                    <h3>Dignity</h3>
+                    <p>Every person in our care is treated as a whole individual — with their own history, preferences, and inherent worth — not a diagnosis or a task list.</p>
+                </div>
+                <div class="value-icon-card">
+                    <div class="value-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Community</h3>
+                    <p>We are deeply invested in the wellbeing of the Chicago metropolitan area, partnering with local organizations to strengthen the fabric of care available to all.</p>
+                </div>
+                <div class="value-icon-card">
+                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Innovation</h3>
+                    <p>We embrace new approaches in home health care — from care coordination technology to evidence-based treatment protocols — to deliver better outcomes for every client.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission">
+        <img class="mission-bg" src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=1920&q=80" alt="Home health care in Chicago">
+        <div class="mission-overlay"></div>
+        <div class="container">
+            <div class="mission-content">
+                <span class="section-label">Our Mission</span>
+                <h2>To Reshape Lives Through Compassionate, Expert Home Care</h2>
+                <p>We believe that the right care — delivered in the right place, at the right time — can restore independence, preserve dignity, and bring genuine peace of mind to entire families. Our mission is to make that possible for every person we serve, without exception.</p>
+                <p>Our vision is a Chicagoland where no individual faces illness, aging, or recovery alone — where professional, loving care is always within reach, regardless of background or circumstance.</p>
+                <a href="contact.html" class="btn btn-outline">Begin Your Care Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="approach">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How We Work</span>
+                <h2>Our Approach to Care</h2>
+                <p>We believe great care is never one-size-fits-all. Every client relationship begins the same way: by truly listening.</p>
+            </div>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <div class="approach-image">
+                        <img src="https://images.unsplash.com/photo-1576765608622-067973a79f53?w=600&q=80" alt="Care assessment">
+                        <div class="approach-image-overlay"></div>
+                        <div class="approach-number">1</div>
+                    </div>
+                    <div class="approach-content">
+                        <h3>Personalized Assessment</h3>
+                        <p>Every new client relationship begins with a comprehensive, no-obligation home assessment conducted by a registered nurse. We evaluate medical needs, home environment, personal preferences, and family dynamics to build a complete picture before a single care plan is written.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-image">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Care planning">
+                        <div class="approach-image-overlay"></div>
+                        <div class="approach-number">2</div>
+                    </div>
+                    <div class="approach-content">
+                        <h3>Tailored Care Planning</h3>
+                        <p>We develop individualized care plans in collaboration with clients, their families, and their physicians. Every plan is specific, measurable, and flexible — designed to evolve as needs change, and always centered on the client's own goals for health and independence.</p>
+                    </div>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-image">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&q=80" alt="Ongoing care">
+                        <div class="approach-image-overlay"></div>
+                        <div class="approach-number">3</div>
+                    </div>
+                    <div class="approach-content">
+                        <h3>Consistent, Monitored Care</h3>
+                        <p>Continuity matters. We carefully match caregivers to clients based on personality, skill set, and schedule, then actively monitor outcomes through regular supervisory visits, family communication, and clinical reviews. You are never left wondering how things are going.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliations -->
+    <section class="affiliations">
+        <div class="container">
+            <div class="affiliations-inner">
+                <h3>Trusted Affiliations &amp; Compliance</h3>
+                <div class="affiliation-badges">
+                    <div class="affiliation-badge">
+                        <i class="fas fa-building-columns"></i>
+                        <span>Illinois Department<br>on Aging (IDoA)</span>
+                    </div>
+                    <div class="affiliation-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>HIPAA Compliant<br>Agency</span>
+                    </div>
+                    <div class="affiliation-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>State of Illinois<br>Licensed &amp; Insured</span>
+                    </div>
+                    <div class="affiliation-badge">
+                        <i class="fas fa-user-nurse"></i>
+                        <span>Clinically Supervised<br>Care Team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-strip">
+        <div class="container">
+            <h2>Ready to Experience the Difference?</h2>
+            <p>Take the first step toward compassionate, professional home care. Our team is ready to answer your questions and begin building a plan tailored to your loved one's needs.</p>
+            <div class="cta-strip-buttons">
+                <a href="contact.html" class="btn btn-secondary">Request a Free Assessment</a>
+                <a href="tel:3127735553" class="btn btn-outline">Call 312-773-5553</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms">
+                    </a>
+                    <p>Providing compassionate, clinically excellent home health care throughout the Chicago metropolitan area since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="resources.html">Wellness Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Home Nursing</a></li>
+                        <li><a href="services.html">Caregiver Services</a></li>
+                        <li><a href="services.html">Pediatric Care</a></li>
+                        <li><a href="services.html">Rehabilitation Therapy</a></li>
+                        <li><a href="services.html">Companion Care</a></li>
+                        <li><a href="services.html">24-Hour Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:3127735553"><i class="fas fa-phone-alt" style="margin-right:8px;color:var(--secondary);"></i>312-773-5553</a></li>
+                        <li><a href="mailto:info@reginaslovingarms.com"><i class="fas fa-envelope" style="margin-right:8px;color:var(--secondary);"></i>info@reginaslovingarms.com</a></li>
+                        <li style="color:rgba(255,255,255,0.8);"><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--secondary);"></i>2020 N Lincoln Park West, Suite 18H, Chicago, IL 60614</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="#" class="js-privacy">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.nav');
+        if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+    </script>
+</body>
+</html>
