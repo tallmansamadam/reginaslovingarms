@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Regina's Loving Arms Home Health Care, LLC</title>
+    <meta name="description" content="Explore the full range of professional home health care services offered by Regina's Loving Arms — from skilled nursing and rehabilitation to pediatric care and 24-hour support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="resources/styles.css">
+    <style>
+        .service-detail-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); display: grid; grid-template-columns: 320px 1fr; }
+        .service-detail-card:nth-child(even) { direction: rtl; }
+        .service-detail-card:nth-child(even) > * { direction: ltr; }
+        .service-detail-image { overflow: hidden; }
+        .service-detail-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .service-detail-card:hover .service-detail-image img { transform: scale(1.06); }
+        .service-detail-body { padding: 50px 45px; }
+        .service-detail-body .service-tag { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--primary); padding: 8px 18px; border-radius: 30px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+        .service-detail-body h2 { font-size: 1.9rem; color: var(--primary); margin-bottom: 16px; }
+        .service-detail-body > p { color: var(--text-light); font-size: 1rem; line-height: 1.85; margin-bottom: 24px; }
+        .service-detail-body ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; margin-bottom: 30px; }
+        .service-detail-body ul li { color: var(--text-light); font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+        .service-detail-body ul li::before { content: ''; width: 8px; height: 8px; background: var(--secondary); border-radius: 50%; flex-shrink: 0; }
+        .services-full { padding: 100px 0; background: var(--bg-light); }
+        .services-full-stack { display: flex; flex-direction: column; gap: 30px; }
+        .payment-section { padding: 100px 0; background: var(--white); }
+        .payment-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .payment-card { background: var(--bg-light); border-radius: 16px; padding: 35px 25px; text-align: center; transition: var(--transition); }
+        .payment-card:hover { box-shadow: var(--shadow); transform: translateY(-5px); }
+        .payment-card i { font-size: 2.2rem; color: var(--primary); margin-bottom: 15px; display: block; }
+        .payment-card h3 { font-size: 1.1rem; color: var(--text-dark); margin-bottom: 10px; }
+        .payment-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; }
+        @media (max-width: 1024px) {
+            .service-detail-card { grid-template-columns: 1fr; }
+            .service-detail-card:nth-child(even) { direction: ltr; }
+            .service-detail-image { height: 280px; }
+            .payment-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .service-detail-body { padding: 30px 25px; }
+            .service-detail-body ul { grid-template-columns: 1fr; }
+            .payment-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <div class="topbar-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>2020 N Lincoln Park West, Suite 18H,<span class="addr-city"> Chicago, IL 60614</span></span>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:3127735553">312-773-5553</a>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-wrapper">
+                    <a href="index.html" class="logo">
+                        <img src="resources/Logo.png" alt="Regina's Loving Arms Home Health Care">
+                    </a>
+                </div>
+                <nav class="nav">
+                    <a href="about.html">About Us</a>
+                    <a href="services.html" class="active">Our Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="resources.html">Wellness Resources</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+                <div class="header-cta">
+                    <a href="tel:3127735553" class="header-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>312-773-5553</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Request Service</a>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <img class="page-hero-bg" src="https://images.unsplash.com/photo-1576765608622-067973a79f53?w=1920&q=80" alt="Home health care services">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Our Services</span>
+                </div>
+                <span class="section-label">What We Offer</span>
+                <h1>Comprehensive Care,<br>Delivered at Home</h1>
+                <p>From skilled nursing and rehabilitation to companion care and 24-hour support — every service we provide is grounded in clinical excellence and personal compassion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Detail Stack -->
+    <section class="services-full">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Services</span>
+                <h2>Everything Your Loved One Needs</h2>
+                <p>We offer a continuum of care designed to meet clients wherever they are in their health journey — and to grow with them as their needs evolve.</p>
+            </div>
+            <div class="services-full-stack">
+
+                <!-- Home Nursing -->
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=700&q=80" alt="Home nursing care">
+                    </div>
+                    <div class="service-detail-body">
+                        <span class="service-tag"><i class="fas fa-stethoscope"></i> Skilled Nursing</span>
+                        <h2>Home Nursing</h2>
+                        <p>Our registered nurses and licensed practical nurses bring hospital-grade clinical care directly to your home. Whether managing a complex chronic condition, recovering from surgery, or requiring ongoing medical monitoring, our nursing staff delivers precise, compassionate care under physician-supervised protocols — giving families the assurance that their loved one is in expert hands.</p>
+                        <ul>
+                            <li>Wound care and dressing changes</li>
+                            <li>Medication management and reconciliation</li>
+                            <li>Vital signs monitoring and documentation</li>
+                            <li>Chronic disease management (diabetes, COPD, CHF)</li>
+                            <li>IV therapy and infusion management</li>
+                            <li>Post-surgical recovery support</li>
+                            <li>Catheter and ostomy care</li>
+                            <li>Physician communication and care coordination</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request This Service</a>
+                    </div>
+                </div>
+
+                <!-- Caregiver Services -->
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80" alt="Caregiver services">
+                    </div>
+                    <div class="service-detail-body">
+                        <span class="service-tag"><i class="fas fa-hands-holding-heart"></i> Personal Care</span>
+                        <h2>Caregiver Services</h2>
+                        <p>Our trained caregivers assist with the daily activities of life that can become challenging due to age, illness, or disability — preserving independence while ensuring safety and comfort. We carefully match every caregiver to each client based on personality, experience, and schedule, building relationships grounded in genuine trust and affection.</p>
+                        <ul>
+                            <li>Bathing, grooming, and personal hygiene</li>
+                            <li>Dressing and mobility assistance</li>
+                            <li>Meal planning and preparation</li>
+                            <li>Light housekeeping and laundry</li>
+                            <li>Grocery shopping and errand running</li>
+                            <li>Transportation to appointments</li>
+                            <li>Medication reminders</li>
+                            <li>Companionship and social engagement</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request This Service</a>
+                    </div>
+                </div>
+
+                <!-- Pediatric Care -->
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1593078166039-c9878df5c520?w=700&q=80" alt="Pediatric home care">
+                    </div>
+                    <div class="service-detail-body">
+                        <span class="service-tag"><i class="fas fa-child"></i> Pediatric Care</span>
+                        <h2>Pediatric Home Care</h2>
+                        <p>Caring for a child with complex medical needs requires a unique blend of clinical expertise and extraordinary patience. Our pediatric care team — trained in the specific physiological and developmental considerations of young patients — delivers specialized care that supports children at home, where they thrive best: surrounded by family and familiar surroundings.</p>
+                        <ul>
+                            <li>Medically complex and technology-dependent care</li>
+                            <li>Tracheostomy and ventilator management</li>
+                            <li>Feeding tube (G-tube, NG-tube) care</li>
+                            <li>Developmental and behavioral support</li>
+                            <li>Seizure monitoring and protocol</li>
+                            <li>Respite care for primary caregivers</li>
+                            <li>School-age transition planning</li>
+                            <li>Family education and training</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request This Service</a>
+                    </div>
+                </div>
+
+                <!-- Rehabilitation Therapy -->
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=80" alt="Rehabilitation therapy at home">
+                    </div>
+                    <div class="service-detail-body">
+                        <span class="service-tag"><i class="fas fa-dumbbell"></i> Rehabilitation</span>
+                        <h2>Rehabilitation Therapy</h2>
+                        <p>Recovery is faster and more sustainable in the comfort of your own home. Our licensed rehabilitation therapists provide individualized physical, occupational, and speech therapy services in the home setting — helping clients regain strength, function, and confidence after illness, surgery, injury, or neurological events such as stroke.</p>
+                        <ul>
+                            <li>Physical therapy and strength restoration</li>
+                            <li>Occupational therapy and daily function</li>
+                            <li>Speech and language therapy</li>
+                            <li>Post-stroke rehabilitation</li>
+                            <li>Post-surgical recovery programs</li>
+                            <li>Balance and fall prevention training</li>
+                            <li>Home safety evaluations and modifications</li>
+                            <li>Adaptive equipment training</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request This Service</a>
+                    </div>
+                </div>
+
+                <!-- Companion Care -->
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=700&q=80" alt="Companion care for seniors">
+                    </div>
+                    <div class="service-detail-body">
+                        <span class="service-tag"><i class="fas fa-comments"></i> Companion Care</span>
+                        <h2>Companion Care</h2>
+                        <p>Loneliness and social isolation are among the most significant — and most overlooked — health risks for older adults. Our companion care services address this directly, pairing clients with warm, engaging companions who provide meaningful social interaction, cognitive stimulation, and the simple gift of being present. For many clients, their companion becomes one of the most important relationships in their life.</p>
+                        <ul>
+                            <li>Meaningful conversation and social engagement</li>
+                            <li>Reading, games, and cognitive activities</li>
+                            <li>Accompaniment to community events</li>
+                            <li>Support for clients with memory challenges</li>
+                            <li>Supervised leisure and hobby activities</li>
+                            <li>Emotional support and active listening</li>
+                            <li>Family communication and updates</li>
+                            <li>Respite support for family caregivers</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request This Service</a>
+                    </div>
+                </div>
+
+                <!-- 24-Hour Care -->
+                <div class="service-detail-card">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=700&q=80" alt="24-hour home care">
+                    </div>
+                    <div class="service-detail-body">
+                        <span class="service-tag"><i class="fas fa-moon"></i> Around the Clock</span>
+                        <h2>24-Hour &amp; Live-In Care</h2>
+                        <p>Some clients require continuous supervision and assistance — whether due to advanced dementia, high fall risk, post-acute recovery, or complex multi-system illness. Our 24-hour and live-in care programs ensure that a qualified caregiver or nurse is always present, providing families with the confidence that their loved one is never alone and always supported, day or night.</p>
+                        <ul>
+                            <li>Continuous overnight supervision</li>
+                            <li>Live-in caregiver placement</li>
+                            <li>Rotating care team for shift-based coverage</li>
+                            <li>Advanced dementia and Alzheimer's care</li>
+                            <li>High fall-risk monitoring and prevention</li>
+                            <li>Nighttime toileting and repositioning</li>
+                            <li>Emergency response and crisis support</li>
+                            <li>Family communication and daily care logs</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Request This Service</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="who-we-serve">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Clients</span>
+                <h2>Who We Serve</h2>
+                <p>We provide care across the full spectrum of need — meeting each individual exactly where they are.</p>
+            </div>
+            <div class="serve-grid">
+                <div class="serve-card">
+                    <div class="serve-image">
+                        <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=500&q=80" alt="Elderly care">
+                    </div>
+                    <div class="serve-content">
+                        <i class="fas fa-walking"></i>
+                        <h3>Seniors &amp; Older Adults</h3>
+                        <p>Supporting independence, safety, and quality of life for aging individuals who wish to remain in their homes.</p>
+                    </div>
+                </div>
+                <div class="serve-card">
+                    <div class="serve-image">
+                        <img src="https://images.unsplash.com/photo-1593078166039-c9878df5c520?w=500&q=80" alt="Pediatric care">
+                    </div>
+                    <div class="serve-content">
+                        <i class="fas fa-child"></i>
+                        <h3>Children with Complex Needs</h3>
+                        <p>Specialized care for medically fragile children, from infancy through adolescence, in the safety and comfort of home.</p>
+                    </div>
+                </div>
+                <div class="serve-card">
+                    <div class="serve-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" alt="Post-surgical recovery">
+                    </div>
+                    <div class="serve-content">
+                        <i class="fas fa-procedures"></i>
+                        <h3>Post-Surgical &amp; Recovering Patients</h3>
+                        <p>Skilled nursing and therapy to support safe, efficient recovery after hospitalization, surgery, or acute illness.</p>
+                    </div>
+                </div>
+                <div class="serve-card">
+                    <div class="serve-image">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80" alt="Chronic illness management">
+                    </div>
+                    <div class="serve-content">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Individuals with Chronic Illness</h3>
+                        <p>Ongoing management and support for clients living with diabetes, heart failure, COPD, multiple sclerosis, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment / Insurance -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Coverage &amp; Payment</span>
+                <h2>Understanding Your Options</h2>
+                <p>We work with a broad range of payment sources to make quality home care accessible to every family we serve.</p>
+            </div>
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <i class="fas fa-id-card"></i>
+                    <h3>Medicaid</h3>
+                    <p>We accept Illinois Medicaid and can help families navigate eligibility requirements and covered services.</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>Medicare</h3>
+                    <p>Qualifying clients may be eligible for Medicare-covered skilled nursing and therapy services following a hospitalization.</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Private Insurance</h3>
+                    <p>We work with most major private insurance carriers and can verify your benefits before service begins.</p>
+                </div>
+                <div class="payment-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Private Pay</h3>
+                    <p>Flexible private-pay arrangements are available. Contact us to discuss a plan that works for your family's budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="careers-cta">
+        <img class="careers-bg" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80" alt="Home health care Chicago">
+        <div class="careers-overlay"></div>
+        <div class="container">
+            <span class="section-label" style="background:rgba(255,255,255,0.15);color:var(--secondary);">Get Started Today</span>
+            <h2>Not Sure Which Service Is Right?</h2>
+            <p>Our care coordinators are here to help you navigate your options, answer your questions, and build a personalized care plan that fits your family's unique situation — at no cost and with no obligation.</p>
+            <a href="contact.html" class="btn btn-secondary">Schedule a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo"><img src="resources/Logo.png" alt="Regina's Loving Arms"></a>
+                    <p>Providing compassionate, clinically excellent home health care throughout the Chicago metropolitan area since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="resources.html">Wellness Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Home Nursing</a></li>
+                        <li><a href="services.html">Caregiver Services</a></li>
+                        <li><a href="services.html">Pediatric Care</a></li>
+                        <li><a href="services.html">Rehabilitation Therapy</a></li>
+                        <li><a href="services.html">Companion Care</a></li>
+                        <li><a href="services.html">24-Hour Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:3127735553"><i class="fas fa-phone-alt" style="margin-right:8px;color:var(--secondary);"></i>312-773-5553</a></li>
+                        <li><a href="mailto:info@reginaslovingarms.com"><i class="fas fa-envelope" style="margin-right:8px;color:var(--secondary);"></i>info@reginaslovingarms.com</a></li>
+                        <li style="color:rgba(255,255,255,0.8);"><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--secondary);"></i>2020 N Lincoln Park West, Suite 18H, Chicago, IL 60614</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC. All Rights Reserved. | <a href="privacy.html">Privacy Policy &amp; Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.nav');
+        if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+    </script>
+</body>
+</html>
