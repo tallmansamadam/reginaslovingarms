@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" role="img" aria-label="Regina's Loving Arms Home Health Care">
+  <title>Regina's Loving Arms Home Health Care</title>
+  <defs>
+    <!-- Teal gradient for house (darker at top, lighter toward base) -->
+    <linearGradient id="tealG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A7D7D"/>
+      <stop offset="100%" stop-color="#5DBDBD"/>
+    </linearGradient>
+
+    <!-- Radial gold for left hand: highlight on inner-upper palm -->
+    <radialGradient id="gldL" cx="62%" cy="28%" r="62%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F4E074"/>
+      <stop offset="48%"  stop-color="#C9A227"/>
+      <stop offset="100%" stop-color="#7A5406"/>
+    </radialGradient>
+
+    <!-- Radial gold for right hand: mirror highlight -->
+    <radialGradient id="gldR" cx="38%" cy="28%" r="62%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#F4E074"/>
+      <stop offset="48%"  stop-color="#C9A227"/>
+      <stop offset="100%" stop-color="#7A5406"/>
+    </radialGradient>
+
+    <!-- Linear gold for heart -->
+    <linearGradient id="gldH" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%"   stop-color="#EDD060"/>
+      <stop offset="100%" stop-color="#A87810"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ═══ LEFT HAND ═══
+       Open palm facing right/up, cradling from left.
+       Path traces clockwise: outer-wrist → outer-arm → fingertips → inner-palm → inner-wrist. -->
+  <path d="M 11,132
+           C  4,114  2,92   6,72
+           C 10,52  18,36  28,24
+           C 33,17  39,14  44,18
+           C 49,22  50,31  47,42
+           C 44,53  40,65  36,77
+           C 31,92  22,108 17,120
+           Z"
+        fill="url(#gldL)"/>
+
+  <!-- ═══ RIGHT HAND ═══ (mirror of left, reflected around x=70) -->
+  <path d="M 129,132
+           C 136,114 138,92  134,72
+           C 130,52  122,36  112,24
+           C 107,17  101,14   96,18
+           C  91,22   90,31   93,42
+           C  96,53  100,65  104,77
+           C 109,92  118,108 123,120
+           Z"
+        fill="url(#gldR)"/>
+
+  <!-- ═══ HOUSE ═══ -->
+  <!-- Roof: two lines meeting at peak -->
+  <line x1="37"  y1="57" x2="70" y2="13" stroke="url(#tealG)" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="103" y1="57" x2="70" y2="13" stroke="url(#tealG)" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- Walls -->
+  <line x1="38.5" y1="58" x2="38.5" y2="88" stroke="url(#tealG)" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="101.5" y1="58" x2="101.5" y2="88" stroke="url(#tealG)" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- ═══ HEART ═══ (centered inside house) -->
+  <path d="M 70,84
+           C 62,76  51,65  51,54
+           C 51,47  57,42  63,42
+           C 67,42  70,46  70,50
+           C 70,46  73,42  77,42
+           C 83,42  89,47  89,54
+           C 89,65  78,76  70,84
+           Z"
+        fill="url(#gldH)"/>
+
+  <!-- ═══ TEXT ═══ -->
+  <!-- REGINA'S -->
+  <text x="155" y="44"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="19" font-weight="bold" font-style="normal"
+        fill="#C9A227" letter-spacing="3.5">REGINA&#x2019;S</text>
+
+  <!-- LOVING ARMS -->
+  <text x="152" y="93"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="45" font-weight="bold" font-style="normal"
+        fill="#2A7D7D" letter-spacing="1">LOVING ARMS</text>
+
+  <!-- HOME HEALTH CARE -->
+  <text x="161" y="118"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="15.5" font-weight="normal" font-style="normal"
+        fill="#C9A227" letter-spacing="5.5">HOME HEALTH CARE</text>
+</svg>
