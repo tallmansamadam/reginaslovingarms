@@ -200,14 +200,6 @@
         .serve-content h3 { font-size: 1.1rem; color: var(--text-dark); margin-bottom: 8px; }
         .serve-content p { font-size: 0.85rem; color: var(--text-light); }
 
-        /* Testimonials */
-        .testimonials { padding: 100px 0; background: var(--bg-cream); }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .testimonial-card { background: var(--white); padding: 40px; border-radius: 20px; box-shadow: var(--shadow); position: relative; }
-        .testimonial-card::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 6rem; color: var(--accent); position: absolute; top: 10px; right: 30px; line-height: 1; }
-        .testimonial-stars { color: var(--secondary); margin-bottom: 20px; }
-        .testimonial-text { color: var(--text-dark); font-size: 1rem; line-height: 1.8; margin-bottom: 25px; position: relative; z-index: 1; }
-        .testimonial-author { display: flex; align-items: center; gap: 15px; }
         .author-avatar { width: 55px; height: 55px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: 700; font-size: 1.2rem; }
         .author-info h4 { font-size: 1rem; color: var(--text-dark); font-family: 'Inter', sans-serif; font-weight: 600; }
         .author-info span { font-size: 0.85rem; color: var(--text-light); }
@@ -334,7 +326,7 @@
             .hero-buttons { justify-content: center; }
             .section-header h2 { font-size: 2rem; }
             .services-preview-grid { grid-template-columns: repeat(2, 1fr); }
-            .services-grid, .values-grid, .testimonials-grid, .resources-grid, .approach-grid { grid-template-columns: 1fr; }
+            .services-grid, .values-grid, .resources-grid, .approach-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -660,7 +652,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Additional Services</h3>
-                        <p>Home Health Aide, Live-In Care, 24-Hour Home Care, Overnight Caregivers, Homemaker Services, and Hospice support — we offer a full spectrum of in-home care to meet every need.</p>
+                        <p>Home Health Aide, Live-In Care,<br>24-Hour Home Care, Overnight Caregivers, Homemaker Services, and Hospice support — we offer a full spectrum of in-home care to meet every need.</p>
                         <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -769,57 +761,6 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Testimonials</span>
-                <h2>What Families Say About Us</h2>
-                <p>Hear from families throughout the Chicago area who have experienced our compassionate, professional care firsthand.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Regina's Loving Arms has been a blessing for our family. The caregivers are compassionate, professional, and treat my mother like their own family. We couldn't ask for better care."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MJ</div>
-                        <div class="author-info">
-                            <h4>Mary Johnson</h4>
-                            <span>Daughter of Client, Evanston</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The nurses from Regina's Loving Arms provided exceptional care after my husband's surgery. Their expertise and kindness made his recovery so much smoother. We are truly grateful."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">PS</div>
-                        <div class="author-info">
-                            <h4>Patricia Smith</h4>
-                            <span>Wife of Client, Joliet</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Finding pediatric care for my son was challenging until we found Regina's Loving Arms. Their specialized nurses are amazing with children and have made such a meaningful difference in our lives."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">DW</div>
-                        <div class="author-info">
-                            <h4>David Williams</h4>
-                            <span>Father of Client, Bolingbrook</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Wellness Resources -->
     <section id="resources" class="resources">
