@@ -101,7 +101,7 @@
 
         /* Services Preview */
         .services-preview { padding: 80px 0; background: var(--white); }
-        .services-preview-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 760px; margin: 0 auto; }
+        .services-preview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 380px)); gap: 20px; justify-content: center; }
         .service-preview-card { position: relative; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
         .service-preview-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
         .service-preview-image { position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; height: 0; }
@@ -251,7 +251,7 @@
 
         /* Careers CTA */
         .careers-cta { position: relative; padding: 120px 0; overflow: hidden; }
-        .careers-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+        .careers-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; z-index: 0; }
         .careers-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(201,162,39,0.68) 0%, rgba(42,125,125,0.68) 100%); z-index: 1; }
         .careers-cta .container { position: relative; z-index: 2; text-align: center; color: var(--white); }
         .careers-cta h2 { font-size: 2.8rem; margin-bottom: 20px; }
@@ -279,7 +279,6 @@
             .logo img { height: 150px; }
             .header-phone { font-size: 1rem; }
             .header .btn-primary { padding: 10px 20px; font-size: 0.8rem; }
-            .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 1024px) {
             .logo img { height: 135px; }
@@ -287,7 +286,6 @@
             .nav a { font-size: 0.85rem; }
             .header-phone { display: none; }
             .hero-content h1 { font-size: 2.8rem; }
-            .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
             .welcome-grid { grid-template-columns: 1fr; }
             .welcome-sidebar { max-width: 400px; margin: 0 auto; }
             .values-grid, .services-grid, .approach-grid { grid-template-columns: repeat(2, 1fr); }
