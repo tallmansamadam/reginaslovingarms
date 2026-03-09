@@ -248,7 +248,7 @@ img { max-width: 100%; height: auto; }
 
 /* ── Careers CTA / Banner ── */
 .careers-cta { position: relative; padding: 120px 0; overflow: hidden; }
-.careers-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; z-index: 0; }
+.careers-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: 0; }
 .careers-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(201,162,39,0.68) 0%, rgba(42,125,125,0.68) 100%); z-index: 1; }
 .careers-cta .container { position: relative; z-index: 2; text-align: center; color: var(--white); }
 .careers-cta h2 { font-size: 2.8rem; margin-bottom: 20px; }
