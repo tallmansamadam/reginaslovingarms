@@ -121,7 +121,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&q=80" alt="Regina's Loving Arms caregiver providing compassionate home health care in Chicago" loading="lazy">
+                    <img src="https://images.pexels.com/photos/16364306/pexels-photo-16364306.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caregiver walking alongside elderly resident in a care facility hallway" loading="lazy">
                 </div>
                 <div class="about-content">
                     <span class="section-label">Who We Are</span>
@@ -253,7 +253,7 @@
                 </div>
                 <div class="approach-card">
                     <div class="approach-image">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Personalized care planning session between caregiver and family" loading="lazy">
+                        <img src="https://images.pexels.com/photos/8949833/pexels-photo-8949833.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Personalized care planning session between caregiver and family at home" loading="lazy">
                         <div class="approach-image-overlay"></div>
                         <div class="approach-number">2</div>
                     </div>
@@ -264,7 +264,7 @@
                 </div>
                 <div class="approach-card">
                     <div class="approach-image">
-                        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&q=80" alt="Ongoing home health care visit with dedicated caregiver in Chicago" loading="lazy">
+                        <img src="https://images.pexels.com/photos/18459198/pexels-photo-18459198.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Caregiver providing ongoing attentive care to senior residents" loading="lazy">
                         <div class="approach-image-overlay"></div>
                         <div class="approach-number">3</div>
                     </div>
@@ -368,6 +368,10 @@
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.nav');
         if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+        // Sticky header scroll state
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+
         // Back to top
         const btt = document.querySelector('.back-to-top');
         if (btt) {
