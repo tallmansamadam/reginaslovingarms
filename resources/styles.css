@@ -331,11 +331,7 @@ img { max-width: 100%; height: auto; }
 .faq { padding: 100px 0; background: var(--bg-cream); }
 .faq-list { max-width: 800px; margin: 0 auto; }
 .faq-item { border-bottom: 1px solid #D8E8E8; }
-.faq-question { width: 100%; background: none; border: none; padding: 24px 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--text-dark); gap: 20px; }
-.faq-question:hover { color: var(--primary); }
-.faq-question i { color: var(--primary); font-size: 1rem; flex-shrink: 0; transition: transform 0.3s ease; }
-.faq-item.open .faq-question i { transform: rotate(45deg); }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-question { padding: 24px 0; font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--primary); }
 .faq-answer p { padding: 0 0 24px; color: var(--text-light); line-height: 1.8; font-size: 0.97rem; }
 
 /* ── Form Success ── */
