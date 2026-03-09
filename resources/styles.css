@@ -50,7 +50,8 @@ img { max-width: 100%; height: auto; }
 .topbar-item a:hover { color: var(--secondary); }
 
 /* ── Header ── */
-.header { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); overflow: visible; }
+.header { background: var(--white); padding: 4px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); overflow: visible; transition: box-shadow 0.3s ease; }
+.header.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.13); }
 .header-content { display: flex; align-items: center; gap: 30px; }
 .logo-wrapper { width: 280px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 .logo { display: flex; align-items: center; }
@@ -77,6 +78,9 @@ img { max-width: 100%; height: auto; }
 .hero-content h1 { font-size: 3.4rem; margin-bottom: 25px; line-height: 1.2; }
 .hero-content p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.95; line-height: 1.8; }
 .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+.hero-mobile-call { display: none; align-items: center; gap: 12px; margin-top: 24px; color: var(--white); font-weight: 700; font-size: 1.1rem; text-decoration: none; background: rgba(255,255,255,0.12); border: 2px solid rgba(255,255,255,0.5); border-radius: 50px; padding: 13px 30px; transition: background 0.2s; }
+.hero-mobile-call:hover { background: rgba(255,255,255,0.22); }
+.hero-mobile-call i { color: var(--secondary); font-size: 1.2rem; }
 
 /* ── Page Hero (Interior Pages) ── */
 .page-hero { position: relative; min-height: 360px; display: flex; align-items: center; overflow: hidden; }
@@ -405,6 +409,7 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .hero-content { text-align: center; }
     .hero-content h1 { font-size: 2.2rem; }
     .hero-buttons { justify-content: center; }
+    .hero-mobile-call { display: inline-flex; }
     .page-hero-content h1 { font-size: 2.2rem; }
     .section-header h2 { font-size: 2rem; }
     .services-preview-grid { grid-template-columns: repeat(2, 1fr); }

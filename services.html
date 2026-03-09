@@ -140,7 +140,7 @@
                 <!-- Caregiver Services -->
                 <div class="service-detail-card">
                     <div class="service-detail-image">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80" alt="Professional caregiver helping elderly client with daily activities at home" loading="lazy">
+                        <img src="https://images.pexels.com/photos/7551622/pexels-photo-7551622.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Professional caregiver helping elderly client with daily activities at home" loading="lazy">
                     </div>
                     <div class="service-detail-body">
                         <span class="service-tag"><i class="fas fa-hands-holding-heart"></i> Personal Care</span>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="serve-card">
                     <div class="serve-image">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80" alt="Caregiver supporting client with chronic illness management at home" loading="lazy">
+                        <img src="https://images.pexels.com/photos/8413410/pexels-photo-8413410.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Caregiver supporting client with chronic illness management at home" loading="lazy">
                     </div>
                     <div class="serve-content">
                         <i class="fas fa-heartbeat"></i>
@@ -278,7 +278,7 @@
 
     <!-- CTA -->
     <section class="careers-cta">
-        <img class="careers-bg" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80" alt="" loading="lazy">
+        <img class="careers-bg" src="https://images.pexels.com/photos/18459204/pexels-photo-18459204.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" loading="lazy">
         <div class="careers-overlay"></div>
         <div class="container">
             <span class="section-label" style="background:rgba(255,255,255,0.15);color:var(--secondary);">Get Started Today</span>
@@ -338,6 +338,10 @@
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.nav');
         if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+        // Sticky header scroll state
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+
         // Back to top
         const btt = document.querySelector('.back-to-top');
         if (btt) {

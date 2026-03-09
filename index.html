@@ -529,7 +529,7 @@
                 <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80" alt="Nurse providing attentive home health care to an elderly patient in Chicago">
             </div>
             <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1920&q=80" alt="Compassionate caregiver smiling with elderly patient at home">
+                <img src="https://images.pexels.com/photos/271353/pexels-photo-271353.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Caregiver in scrubs leaning in warmly to assist an elderly person outdoors">
             </div>
             <div class="hero-slide">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=1920&q=80" alt="Nurse assisting elderly patient with daily care at home in Chicago">
@@ -545,6 +545,9 @@
                     <a href="contact.html" class="btn btn-secondary">Request Service</a>
                     <a href="services.html" class="btn btn-outline">Our Services</a>
                 </div>
+                <a href="tel:3127735553" class="hero-mobile-call">
+                    <i class="fas fa-phone-alt"></i> Tap to Call Now — 312-773-5553
+                </a>
             </div>
         </div>
     </section>
@@ -640,7 +643,7 @@
 
     <!-- Mission Section with background image -->
     <section class="mission">
-        <img loading="lazy" class="mission-bg" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=60" alt="">
+        <img loading="lazy" class="mission-bg" src="https://images.pexels.com/photos/8949908/pexels-photo-8949908.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
         <div class="mission-overlay"></div>
         <div class="container">
             <div class="mission-content">
@@ -663,7 +666,7 @@
             <div class="approach-grid">
                 <div class="approach-card">
                     <div class="approach-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=700&q=80" alt="Caregiver providing customized one-on-one home care">
+                        <img loading="lazy" src="https://images.pexels.com/photos/18429373/pexels-photo-18429373.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Caregiver providing customized one-on-one home care">
                         <div class="approach-image-overlay"></div>
                         <div class="approach-number">1</div>
                     </div>
@@ -675,7 +678,7 @@
                 </div>
                 <div class="approach-card">
                     <div class="approach-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80" alt="Consistent and reliable caregiver visiting elderly client at home">
+                        <img loading="lazy" src="https://images.pexels.com/photos/7551614/pexels-photo-7551614.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Consistent and reliable caregiver spending quality time with elderly client at home">
                         <div class="approach-image-overlay"></div>
                         <div class="approach-number">2</div>
                     </div>
@@ -712,7 +715,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Professional caregiver services for seniors and adults in Chicago">
+                        <img loading="lazy" src="https://images.pexels.com/photos/6129678/pexels-photo-6129678.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional caregiver services for seniors and adults in Chicago">
                         <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
                     </div>
                     <div class="service-content">
@@ -1013,7 +1016,7 @@
 
     <!-- Careers CTA with background image -->
     <section id="careers" class="careers-cta">
-        <img loading="lazy" class="careers-bg" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1920&q=60" alt="">
+        <img loading="lazy" class="careers-bg" src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
         <div class="careers-overlay"></div>
         <div class="container">
             <h2>Join Our Caring Team</h2>
@@ -1217,6 +1220,10 @@
                 } catch { btn.textContent = 'Submit'; btn.disabled = false; }
             });
         }
+
+        // Sticky header scroll state
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
 
         // Back to top
         const btt = document.querySelector('.back-to-top');

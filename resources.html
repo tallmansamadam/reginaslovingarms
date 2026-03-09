@@ -414,6 +414,10 @@
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.nav');
         if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+        // Sticky header scroll state
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+
         // Back to top
         const btt = document.querySelector('.back-to-top');
         if (btt) {
