@@ -309,6 +309,42 @@ img { max-width: 100%; height: auto; }
 .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 .footer-bottom a { color: var(--secondary); }
 
+/* ── Skip Navigation ── */
+.skip-nav { position: absolute; top: -100px; left: 16px; background: var(--primary); color: var(--white); padding: 10px 20px; font-weight: 600; font-size: 0.9rem; border-radius: 0 0 8px 8px; z-index: 9999; transition: top 0.2s; text-decoration: none; }
+.skip-nav:focus { top: 0; }
+
+/* ── Back to Top ── */
+.back-to-top { position: fixed; bottom: 86px; right: 22px; width: 46px; height: 46px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 998; box-shadow: var(--shadow-lg); }
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
+@media (max-width: 768px) { .back-to-top { bottom: 72px; right: 16px; } }
+
+/* ── Mobile Sticky Call Bar ── */
+.mobile-call-bar { display: none; }
+@media (max-width: 768px) {
+    .mobile-call-bar { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000; background: var(--primary); color: var(--white); padding: 14px 20px; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
+    .mobile-call-bar i { font-size: 1.1rem; color: var(--secondary); }
+    body { padding-bottom: 56px; }
+}
+
+/* ── FAQ ── */
+.faq { padding: 100px 0; background: var(--bg-cream); }
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid #D8E8E8; }
+.faq-question { width: 100%; background: none; border: none; padding: 24px 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--text-dark); gap: 20px; }
+.faq-question:hover { color: var(--primary); }
+.faq-question i { color: var(--primary); font-size: 1rem; flex-shrink: 0; transition: transform 0.3s ease; }
+.faq-item.open .faq-question i { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-answer p { padding: 0 0 24px; color: var(--text-light); line-height: 1.8; font-size: 0.97rem; }
+
+/* ── Form Success ── */
+.form-success { text-align: center; padding: 50px 20px; }
+.form-success i { font-size: 3rem; color: var(--primary); display: block; margin-bottom: 20px; }
+.form-success h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; }
+.form-success p { color: var(--text-light); font-size: 1.05rem; line-height: 1.8; }
+.form-success a { color: var(--primary); font-weight: 600; }
+
 /* ── Privacy Modal ── */
 dialog.privacy-modal { border: none; border-radius: 12px; padding: 0; max-width: 780px; width: calc(100% - 40px); max-height: 85vh; box-shadow: 0 24px 80px rgba(0,0,0,0.25); overflow: hidden; }
 dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: blur(2px); }

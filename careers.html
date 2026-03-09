@@ -39,6 +39,7 @@
     </style>
 </head>
 <body>
+<a class="skip-nav" href="#main-content">Skip to main content</a>
 
     <!-- Top Bar -->
     <div class="topbar">
@@ -91,7 +92,7 @@
     </header>
 
     <!-- Page Hero -->
-    <section class="page-hero">
+    <section id="main-content" class="page-hero">
         <img class="page-hero-bg" src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=1920&q=80" alt="Healthcare team">
         <div class="page-hero-overlay" style="background: linear-gradient(135deg, rgba(201,162,39,0.72) 0%, rgba(42,125,125,0.72) 100%);"></div>
         <div class="container">
@@ -404,7 +405,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.html" class="logo"><img src="resources/Logo.png" alt="Regina's Loving Arms"></a>
+                    <a href="index.html" class="logo"><img src="resources/Logo.png" alt="Regina's Loving Arms" loading="lazy"></a>
                     <p>Providing compassionate, clinically excellent home health care throughout the Chicago metropolitan area.</p>
                 </div>
                 <div class="footer-links">
@@ -442,10 +443,19 @@
         </div>
     </footer>
 
+    <a href="tel:3127735553" class="mobile-call-bar"><i class="fas fa-phone-alt"></i> Call Now — 312-773-5553</a>
+    <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
     <script>
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const mobileNav = document.querySelector('.nav');
         if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
+        // Back to top
+        const btt = document.querySelector('.back-to-top');
+        if (btt) {
+            window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+            btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
     </script>
 </body>
 </html>
