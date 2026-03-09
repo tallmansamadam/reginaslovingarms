@@ -118,7 +118,7 @@ img { max-width: 100%; height: auto; }
 .welcome-sidebar { position: relative; }
 .welcome-sidebar-image { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); }
 .welcome-sidebar-image img { width: 100%; height: auto; display: block; }
-.assessment-box { background: var(--primary); color: var(--white); padding: 30px; border-radius: 15px; text-align: center; margin-top: -50px; position: relative; z-index: 2; margin-left: 20px; margin-right: 20px; }
+.assessment-box { background: var(--primary); color: var(--white); padding: 30px; border-radius: 15px; text-align: center; margin-top: 20px; }
 .assessment-box h3 { font-size: 1.3rem; margin-bottom: 15px; }
 .assessment-box p { margin-bottom: 20px; opacity: 0.9; }
 
