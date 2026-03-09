@@ -96,19 +96,31 @@
 
         /* Stats Bar */
         .stats-bar { background: var(--primary-dark); padding: 30px 0; }
-        .stats-grid { display: grid; grid-template-columns: 1fr; gap: 20px; text-align: center; max-width: 280px; margin: 0 auto; }
+        .stats-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; text-align: center; }
         .stat-item { color: var(--white); padding: 10px; }
         .stat-number { display: block; font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; color: var(--secondary); line-height: 1; margin-bottom: 6px; }
         .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.85; }
         .stat-item i { display: block; font-size: 1.4rem; color: var(--secondary); margin-bottom: 10px; }
-        .insurance-section { background: var(--bg-light); padding: 52px 0; }
-        .insurance-section .section-header { margin-bottom: 32px; }
-        .insurance-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 16px; }
-        .insurance-badge { background: var(--white); border: 1.5px solid #D0DEDE; border-radius: 8px; padding: 10px 22px; font-size: 0.95rem; font-weight: 600; color: var(--primary-dark); letter-spacing: 0.3px; white-space: nowrap; }
-        .insurance-badge.alt { border-color: var(--primary); color: var(--primary); }
-        .insurance-note { text-align: center; margin-top: 20px; font-size: 0.95rem; color: var(--text-light); }
-        .insurance-note a { color: var(--primary); font-weight: 600; text-decoration: none; }
-        .insurance-note a:hover { text-decoration: underline; }
+        /* ── Insurance Section ── */
+        .insurance-section { background: var(--white); overflow: hidden; }
+        .insurance-layout { display: grid; grid-template-columns: 2fr 3fr; }
+        .insurance-pitch { background: var(--primary); color: var(--white); padding: 80px 56px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+        .insurance-pitch::before { content: ''; position: absolute; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,0.05); top: -100px; right: -100px; pointer-events: none; }
+        .insurance-pitch::after { content: ''; position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.04); bottom: -70px; left: -60px; pointer-events: none; }
+        .insurance-pitch .section-label { background: rgba(255,255,255,0.15); color: var(--secondary); margin-bottom: 20px; display: inline-block; position: relative; z-index: 1; }
+        .insurance-pitch h2 { font-size: 2.2rem; color: var(--white); margin-bottom: 18px; line-height: 1.25; position: relative; z-index: 1; }
+        .insurance-pitch p { color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 36px; font-size: 1rem; position: relative; z-index: 1; }
+        .insurance-pitch .btn { position: relative; z-index: 1; align-self: flex-start; }
+        .insurance-plans { background: var(--bg-light); padding: 64px 52px; display: flex; flex-direction: column; justify-content: center; }
+        .insurance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 24px; padding: 0; list-style: none; }
+        .insurance-card { background: var(--white); border-radius: 14px; padding: 22px 16px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; border: 1.5px solid #D8EDEC; transition: all 0.25s ease; }
+        .insurance-card:hover { border-color: var(--primary); box-shadow: 0 6px 24px rgba(42,125,125,0.12); transform: translateY(-3px); }
+        .insurance-card i { font-size: 1.5rem; color: var(--primary); }
+        .insurance-card span { font-weight: 600; font-size: 0.875rem; color: var(--text-dark); line-height: 1.3; }
+        .insurance-also { border-top: 1px solid #D8EDEC; padding-top: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .insurance-also-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); white-space: nowrap; flex-shrink: 0; }
+        .insurance-also-item { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.875rem; color: var(--primary-dark); background: var(--white); border: 1.5px solid #D8EDEC; border-radius: 50px; padding: 7px 18px; }
+        .insurance-also-item i { color: var(--secondary); font-size: 0.85rem; }
 
         /* Services Preview */
         .services-preview { padding: 80px 0; background: var(--white); }
@@ -135,8 +147,8 @@
         .assessment-box p { margin-bottom: 20px; opacity: 0.9; }
 
         /* Mission */
-        .mission { position: relative; padding: 100px 0; overflow: hidden; }
-        .mission-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+        .mission { position: relative; padding: 100px 0; overflow: hidden; min-height: 520px; }
+        .mission-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 30%; z-index: 0; }
         .mission-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(42,125,125,0.72) 0%, rgba(31,95,95,0.75) 100%); z-index: 1; }
         .mission-content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; text-align: center; }
         .mission-content .section-label { background: rgba(255,255,255,0.15); color: var(--white); }
@@ -184,7 +196,7 @@
         .service-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
         .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
         .service-image { height: 240px; overflow: hidden; position: relative; background: var(--bg-light); }
-        .service-image img { width: 100%; height: 100%; object-fit: contain; object-position: center; transition: var(--transition); }
+        .service-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; transition: var(--transition); }
         .service-card:hover .service-image img { transform: scale(1.05); }
         .service-icon { position: absolute; bottom: 15px; right: 20px; width: 56px; height: 56px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.4rem; box-shadow: var(--shadow); }
         .service-content { padding: 40px 30px 30px; }
@@ -262,7 +274,7 @@
 
         /* Careers CTA */
         .careers-cta { position: relative; padding: 120px 0; overflow: hidden; }
-        .careers-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: 0; }
+        .careers-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; z-index: 0; }
         .careers-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(201,162,39,0.68) 0%, rgba(42,125,125,0.68) 100%); z-index: 1; }
         .careers-cta .container { position: relative; z-index: 2; text-align: center; color: var(--white); }
         .careers-cta h2 { font-size: 2.8rem; margin-bottom: 20px; }
@@ -300,8 +312,11 @@
             .welcome-grid { grid-template-columns: 1fr; }
             .welcome-sidebar { max-width: 400px; margin: 0 auto; }
             .values-grid, .services-grid, .approach-grid { grid-template-columns: repeat(2, 1fr); }
+            .insurance-layout { grid-template-columns: 1fr; }
+            .insurance-pitch { padding: 56px 40px; }
+            .insurance-pitch::before, .insurance-pitch::after { display: none; }
+            .insurance-plans { padding: 48px 40px; }
             .about-grid { grid-template-columns: 1fr; gap: 50px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .serve-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -347,8 +362,10 @@
             .services-grid, .values-grid, .resources-grid, .approach-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .serve-grid { grid-template-columns: 1fr; }
+            .insurance-pitch { padding: 48px 24px; }
+            .insurance-plans { padding: 40px 24px; }
+            .insurance-grid { grid-template-columns: repeat(2, 1fr); }
             .welcome-content { text-align: center; }
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
             .footer-about .logo img { height: 175px; }
@@ -546,7 +563,7 @@
                     <a href="services.html" class="btn btn-outline">Our Services</a>
                 </div>
                 <a href="tel:3127735553" class="hero-mobile-call">
-                    <i class="fas fa-phone-alt"></i> Tap to Call Now — 312-773-5553
+                    <i class="fas fa-phone-alt"></i> Tap to Call Now<span style="display:block;">312-773-5553</span>
                 </a>
             </div>
         </div>
@@ -566,22 +583,43 @@
     </section>
 
     <!-- Insurance & Payment -->
-    <section class="insurance-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Payment & Coverage</span>
-                <h2>Insurance We Accept</h2>
+    <section class="insurance-section" aria-labelledby="insurance-heading">
+        <div class="insurance-layout">
+            <div class="insurance-pitch">
+                <span class="section-label">Coverage &amp; Payment</span>
+                <h2 id="insurance-heading">We Work With<br>Your Insurance</h2>
+                <p>Most major plans are welcome. If you don't see yours listed, reach out — we verify your coverage personally at no cost to you.</p>
+                <a href="contact.html" class="btn btn-secondary">Verify My Coverage Free <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="insurance-badges">
-                <span class="insurance-badge">Molina Healthcare</span>
-                <span class="insurance-badge">Humana</span>
-                <span class="insurance-badge">BCBS Illinois</span>
-                <span class="insurance-badge">Aetna</span>
-                <span class="insurance-badge">Meridian Health Plan</span>
-                <span class="insurance-badge alt">Long-Term Care Insurance</span>
-                <span class="insurance-badge alt">Private Pay</span>
+            <div class="insurance-plans">
+                <ul class="insurance-grid" aria-label="Accepted insurance plans">
+                    <li class="insurance-card">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>Molina Healthcare</span>
+                    </li>
+                    <li class="insurance-card">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>Humana</span>
+                    </li>
+                    <li class="insurance-card">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>BCBS Illinois</span>
+                    </li>
+                    <li class="insurance-card">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>Aetna</span>
+                    </li>
+                    <li class="insurance-card">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>Meridian Health Plan</span>
+                    </li>
+                </ul>
+                <div class="insurance-also">
+                    <span class="insurance-also-label">Also accepted</span>
+                    <span class="insurance-also-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Long-Term Care Insurance</span>
+                    <span class="insurance-also-item"><i class="fas fa-check-circle" aria-hidden="true"></i> Private Pay</span>
+                </div>
             </div>
-            <p class="insurance-note">Don't see your insurance listed? <a href="contact.html">Contact us</a> — we're happy to verify your coverage and explore your options.</p>
         </div>
     </section>
 
@@ -643,7 +681,7 @@
 
     <!-- Mission Section with background image -->
     <section class="mission">
-        <img loading="lazy" class="mission-bg" src="https://images.pexels.com/photos/8949908/pexels-photo-8949908.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
+        <img loading="lazy" class="mission-bg" src="https://images.pexels.com/photos/18429308/pexels-photo-18429308.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
         <div class="mission-overlay"></div>
         <div class="container">
             <div class="mission-content">
@@ -666,7 +704,7 @@
             <div class="approach-grid">
                 <div class="approach-card">
                     <div class="approach-image">
-                        <img loading="lazy" src="https://images.pexels.com/photos/18429373/pexels-photo-18429373.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Caregiver providing customized one-on-one home care">
+                        <img loading="lazy" src="https://images.pexels.com/photos/7551618/pexels-photo-7551618.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Caregiver sitting with elderly client, reading together at home">
                         <div class="approach-image-overlay"></div>
                         <div class="approach-number">1</div>
                     </div>
@@ -690,7 +728,7 @@
                 </div>
                 <div class="approach-card">
                     <div class="approach-image">
-                        <img loading="lazy" src="https://images.pexels.com/photos/6129686/pexels-photo-6129686.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Transparent and communicative home health care team in Chicago">
+                        <img loading="lazy" src="https://images.pexels.com/photos/7551668/pexels-photo-7551668.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Caregiver reviewing care plan with elderly client at home" style="object-position: 60% 20%;">
                         <div class="approach-image-overlay"></div>
                         <div class="approach-number">3</div>
                     </div>
@@ -715,7 +753,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-image">
-                        <img loading="lazy" src="https://images.pexels.com/photos/6129678/pexels-photo-6129678.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional caregiver services for seniors and adults in Chicago">
+                        <img loading="lazy" src="https://images.pexels.com/photos/7551616/pexels-photo-7551616.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Two caregivers attentively helping elderly client at home" style="object-position: center 20%;">
                         <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
                     </div>
                     <div class="service-content">
@@ -726,7 +764,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?w=600&q=80" alt="Illinois Department on Aging senior home care program">
+                        <img loading="lazy" src="https://images.pexels.com/photos/7728089/pexels-photo-7728089.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Senior couple active and independent at home, gardening together" style="object-position: 35% 35%;">
                         <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
                     </div>
                     <div class="service-content">
@@ -1016,7 +1054,7 @@
 
     <!-- Careers CTA with background image -->
     <section id="careers" class="careers-cta">
-        <img loading="lazy" class="careers-bg" src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="">
+        <img loading="lazy" class="careers-bg" src="https://acareconnection.com/wp-content/uploads/2022/12/elder-care-at-home-scaled.jpeg" alt="">
         <div class="careers-overlay"></div>
         <div class="container">
             <h2>Join Our Caring Team</h2>
