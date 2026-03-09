@@ -309,10 +309,6 @@ img { max-width: 100%; height: auto; }
 .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 .footer-bottom a { color: var(--secondary); }
 
-/* ── Skip Navigation ── */
-.skip-nav { position: absolute; top: -100px; left: 16px; background: var(--primary); color: var(--white); padding: 10px 20px; font-weight: 600; font-size: 0.9rem; border-radius: 0 0 8px 8px; z-index: 9999; transition: top 0.2s; text-decoration: none; }
-.skip-nav:focus { top: 0; }
-
 /* ── Back to Top ── */
 .back-to-top { position: fixed; bottom: 86px; right: 22px; width: 46px; height: 46px; background: var(--primary); color: var(--white); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 998; box-shadow: var(--shadow-lg); }
 .back-to-top.visible { opacity: 1; visibility: visible; }
