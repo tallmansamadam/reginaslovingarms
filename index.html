@@ -93,19 +93,19 @@
         .insurance-section { background: var(--bg-light); padding: 52px 0; }
         .insurance-section .section-header { margin-bottom: 32px; }
         .insurance-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 16px; }
-        .insurance-badge { background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 22px; font-size: 0.95rem; font-weight: 600; color: var(--primary-dark); letter-spacing: 0.3px; white-space: nowrap; }
+        .insurance-badge { background: var(--white); border: 1.5px solid #D0DEDE; border-radius: 8px; padding: 10px 22px; font-size: 0.95rem; font-weight: 600; color: var(--primary-dark); letter-spacing: 0.3px; white-space: nowrap; }
         .insurance-badge.alt { border-color: var(--primary); color: var(--primary); }
-        .insurance-note { text-align: center; margin-top: 20px; font-size: 0.95rem; color: var(--text-muted); }
+        .insurance-note { text-align: center; margin-top: 20px; font-size: 0.95rem; color: var(--text-light); }
         .insurance-note a { color: var(--primary); font-weight: 600; text-decoration: none; }
         .insurance-note a:hover { text-decoration: underline; }
 
         /* Services Preview */
-        .services-preview { padding: 80px 0; background: var(--bg-light); }
+        .services-preview { padding: 80px 0; background: var(--white); }
         .services-preview-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 760px; margin: 0 auto; }
         .service-preview-card { position: relative; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
         .service-preview-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
-        .service-preview-image { overflow: hidden; }
-        .service-preview-image img { width: 100%; height: auto; display: block; transition: var(--transition); }
+        .service-preview-image { overflow: hidden; aspect-ratio: 4/3; }
+        .service-preview-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: var(--transition); }
         .service-preview-card:hover .service-preview-image img { transform: scale(1.1); }
         .service-preview-content { padding: 20px; text-align: center; }
         .service-preview-content h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; }
@@ -139,8 +139,8 @@
         .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
         .approach-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
         .approach-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
-        .approach-image { overflow: hidden; position: relative; }
-        .approach-image img { width: 100%; height: auto; display: block; transition: var(--transition); }
+        .approach-image { overflow: hidden; position: relative; aspect-ratio: 4/3; }
+        .approach-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: var(--transition); }
         .approach-card:hover .approach-image img { transform: scale(1.08); }
         .approach-image-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 50%, rgba(31,95,95,0.7) 100%); }
         .approach-number { position: absolute; top: 20px; right: 20px; width: 50px; height: 50px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); }
@@ -158,8 +158,8 @@
         .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
         .value-card { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
         .value-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
-        .value-card-image { overflow: hidden; }
-        .value-card-image img { width: 100%; height: auto; display: block; transition: var(--transition); }
+        .value-card-image { overflow: hidden; aspect-ratio: 4/3; }
+        .value-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: var(--transition); }
         .value-card:hover .value-card-image img { transform: scale(1.08); }
         .value-card-content { padding: 30px; text-align: center; }
         .value-card-content h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 12px; }
@@ -201,8 +201,8 @@
         .serve-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; max-width: 760px; margin: 0 auto; }
         .serve-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); text-align: center; }
         .serve-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
-        .serve-image { overflow: hidden; }
-        .serve-image img { width: 100%; height: auto; display: block; transition: var(--transition); }
+        .serve-image { overflow: hidden; aspect-ratio: 4/3; }
+        .serve-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: var(--transition); }
         .serve-card:hover .serve-image img { transform: scale(1.08); }
         .serve-content { padding: 25px 20px; }
         .serve-content i { font-size: 2rem; color: var(--primary); margin-bottom: 12px; display: block; }
@@ -759,7 +759,7 @@
             <div class="serve-grid">
                 <div class="serve-card">
                     <div class="serve-image">
-                        <img src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=500&q=80" alt="Seniors">
+                        <img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=500&q=80" alt="Smiling elderly couple">
                     </div>
                     <div class="serve-content">
                         <i class="fas fa-user-friends"></i>
