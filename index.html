@@ -85,11 +85,19 @@
 
         /* Stats Bar */
         .stats-bar { background: var(--primary-dark); padding: 30px 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: 1fr; gap: 20px; text-align: center; max-width: 280px; margin: 0 auto; }
         .stat-item { color: var(--white); padding: 10px; }
         .stat-number { display: block; font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; color: var(--secondary); line-height: 1; margin-bottom: 6px; }
         .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.85; }
         .stat-item i { display: block; font-size: 1.4rem; color: var(--secondary); margin-bottom: 10px; }
+        .insurance-section { background: var(--bg-light); padding: 52px 0; }
+        .insurance-section .section-header { margin-bottom: 32px; }
+        .insurance-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 16px; }
+        .insurance-badge { background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 22px; font-size: 0.95rem; font-weight: 600; color: var(--primary-dark); letter-spacing: 0.3px; white-space: nowrap; }
+        .insurance-badge.alt { border-color: var(--primary); color: var(--primary); }
+        .insurance-note { text-align: center; margin-top: 20px; font-size: 0.95rem; color: var(--text-muted); }
+        .insurance-note a { color: var(--primary); font-weight: 600; text-decoration: none; }
+        .insurance-note a:hover { text-decoration: underline; }
 
         /* Services Preview */
         .services-preview { padding: 80px 0; background: var(--bg-light); }
@@ -97,7 +105,7 @@
         .service-preview-card { position: relative; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
         .service-preview-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
         .service-preview-image { height: 200px; overflow: hidden; }
-        .service-preview-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .service-preview-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
         .service-preview-card:hover .service-preview-image img { transform: scale(1.1); }
         .service-preview-content { padding: 20px; text-align: center; }
         .service-preview-content h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; }
@@ -132,7 +140,7 @@
         .approach-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
         .approach-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
         .approach-image { height: 280px; overflow: hidden; position: relative; }
-        .approach-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .approach-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
         .approach-card:hover .approach-image img { transform: scale(1.08); }
         .approach-image-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 50%, rgba(31,95,95,0.7) 100%); }
         .approach-number { position: absolute; top: 20px; right: 20px; width: 50px; height: 50px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); }
@@ -151,7 +159,7 @@
         .value-card { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
         .value-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
         .value-card-image { height: 250px; overflow: hidden; }
-        .value-card-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .value-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
         .value-card:hover .value-card-image img { transform: scale(1.08); }
         .value-card-content { padding: 30px; text-align: center; }
         .value-card-content h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 12px; }
@@ -194,7 +202,7 @@
         .serve-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); text-align: center; }
         .serve-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
         .serve-image { height: 200px; overflow: hidden; }
-        .serve-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .serve-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
         .serve-card:hover .serve-image img { transform: scale(1.08); }
         .serve-content { padding: 25px 20px; }
         .serve-content i { font-size: 2rem; color: var(--primary); margin-bottom: 12px; display: block; }
@@ -499,16 +507,31 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Clients Served</span>
-                </div>
-                <div class="stat-item">
                     <i class="fas fa-clock"></i>
                     <span class="stat-number">24/7</span>
                     <span class="stat-label">Care Available</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Insurance & Payment -->
+    <section class="insurance-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Payment & Coverage</span>
+                <h2>Insurance We Accept</h2>
+            </div>
+            <div class="insurance-badges">
+                <span class="insurance-badge">Molina Healthcare</span>
+                <span class="insurance-badge">Humana</span>
+                <span class="insurance-badge">BCBS Illinois</span>
+                <span class="insurance-badge">Aetna</span>
+                <span class="insurance-badge">Meridian Health Plan</span>
+                <span class="insurance-badge alt">Long-Term Care Insurance</span>
+                <span class="insurance-badge alt">Private Pay</span>
+            </div>
+            <p class="insurance-note">Don't see your insurance listed? <a href="contact.html">Contact us</a> — we're happy to verify your coverage and explore your options.</p>
         </div>
     </section>
 

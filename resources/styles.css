@@ -104,7 +104,7 @@ img { max-width: 100%; height: auto; }
 .service-preview-card { position: relative; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
 .service-preview-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
 .service-preview-image { height: 200px; overflow: hidden; }
-.service-preview-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+.service-preview-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
 .service-preview-card:hover .service-preview-image img { transform: scale(1.1); }
 .service-preview-content { padding: 20px; text-align: center; }
 .service-preview-content h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; }
@@ -139,7 +139,7 @@ img { max-width: 100%; height: auto; }
 .approach-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
 .approach-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
 .approach-image { height: 280px; overflow: hidden; position: relative; }
-.approach-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+.approach-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
 .approach-card:hover .approach-image img { transform: scale(1.08); }
 .approach-image-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 50%, rgba(31,95,95,0.7) 100%); }
 .approach-number { position: absolute; top: 20px; right: 20px; width: 50px; height: 50px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); }
@@ -158,7 +158,7 @@ img { max-width: 100%; height: auto; }
 .value-card { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); background: var(--white); }
 .value-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
 .value-card-image { height: 250px; overflow: hidden; }
-.value-card-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+.value-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
 .value-card:hover .value-card-image img { transform: scale(1.08); }
 .value-card-content { padding: 30px; text-align: center; }
 .value-card-content h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 12px; }
@@ -204,7 +204,7 @@ img { max-width: 100%; height: auto; }
 .serve-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); text-align: center; }
 .serve-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
 .serve-image { height: 200px; overflow: hidden; }
-.serve-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+.serve-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: var(--transition); }
 .serve-card:hover .serve-image img { transform: scale(1.08); }
 .serve-content { padding: 25px 20px; }
 .serve-content i { font-size: 2rem; color: var(--primary); margin-bottom: 12px; display: block; }
