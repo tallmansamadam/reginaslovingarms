@@ -14,7 +14,12 @@
       "Bash(for f in index.html about.html services.html careers.html contact.html resources.html)",
       "Bash(do:*)",
       "Bash(for f in services.html careers.html contact.html resources.html)",
-      "Bash(for f in about.html services.html careers.html contact.html resources.html)"
+      "Bash(for f in about.html services.html careers.html contact.html resources.html)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:www.mynextmove.org)",
+      "WebFetch(domain:www.flickr.com)",
+      "WebFetch(domain:positek.net)"
     ]
   }
 }
