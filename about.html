@@ -31,18 +31,8 @@
         .value-icon { width: 75px; height: 75px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 2rem; margin: 0 auto 22px; }
         .value-icon-card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 12px; }
         .value-icon-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
-        .timeline { padding: 100px 0; background: var(--white); }
-        .timeline-inner { max-width: 800px; margin: 0 auto; }
-        .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 30px; margin-bottom: 50px; align-items: start; }
-        .timeline-year { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--secondary); text-align: right; padding-top: 5px; }
-        .timeline-body { border-left: 3px solid var(--accent); padding-left: 30px; position: relative; }
-        .timeline-body::before { content: ''; position: absolute; left: -9px; top: 8px; width: 16px; height: 16px; background: var(--primary); border-radius: 50%; border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--primary); }
-        .timeline-body h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 10px; }
-        .timeline-body p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
         @media (max-width: 768px) {
             .values-icon-grid { grid-template-columns: 1fr; padding: 60px 0; }
-            .timeline-item { grid-template-columns: 1fr; gap: 10px; }
-            .timeline-year { text-align: left; font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -138,8 +128,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Timeline -->
 
     <!-- Core Values -->
     <section style="background: var(--bg-light); padding: 100px 0;">
