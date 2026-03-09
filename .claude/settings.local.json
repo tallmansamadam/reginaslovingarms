@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:source.unsplash.com)",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:images.pexels.com)",
+      "Bash(for f in index.html about.html services.html careers.html contact.html resources.html privacy.html 404.html)",
+      "Bash(do echo \"=== $f ===\")",
+      "Read(//c/Users/frank/Documents/reginaslovingarms/**)",
+      "Bash(done)",
+      "Bash(for f in index.html about.html services.html careers.html contact.html resources.html)",
+      "Bash(do:*)"
+    ]
+  }
+}
