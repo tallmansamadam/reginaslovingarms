@@ -41,6 +41,10 @@ img { max-width: 100%; height: auto; }
 .section-header p { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
 .section-label { display: inline-block; background: var(--accent); color: var(--primary); padding: 8px 20px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
 
+/* ── Sticky top wrapper ── */
+.site-top { position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); transition: box-shadow 0.3s ease; }
+.site-top.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.13); }
+
 /* ── Top Bar ── */
 .topbar { background: var(--primary); color: var(--white); padding: 14px 0; font-size: 0.95rem; }
 .topbar-content { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; }
@@ -50,8 +54,7 @@ img { max-width: 100%; height: auto; }
 .topbar-item a:hover { color: var(--secondary); }
 
 /* ── Header ── */
-.header { background: var(--white); padding: 8px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); overflow: visible; transition: box-shadow 0.3s ease; }
-.header.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.13); }
+.header { background: var(--white); padding: 8px 0; overflow: visible; }
 .header-content { display: flex; align-items: center; gap: 30px; }
 .logo-wrapper { width: 400px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start; }
 .logo { display: flex; align-items: center; }
@@ -65,7 +68,7 @@ img { max-width: 100%; height: auto; }
 .header-phone { display: flex; align-items: center; gap: 10px; color: var(--primary); font-weight: 700; font-size: 1.1rem; }
 .header-phone i { font-size: 1.3rem; }
 .header .btn-primary { padding: 12px 28px; font-size: 0.85rem; }
-.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.8rem; color: var(--primary); cursor: pointer; padding: 5px; }
+.mobile-menu-btn { display: none; background: var(--primary); border: none; color: var(--white); cursor: pointer; width: 46px; height: 46px; border-radius: 10px; font-size: 1.4rem; display: none; align-items: center; justify-content: center; flex-shrink: 0; }
 
 /* ── Hero (Home) ── */
 .hero { position: relative; min-height: 620px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -403,7 +406,7 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     }
     .nav.nav--open a { padding: 13px 24px; border-bottom: 1px solid #eef4f4; font-size: 1rem; white-space: normal; }
     .nav.nav--open a:last-child { border-bottom: none; }
-    .mobile-menu-btn { display: block; }
+    .mobile-menu-btn { display: flex !important; }
     .header-cta .btn-primary { display: none; }
     .topbar-left .topbar-item:first-child { align-items: flex-start; }
     .topbar-left .topbar-item:first-child i { margin-top: 3px; }

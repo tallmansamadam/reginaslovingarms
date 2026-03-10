@@ -21,7 +21,10 @@
       "WebFetch(domain:www.flickr.com)",
       "WebFetch(domain:positek.net)",
       "Bash(grep:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(magick --version 2>/dev/null || convert --version 2>/dev/null || echo \"ImageMagick not found\")",
+      "Bash(python -c \"from PIL import Image; print\\('Pillow ok'\\)\" 2>/dev/null || python -m pip install Pillow -q)",
+      "Bash(python -c \"\nimport sys\nsys.stdout.reconfigure\\(encoding='utf-8'\\)\nwith open\\('resources/styles.css', 'r', encoding='utf-8'\\) as f:\n    lines = f.readlines\\(\\)\nfor i, l in enumerate\\(lines[43:60], start=44\\):\n    print\\(i, l.rstrip\\(\\)\\)\n\")"
     ]
   }
 }
