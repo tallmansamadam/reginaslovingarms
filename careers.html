@@ -47,9 +47,12 @@
             .process-step::after { display: none; }
         }
         @media (max-width: 768px) {
-            .culture-pull { padding: 35px; }
-            .culture-stats { grid-template-columns: 1fr 1fr; }
+            .culture-pull { padding: 24px; }
+            .culture-stats { grid-template-columns: 1fr 1fr; gap: 12px; }
             .process-steps { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .culture-stats { grid-template-columns: 1fr; }
         }
         .logo-wrapper { width: 400px; }
         .logo img { max-height: 400px; }
