@@ -34,11 +34,11 @@
         @media (max-width: 768px) {
             .values-icon-grid { grid-template-columns: 1fr; padding: 60px 0; }
         }
-        .logo-wrapper { width: 400px; }
-        .logo img { max-height: 400px; }
-        @media (max-width: 1280px) { .logo img { height: 340px; } }
-        @media (max-width: 1024px) { .logo img { height: 280px; } }
-        @media (max-width: 768px) { .logo img { height: 180px; } }
+        .logo-wrapper { width: 400px !important; flex-shrink: 0; }
+        .logo img { max-height: 400px !important; height: auto !important; }
+        @media (max-width: 1280px) { .logo img { height: 340px !important; max-height: 340px !important; } }
+        @media (max-width: 1024px) { .logo img { height: 280px !important; max-height: 280px !important; } }
+        @media (max-width: 768px) { .logo img { height: 180px !important; max-height: 180px !important; } }
     </style>
 </head>
 <body>
