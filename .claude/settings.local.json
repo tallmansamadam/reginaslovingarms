@@ -19,7 +19,9 @@
       "Bash(ls:*)",
       "WebFetch(domain:www.mynextmove.org)",
       "WebFetch(domain:www.flickr.com)",
-      "WebFetch(domain:positek.net)"
+      "WebFetch(domain:positek.net)",
+      "Bash(grep:*)",
+      "Bash(git:*)"
     ]
   }
 }

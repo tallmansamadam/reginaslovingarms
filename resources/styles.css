@@ -68,16 +68,16 @@ img { max-width: 100%; height: auto; }
 .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.8rem; color: var(--primary); cursor: pointer; padding: 5px; }
 
 /* ── Hero (Home) ── */
-.hero { position: relative; min-height: 620px; display: flex; align-items: center; overflow: hidden; }
+.hero { position: relative; min-height: 620px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .hero-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; }
 .hero-slide.active { opacity: 1; }
 .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
 .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(42,125,125,0.7) 0%, rgba(31,95,95,0.65) 100%); }
-.hero-content { position: relative; z-index: 2; max-width: 700px; color: var(--white); padding: 80px 0; }
+.hero-content { position: relative; z-index: 2; max-width: 700px; color: var(--white); padding: 80px 0; text-align: center; margin: 0 auto; }
 .hero-content h1 { font-size: 3.4rem; margin-bottom: 25px; line-height: 1.2; }
 .hero-content p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.95; line-height: 1.8; }
-.hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+.hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 .hero-mobile-call { display: none; align-items: center; gap: 12px; margin-top: 24px; color: var(--white); font-weight: 700; font-size: 1.1rem; text-decoration: none; background: rgba(255,255,255,0.12); border: 2px solid rgba(255,255,255,0.5); border-radius: 50px; padding: 13px 30px; transition: background 0.2s; }
 .hero-mobile-call:hover { background: rgba(255,255,255,0.22); }
 .hero-mobile-call i { color: var(--secondary); font-size: 1.2rem; }
