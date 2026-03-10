@@ -56,6 +56,7 @@
 </head>
 <body>
 
+    <div class="site-top">
     <!-- Top Bar -->
     <div class="topbar">
         <div class="container">
@@ -105,6 +106,7 @@
             </div>
         </div>
     </header>
+    </div><!-- /.site-top -->
 
     <!-- Page Hero -->
     <section id="main-content" class="page-hero">
@@ -466,7 +468,7 @@
         const mobileNav = document.querySelector('.nav');
         if (menuBtn) menuBtn.addEventListener('click', () => mobileNav.classList.toggle('nav--open'));
         // Sticky header scroll state
-        const header = document.querySelector('.header');
+        const header = document.querySelector('.site-top');
         window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
 
         // Back to top

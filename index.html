@@ -66,7 +66,7 @@
         .topbar-item a:hover { color: var(--secondary); }
 
         /* Header */
-        .header { background: var(--white); padding: 8px 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); overflow: visible; }
+        .header { background: var(--white); padding: 8px 0; overflow: visible; }
         .header-content { display: flex; align-items: center; gap: 30px; }
         .logo-wrapper { width: 400px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start; }
         .logo { display: flex; align-items: center; }
@@ -80,7 +80,7 @@
         .header-phone { display: flex; align-items: center; gap: 10px; color: var(--primary); font-weight: 700; font-size: 1.1rem; }
         .header-phone i { font-size: 1.3rem; }
         .header .btn-primary { padding: 12px 28px; font-size: 0.85rem; }
-        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.8rem; color: var(--primary); cursor: pointer; padding: 5px; }
+        .mobile-menu-btn { display: none; background: var(--primary); border: none; color: var(--white); cursor: pointer; width: 46px; height: 46px; border-radius: 10px; font-size: 1.4rem; align-items: center; justify-content: center; flex-shrink: 0; }
 
         /* Hero */
         .hero { position: relative; min-height: 620px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -351,7 +351,7 @@
                 white-space: normal;
             }
             .nav.nav--open a:last-child { border-bottom: none; }
-            .mobile-menu-btn { display: block; }
+            .mobile-menu-btn { display: flex !important; }
             .header-cta .btn-primary { display: none; }
             .topbar-left .topbar-item:first-child { align-items: flex-start; }
             .topbar-left .topbar-item:first-child i { margin-top: 3px; }
@@ -491,6 +491,7 @@
 </head>
 <body>
 
+    <div class="site-top">
     <!-- Top Bar -->
     <div class="topbar">
         <div class="container">
@@ -540,6 +541,7 @@
             </div>
         </div>
     </header>
+    </div><!-- /.site-top -->
 
     <!-- Hero Section -->
     <section id="main-content" class="hero">
@@ -1226,7 +1228,7 @@
         });
 
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
+            const header = document.querySelector('.site-top');
             header.style.boxShadow = window.pageYOffset > 100
                 ? '0 4px 30px rgba(42,125,125,0.15)'
                 : '0 4px 20px rgba(42,125,125,0.1)';
@@ -1266,7 +1268,7 @@
         }
 
         // Sticky header scroll state
-        const header = document.querySelector('.header');
+        const header = document.querySelector('.site-top');
         window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
 
         // Back to top
