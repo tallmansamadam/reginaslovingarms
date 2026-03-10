@@ -55,8 +55,8 @@ img { max-width: 100%; height: auto; }
 
 /* ── Header ── */
 .header { background: var(--white); padding: 8px 0; overflow: visible; }
-.header-content { display: flex; align-items: center; gap: 30px; }
-.logo-wrapper { width: 400px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start; }
+.header-content { display: flex; align-items: center; gap: 24px; }
+.logo-wrapper { flex: 0 1 auto; max-width: 400px; min-width: 0; display: flex; align-items: center; justify-content: flex-start; }
 .logo { display: flex; align-items: center; }
 .logo img { max-width: 100%; max-height: 400px; width: auto; height: auto; object-fit: contain; }
 .nav { display: flex; gap: 32px; align-items: center; }
@@ -373,6 +373,16 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .nav { gap: 18px; }
     .nav a { font-size: 0.85rem; }
     .header-phone { display: none; }
+    .logo-wrapper { max-width: 260px; }
+    .header-content { gap: 16px; }
+}
+@media (max-width: 900px) {
+    .logo img { height: 200px; }
+    .nav { gap: 12px; }
+    .nav a { font-size: 0.8rem; }
+    .logo-wrapper { max-width: 200px; }
+    .header-content { gap: 12px; }
+    .header .btn-primary { padding: 9px 16px; font-size: 0.78rem; }
     .hero-content h1 { font-size: 2.8rem; }
     .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
     .welcome-grid { grid-template-columns: 1fr; }
@@ -393,9 +403,9 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .topbar-item { font-size: 0.8rem; }
     .addr-city { display: block; }
     .header { padding: 5px 0; }
-    .header-content { display: flex; justify-content: space-between; }
-    .logo-wrapper { flex: 0 0 auto; justify-content: center; width: 100%; }
-    .logo { overflow: hidden; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo-wrapper { flex: 1 1 auto; justify-content: center; min-width: 0; }
+    .logo { overflow: hidden; display: flex; justify-content: center; }
     .logo img { width: 100%; height: auto; margin: -22% 0; }
     .nav { display: none; }
     .nav.nav--open {
