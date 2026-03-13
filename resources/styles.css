@@ -58,7 +58,7 @@ img { max-width: 100%; height: auto; }
 .header-content { display: flex; align-items: center; gap: 30px; justify-content: center; }
 .logo-wrapper { width: 400px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .logo { display: flex; align-items: center; overflow: hidden; }
-.logo img { max-height: 400px; width: auto; height: auto; object-fit: contain; margin: -15% -12%; }
+.logo img { max-height: 400px; width: auto; height: auto; object-fit: contain; margin: -15% 0; }
 .nav { display: flex; gap: 32px; align-items: center; }
 .nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); position: relative; padding: 8px 0; white-space: nowrap; letter-spacing: 0.3px; }
 .nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--primary); transition: var(--transition); border-radius: 2px; }
