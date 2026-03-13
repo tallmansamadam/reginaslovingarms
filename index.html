@@ -68,9 +68,9 @@
         /* Header */
         .header { background: var(--white); padding: 8px 0; overflow: visible; }
         .header-content { display: flex; align-items: center; gap: 30px; justify-content: center; }
-        .logo-wrapper { width: 400px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start; }
+        .logo-wrapper { width: 400px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; }
         .logo { display: flex; align-items: center; }
-        .logo img { max-width: 100%; max-height: 80px; width: auto; height: auto; object-fit: contain; }
+        .logo img { max-height: 400px; width: auto; height: auto; object-fit: contain; margin: 0 -12%; }
         .nav { display: flex; gap: 32px; align-items: center; }
         .nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); position: relative; padding: 8px 0; white-space: nowrap; letter-spacing: 0.3px; }
         .nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background: var(--primary); transition: var(--transition); border-radius: 2px; }
@@ -299,12 +299,12 @@
         @media (max-width: 1280px) {
             .nav { gap: 22px; }
             .nav a { font-size: 0.9rem; }
-            .logo img { height: 70px; }
+            .logo img { height: 340px; }
             .header-phone { font-size: 1rem; }
             .header .btn-primary { padding: 10px 20px; font-size: 0.8rem; }
         }
         @media (max-width: 1024px) {
-            .logo img { height: 60px; }
+            .logo img { height: 280px; }
             .nav { gap: 18px; }
             .nav a { font-size: 0.85rem; }
             .header-phone { display: none; }
