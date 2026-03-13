@@ -376,7 +376,6 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .header-content { gap: 16px; }
 }
 @media (max-width: 900px) {
-    .logo img { height: 135px; }
     .nav { gap: 12px; }
     .nav a { font-size: 0.8rem; }
     .header-content { gap: 12px; }
