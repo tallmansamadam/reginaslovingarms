@@ -28,42 +28,40 @@
     </linearGradient>
   </defs>
 
-  <!-- LEFT HAND (scaled from original logo) -->
-  <path d="M 6,95
-           C 3,83  1,70  4,57
-           C 6,45  11,35  19,28
-           C 22,25  25,24  28,26
-           C 31,28  32,33  30,39
-           C 28,45  26,51  24,58
-           C 21,68  15,77  12,86
+  <!-- LEFT HAND (opening outward/left from baseline at bottom) -->
+  <path d="M 15,80
+           C 8,72  2,58  1,42
+           C 0,35  3,28  8,26
+           C 12,24  16,26  18,32
+           C 21,42  24,54  28,65
+           C 30,72  25,80  15,80
            Z"
         fill="url(#gldL)"/>
 
-  <!-- RIGHT HAND (scaled from original logo) -->
-  <path d="M 94,95
-           C 97,83  99,70  96,57
-           C 94,45  89,35  81,28
-           C 78,25  75,24  72,26
-           C 69,28  68,33  70,39
-           C 72,45  74,51  76,58
-           C 79,68  85,77  88,86
+  <!-- RIGHT HAND (opening outward/right from baseline at bottom) -->
+  <path d="M 85,80
+           C 92,72  98,58  99,42
+           C 100,35  97,28  92,26
+           C 88,24  84,26  82,32
+           C 79,42  76,54  72,65
+           C 70,72  75,80  85,80
            Z"
         fill="url(#gldR)"/>
 
   <!-- HOUSE ROOF (left) -->
-  <line x1="32"  y1="48" x2="50" y2="25" stroke="url(#tealG)" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="35"  y1="48" x2="50" y2="25" stroke="url(#tealG)" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- HOUSE ROOF (right) -->
-  <line x1="68" y1="48" x2="50" y2="25" stroke="url(#tealG)" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="65" y1="48" x2="50" y2="25" stroke="url(#tealG)" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- HOUSE WALLS (left) -->
-  <line x1="33" y1="49" x2="33" y2="68" stroke="url(#tealG)" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="36" y1="49" x2="36" y2="68" stroke="url(#tealG)" stroke-width="2.8" stroke-linecap="round"/>
 
   <!-- HOUSE WALLS (right) -->
-  <line x1="67" y1="49" x2="67" y2="68" stroke="url(#tealG)" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="64" y1="49" x2="64" y2="68" stroke="url(#tealG)" stroke-width="2.8" stroke-linecap="round"/>
 
   <!-- HOUSE BASE -->
-  <line x1="33" y1="68" x2="67" y2="68" stroke="url(#tealG)" stroke-width="2.8" stroke-linecap="round"/>
+  <line x1="36" y1="68" x2="64" y2="68" stroke="url(#tealG)" stroke-width="2.8" stroke-linecap="round"/>
 
   <!-- HEART -->
   <path d="M 50,63
