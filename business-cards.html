@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regina's Loving Arms — Business Cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="resources/favicon.svg">
+<style>
+  :root {
+    --primary: #1a3a5c;
+    --primary-dark: #0f2339;
+    --secondary: #c9a84c;
+    --secondary-light: #e2c97a;
+    --accent: #e8f0f7;
+    --white: #ffffff;
+    --text: #2c2c2c;
+    --text-light: #5a5a6a;
+    --card-w: 3.5in;
+    --card-h: 2in;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: #cfd4da;
+    padding: 40px 20px;
+  }
+
+  /* ── Screen labels ── */
+  .section-label {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a8491;
+    margin-bottom: 16px;
+  }
+
+  /* ── PREVIEW SECTION ── */
+  .preview-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .preview-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .preview-item-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a8491;
+  }
+
+  /* ── CARD BASE ── */
+  .card {
+    width: var(--card-w);
+    height: var(--card-h);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    flex-shrink: 0;
+  }
+
+  /* ══════════════════
+     CARD FRONT
+  ══════════════════ */
+  .card-front {
+    background: var(--primary-dark);
+  }
+
+  /* Background arcs */
+  .cf-arc {
+    position: absolute;
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cf-arc-1 { width: 3.2in; height: 3.2in; top: -1.4in; right: -1.4in; }
+  .cf-arc-2 { width: 2in; height: 2in; top: -0.8in; right: -0.8in; }
+  .cf-arc-3 { width: 2.8in; height: 2.8in; bottom: -1.4in; left: -1.4in; border-color: rgba(201,168,76,0.10); }
+
+  /* Gradient overlay */
+  .cf-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(140deg, rgba(10,28,50,0.5) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.12) 0%, transparent 55%);
+  }
+
+  /* Gold top bar */
+  .cf-topbar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary), var(--secondary-light), var(--secondary));
+    z-index: 2;
+  }
+
+  /* Gold left bar */
+  .cf-leftbar {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--secondary), var(--secondary-light), var(--secondary));
+    z-index: 2;
+  }
+
+  .cf-inner {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    padding: 0.2in 0.22in 0.18in 0.22in;
+    gap: 0.16in;
+    align-items: center;
+  }
+
+  /* Monogram column */
+  .cf-mono-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .cf-monogram {
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid rgba(201,168,76,0.55);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  .cf-monogram span {
+    font-family: 'Playfair Display', serif;
+    font-size: 22pt;
+    font-weight: 700;
+    color: var(--secondary);
+    line-height: 1;
+  }
+
+  .cf-vert-rule {
+    width: 1px;
+    flex: 1;
+    background: rgba(201,168,76,0.25);
+  }
+
+  /* Text column */
+  .cf-text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .cf-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .cf-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 6.5pt;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .cf-rule {
+    width: 28px;
+    height: 1.5px;
+    background: var(--secondary);
+    margin-bottom: 10px;
+  }
+
+  .cf-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 8pt;
+    font-style: italic;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.45;
+  }
+
+  /* ══════════════════
+     CARD BACK
+  ══════════════════ */
+  .card-back {
+    background: var(--white);
+  }
+
+  .cb-top-stripe {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 0.42in;
+    background: var(--primary);
+  }
+
+  .cb-top-stripe-gold {
+    position: absolute;
+    top: 0.42in; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary), var(--secondary-light), var(--secondary));
+  }
+
+  .cb-inner {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.2in 0.16in;
+  }
+
+  /* Name block in stripe */
+  .cb-name-block {
+    height: 0.42in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3px;
+  }
+
+  .cb-person-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 12pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .cb-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 6.5pt;
+    font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* Contact items */
+  .cb-contacts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 0.1in;
+  }
+
+  .cb-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cb-item i {
+    color: var(--secondary);
+    font-size: 8pt;
+    width: 12px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .cb-item span {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    color: var(--text);
+    line-height: 1.35;
+  }
+
+  .cb-item span.small {
+    font-size: 7pt;
+    color: var(--text-light);
+  }
+
+  /* Bottom logo strip */
+  .cb-bottom {
+    border-top: 1px solid rgba(26,58,92,0.1);
+    padding-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cb-logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+
+  .cb-logo-text span {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 6pt;
+    font-weight: 400;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+  }
+
+  .cb-mono-small {
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(201,168,76,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+  }
+  .cb-mono-small span {
+    font-family: 'Playfair Display', serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--secondary);
+    line-height: 1;
+  }
+
+  /* ══════════════════════════════════════
+     PRINT SHEET — 10 cards per sheet
+     2 columns × 5 rows, letter portrait
+  ══════════════════════════════════════ */
+  .print-sheet {
+    width: 8.5in;
+    height: 11in;
+    background: var(--white);
+    margin: 0 auto 50px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, var(--card-w));
+    grid-template-rows: repeat(5, var(--card-h));
+    gap: 0;
+    /* Center the grid of cards on the sheet */
+    padding: calc((11in - (var(--card-h) * 5)) / 2) calc((8.5in - (var(--card-w) * 2)) / 2);
+  }
+
+  .card-cell {
+    position: relative;
+    width: var(--card-w);
+    height: var(--card-h);
+  }
+
+  /* Crop marks */
+  .card-cell::before,
+  .card-cell::after {
+    content: '';
+    position: absolute;
+    background: #aaa;
+  }
+
+  /* Thin crop lines between cards */
+  .crop-line-h {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, #bbb 0, #bbb 4px, transparent 4px, transparent 8px);
+    pointer-events: none;
+  }
+  .crop-line-v {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: repeating-linear-gradient(180deg, #bbb 0, #bbb 4px, transparent 4px, transparent 8px);
+    pointer-events: none;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section-label,
+    .preview-row,
+    .screen-only {
+      display: none !important;
+    }
+
+    .print-sheet {
+      box-shadow: none;
+      margin: 0;
+      page-break-after: always;
+    }
+
+    .print-sheet:last-of-type {
+      page-break-after: avoid;
+    }
+
+    .card {
+      box-shadow: none;
+    }
+
+    @page {
+      size: 8.5in 11in portrait;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     SCREEN PREVIEW
+══════════════════════════════════ -->
+<p class="section-label screen-only">Preview — Front &amp; Back</p>
+<div class="preview-row screen-only">
+
+  <!-- FRONT -->
+  <div class="preview-item">
+    <div class="preview-item-label">Front</div>
+    <div class="card card-front">
+      <div class="cf-topbar"></div>
+      <div class="cf-leftbar"></div>
+      <div class="cf-arc cf-arc-1"></div>
+      <div class="cf-arc cf-arc-2"></div>
+      <div class="cf-arc cf-arc-3"></div>
+      <div class="cf-gradient"></div>
+      <div class="cf-inner">
+        <div class="cf-mono-col">
+          <div class="cf-monogram"><span>R</span></div>
+          <div class="cf-vert-rule"></div>
+        </div>
+        <div class="cf-text-col">
+          <div class="cf-name">Regina's<br>Loving Arms</div>
+          <div class="cf-sub">Home Health Care, LLC</div>
+          <div class="cf-rule"></div>
+          <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div class="preview-item">
+    <div class="preview-item-label">Back</div>
+    <div class="card card-back">
+      <div class="cb-top-stripe"></div>
+      <div class="cb-top-stripe-gold"></div>
+      <div class="cb-inner">
+        <div class="cb-name-block">
+          <div class="cb-person-name">Regina</div>
+          <div class="cb-title">Founder &amp; Chief Executive Officer</div>
+        </div>
+        <div class="cb-contacts">
+          <div class="cb-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>312-773-5553</span>
+          </div>
+          <div class="cb-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@reginaslovingarms.com</span>
+          </div>
+          <div class="cb-item">
+            <i class="fas fa-globe"></i>
+            <span>reginaslovingarms.com</span>
+          </div>
+          <div class="cb-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span>
+          </div>
+        </div>
+        <div class="cb-bottom">
+          <div class="cb-logo-text">
+            Regina's Loving Arms
+            <span>Home Health Care, LLC</span>
+          </div>
+          <div class="cb-mono-small"><span>R</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════
+     PRINT SHEET 1 — FRONTS (5 rows × 2 cols)
+══════════════════════════════════ -->
+<p class="section-label">Print Sheet 1 — Fronts &nbsp;|&nbsp; 10 cards per sheet</p>
+<div class="print-sheet">
+  <!-- Crop guide lines -->
+  <div class="crop-line-v" style="left: calc((8.5in - (var(--card-w) * 2)) / 2 + var(--card-w));"></div>
+
+  <!-- 10 front cards -->
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-front">
+    <div class="cf-topbar"></div><div class="cf-leftbar"></div>
+    <div class="cf-arc cf-arc-1"></div><div class="cf-arc cf-arc-2"></div><div class="cf-arc cf-arc-3"></div>
+    <div class="cf-gradient"></div>
+    <div class="cf-inner">
+      <div class="cf-mono-col"><div class="cf-monogram"><span>R</span></div><div class="cf-vert-rule"></div></div>
+      <div class="cf-text-col">
+        <div class="cf-name">Regina's<br>Loving Arms</div>
+        <div class="cf-sub">Home Health Care, LLC</div>
+        <div class="cf-rule"></div>
+        <div class="cf-tagline">Compassionate Care,<br>Delivered at Home.</div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PRINT SHEET 2 — BACKS (5 rows × 2 cols)
+══════════════════════════════════ -->
+<p class="section-label">Print Sheet 2 — Backs &nbsp;|&nbsp; 10 cards per sheet</p>
+<div class="print-sheet">
+
+  <!-- 10 back cards -->
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div class="card-cell"><div class="card card-back">
+    <div class="cb-top-stripe"></div><div class="cb-top-stripe-gold"></div>
+    <div class="cb-inner">
+      <div class="cb-name-block"><div class="cb-person-name">Regina</div><div class="cb-title">Founder &amp; Chief Executive Officer</div></div>
+      <div class="cb-contacts">
+        <div class="cb-item"><i class="fas fa-phone-alt"></i><span>312-773-5553</span></div>
+        <div class="cb-item"><i class="fas fa-envelope"></i><span>info@reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-globe"></i><span>reginaslovingarms.com</span></div>
+        <div class="cb-item"><i class="fas fa-map-marker-alt"></i><span class="small">2020 N Lincoln Park West, Suite 18H<br>Chicago, IL 60614</span></div>
+      </div>
+      <div class="cb-bottom">
+        <div class="cb-logo-text">Regina's Loving Arms<span>Home Health Care, LLC</span></div>
+        <div class="cb-mono-small"><span>R</span></div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+</body>
+</html>
