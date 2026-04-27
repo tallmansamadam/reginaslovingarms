@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regina's Loving Arms — Brochure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" type="image/svg+xml" href="resources/favicon.svg">
+<style>
+  :root {
+    --primary: #2A7D7D;
+    --primary-dark: #1F5F5F;
+    --secondary: #C9A227;
+    --secondary-light: #E0C15A;
+    --accent: #F5EDD8;
+    --accent2: #F5EDD8;
+    --white: #ffffff;
+    --text: #2c2c2c;
+    --text-light: #5a5a6a;
+    --panel-w: 3.667in;
+    --panel-h: 8.5in;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: #cfd4da;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  /* ── Screen layout ── */
+  .sheet-label {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7a8491;
+    margin-bottom: 10px;
+  }
+
+  .sheet {
+    display: flex;
+    width: 11in;
+    height: 8.5in;
+    margin: 0 auto 50px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+    background: var(--white);
+    position: relative;
+  }
+
+  .panel {
+    width: var(--panel-w);
+    height: var(--panel-h);
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    /* Panel fold guides */
+    border-right: 1px dashed rgba(0,0,0,0.08);
+  }
+  .panel:last-child { border-right: none; }
+
+  /* ── Shared panel utilities ── */
+  .panel-inner {
+    padding: 0.38in 0.32in;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 0.1in;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: var(--secondary);
+    flex-shrink: 0;
+  }
+
+  h2.panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 0.14in;
+  }
+
+  .divider {
+    width: 36px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+    margin-bottom: 0.16in;
+  }
+
+  p.body-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    color: var(--text-light);
+    line-height: 1.65;
+    margin-bottom: 0.1in;
+  }
+
+  /* ══════════════════════════════════════
+     PANEL C — FRONT COVER (Sheet 1, right)
+  ══════════════════════════════════════ */
+  .panel-cover {
+    background: var(--primary-dark);
+    position: relative;
+  }
+
+  .cover-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  .cover-texture {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(170deg, rgba(10,28,50,0.82) 0%, rgba(15,35,57,0.70) 45%, rgba(10,28,50,0.88) 100%);
+  }
+
+  /* Decorative arc lines */
+  .cover-arc {
+    position: absolute;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .cover-arc-1 { width: 4.8in; height: 4.8in; top: -1.2in; right: -2in; }
+  .cover-arc-2 { width: 3.2in; height: 3.2in; top: -0.5in; right: -1.1in; }
+  .cover-arc-3 { width: 5.5in; height: 5.5in; bottom: -2in; left: -2.5in; border-color: rgba(201,168,76,0.12); }
+
+  /* Gold bar top */
+  .cover-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--secondary), var(--secondary-light), var(--secondary));
+    z-index: 3;
+  }
+
+  .cover-inner {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.45in 0.35in 0.38in;
+  }
+
+  /* Monogram */
+  .cover-monogram {
+    width: 62px;
+    height: 62px;
+    border: 2px solid rgba(201,168,76,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.22in;
+  }
+  .cover-monogram span {
+    font-family: 'Playfair Display', serif;
+    font-size: 26pt;
+    font-weight: 700;
+    color: var(--secondary);
+    line-height: 1;
+  }
+
+  .cover-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22pt;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+  }
+
+  .cover-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 0.28in;
+  }
+
+  .cover-gold-rule {
+    width: 50px;
+    height: 1.5px;
+    background: var(--secondary);
+    margin-bottom: 0.25in;
+  }
+
+  .cover-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 13pt;
+    font-style: italic;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.45;
+    margin-bottom: auto;
+  }
+
+  .cover-phone-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--secondary);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-top: 10px;
+  }
+  .cover-phone-block i {
+    color: var(--primary-dark);
+    font-size: 11pt;
+  }
+  .cover-phone-block span {
+    font-family: 'Lato', sans-serif;
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: 0.5px;
+  }
+
+  .cover-city {
+    font-family: 'Lato', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: rgba(255,255,255,0.82);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  /* ══════════════════════════════════════
+     PANEL B — BACK (Sheet 1, center)
+  ══════════════════════════════════════ */
+  .panel-back {
+    background: var(--white);
+  }
+
+  .back-header {
+    background: var(--primary);
+    margin: -0.38in -0.32in 0.25in;
+    padding: 0.28in 0.32in 0.22in;
+  }
+  .back-header .bh-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 5px;
+  }
+  .back-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 0.13in;
+  }
+  .contact-item i {
+    color: var(--secondary);
+    font-size: 10pt;
+    width: 15px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .contact-item-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .contact-item-text strong {
+    display: block;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 2px;
+  }
+
+  .back-section-title {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    border-bottom: 1.5px solid var(--secondary);
+    padding-bottom: 5px;
+    margin: 0.2in 0 0.14in;
+  }
+
+  .payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .payment-item {
+    background: var(--accent);
+    border-radius: 6px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .payment-item i {
+    color: var(--primary);
+    font-size: 9pt;
+    width: 14px;
+    flex-shrink: 0;
+  }
+  .payment-item span {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .back-footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 0.12in;
+  }
+  .back-footer p {
+    font-family: 'Lato', sans-serif;
+    font-size: 6.5pt;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ══════════════════════════════════════
+     PANEL A — INNER FLAP (Sheet 1, left)
+  ══════════════════════════════════════ */
+  .panel-flap {
+    background: var(--accent);
+  }
+
+  .affiliation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(26,58,92,0.1);
+  }
+  .affiliation-item:last-child { border-bottom: none; }
+  .affil-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .affil-icon i { color: var(--secondary); font-size: 9pt; }
+  .affil-text h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+  .affil-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  .approach-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 0.12in;
+  }
+  .step-num {
+    width: 26px;
+    height: 26px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1;
+  }
+  .step-text h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2px;
+  }
+  .step-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    color: var(--text-light);
+    line-height: 1.45;
+  }
+
+  /* ══════════════════════════════════════
+     PANEL D — ABOUT (Sheet 2, left)
+  ══════════════════════════════════════ */
+  .panel-about {
+    background: var(--white);
+  }
+
+  .about-image-strip {
+    width: 100%;
+    height: 1.45in;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0.12in 0 0.14in;
+    flex-shrink: 0;
+  }
+  .about-image-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+  }
+
+  .founder-quote-block {
+    background: var(--primary);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 0.15in 0 0.18in;
+    position: relative;
+  }
+  .founder-quote-block::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 42pt;
+    color: rgba(201,168,76,0.3);
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    line-height: 1;
+  }
+  .founder-quote-block blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 8.5pt;
+    font-style: italic;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .founder-quote-block cite {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--secondary);
+    font-style: normal;
+    letter-spacing: 0.5px;
+  }
+
+  .values-compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 0.05in;
+  }
+  .value-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    background: var(--accent);
+    border-radius: 5px;
+    border-left: 2.5px solid var(--secondary);
+  }
+  .value-chip i {
+    color: var(--primary);
+    font-size: 8pt;
+    width: 12px;
+    flex-shrink: 0;
+  }
+  .value-chip span {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  /* ══════════════════════════════════════
+     PANEL E — SERVICES (Sheet 2, center)
+  ══════════════════════════════════════ */
+  .panel-services {
+    background: var(--primary);
+  }
+
+  .panel-services .section-eyebrow { color: var(--secondary); }
+  .panel-services .section-eyebrow::before { background: var(--secondary); }
+  .panel-services h2.panel-title { color: var(--white); }
+  .panel-services .divider { background: var(--secondary); }
+
+  .service-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-top: 2.5px solid var(--secondary);
+    border-radius: 7px;
+    padding: 12px 13px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .panel-services .panel-inner {
+    gap: 0.08in;
+  }
+
+  .service-card-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 7px;
+  }
+  .service-card-icon {
+    width: 30px;
+    height: 30px;
+    background: rgba(201,168,76,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .service-card-icon i { color: var(--secondary); font-size: 9pt; }
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .service-bullets {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 8px;
+  }
+  .service-card-desc {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.55;
+    margin-bottom: 9px;
+    font-style: italic;
+  }
+
+  .service-bullets li {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .service-bullets li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--secondary);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  /* ══════════════════════════════════════
+     PANEL F — CTA (Sheet 2, right)
+  ══════════════════════════════════════ */
+  .panel-cta {
+    background: var(--white);
+  }
+
+  .serve-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(26,58,92,0.1);
+  }
+  .serve-item:last-child { border-bottom: none; }
+  .serve-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .serve-icon i { color: var(--primary); font-size: 9.5pt; }
+  .serve-text h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2px;
+  }
+  .serve-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  .cta-box {
+    background: var(--primary);
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-align: center;
+    margin-top: 0.12in;
+    flex-shrink: 0;
+  }
+  .cta-box .cta-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 6px;
+  }
+  .cta-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .cta-phone {
+    font-family: 'Lato', sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 11px;
+  }
+  .cta-button {
+    display: block;
+    background: var(--secondary);
+    color: var(--primary-dark);
+    font-family: 'Lato', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .cta-mission {
+    font-family: 'Playfair Display', serif;
+    font-size: 7.5pt;
+    font-style: italic;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+  .cta-web {
+    font-family: 'Lato', sans-serif;
+    font-size: 7.5pt;
+    color: var(--secondary-light);
+    letter-spacing: 0.5px;
+  }
+
+  /* ══════════════════════════════════════
+     PRINT STYLES
+  ══════════════════════════════════════ */
+  @media print {
+    body {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sheet-label { display: none; }
+
+    .sheet {
+      width: 11in;
+      height: 8.5in;
+      box-shadow: none;
+      margin: 0;
+      page-break-after: always;
+    }
+
+    .sheet:last-of-type {
+      page-break-after: avoid;
+    }
+
+    .panel { border-right: none; }
+
+    @page {
+      size: 11in 8.5in landscape;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     SHEET 1 — OUTSIDE
+     Left to right: Panel A | Panel B | Panel C
+     (When folded: A=inner flap, B=back, C=front cover)
+══════════════════════════════════ -->
+<p class="sheet-label">Sheet 1 — Outside (Print first) &nbsp;|&nbsp; When folded: Left panel tucks inside &nbsp;·&nbsp; Center = Back &nbsp;·&nbsp; Right = Front Cover</p>
+<div class="sheet" id="sheet-outside">
+
+  <!-- Panel A: Inner flap — "Why Choose Us" -->
+  <div class="panel panel-flap">
+    <div class="panel-inner">
+      <div class="section-eyebrow">Why Choose Us</div>
+      <h2 class="panel-title">Trusted.<br>Accredited.<br>Committed.</h2>
+      <div class="divider"></div>
+
+      <p class="body-text">Every family we serve deserves an agency they can trust completely. Here's what sets us apart.</p>
+
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="affiliation-item">
+          <div class="affil-icon"><i class="fas fa-building-columns"></i></div>
+          <div class="affil-text">
+            <h4>Illinois Dept on Aging (IDoA)</h4>
+            <p>Approved provider for senior care programs funded through the State of Illinois.</p>
+          </div>
+        </div>
+        <div class="affiliation-item">
+          <div class="affil-icon"><i class="fas fa-lock"></i></div>
+          <div class="affil-text">
+            <h4>HIPAA Compliant Agency</h4>
+            <p>Your health information is protected with the highest privacy standards.</p>
+          </div>
+        </div>
+        <div class="affiliation-item">
+          <div class="affil-icon"><i class="fas fa-certificate"></i></div>
+          <div class="affil-text">
+            <h4>State of Illinois Licensed &amp; Insured</h4>
+            <p>Fully licensed, bonded, and insured for your complete peace of mind.</p>
+          </div>
+        </div>
+        <div class="affiliation-item" style="border-bottom: none; padding-bottom: 0;">
+          <div class="affil-icon"><i class="fas fa-user-nurse"></i></div>
+          <div class="affil-text">
+            <h4>Clinically Supervised Care</h4>
+            <p>All care plans are created and overseen by a Registered Nurse.</p>
+          </div>
+        </div>
+
+        <!-- Stats strip -->
+        <div style="display: flex; gap: 7px;">
+          <div style="flex:1; background:var(--primary); border-radius:8px; padding:11px 6px; text-align:center;">
+            <div style="font-family:'Playfair Display',serif; font-size:11pt; font-weight:700; color:var(--secondary); line-height:1.1;">Trusted</div>
+            <div style="font-family:'Lato',sans-serif; font-size:6pt; color:rgba(255,255,255,0.78); text-transform:uppercase; letter-spacing:1px; margin-top:4px; line-height:1.3;">Home Care Provider</div>
+          </div>
+          <div style="flex:1; background:var(--primary); border-radius:8px; padding:11px 6px; text-align:center;">
+            <div style="font-family:'Playfair Display',serif; font-size:17pt; font-weight:700; color:var(--secondary); line-height:1;">24/7</div>
+            <div style="font-family:'Lato',sans-serif; font-size:6pt; color:rgba(255,255,255,0.78); text-transform:uppercase; letter-spacing:1px; margin-top:4px; line-height:1.3;">Support Available</div>
+          </div>
+        </div>
+
+        <!-- Our Approach -->
+        <div>
+          <div class="section-eyebrow" style="margin-top: 0; margin-bottom: 0.08in;">Our Approach</div>
+          <div style="height: 2px; width: 28px; background: var(--secondary); margin-bottom: 0.1in;"></div>
+          <div class="approach-step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Free In-Home Assessment</h4>
+              <p>A thorough in-home evaluation at no cost to understand needs, environment, and personal preferences.</p>
+            </div>
+          </div>
+          <div class="approach-step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Tailored Care Plan</h4>
+              <p>A personalized plan co-developed with client, family, and physician — flexible and evolving.</p>
+            </div>
+          </div>
+          <div class="approach-step" style="margin-bottom: 0;">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>Consistent, Monitored Care</h4>
+              <p>Carefully matched caregivers, regular supervisory visits, and open family communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel B: Back panel — Contact & Payment -->
+  <div class="panel panel-back">
+    <div class="panel-inner">
+      <div class="back-header">
+        <div class="bh-eyebrow">Get in Touch</div>
+        <h2>We're Here<br>to Help</h2>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <div class="contact-item-text">
+          <strong>Phone</strong>
+          312-773-5553
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div class="contact-item-text">
+          <strong>Email</strong>
+          info@reginaslovingarms.com
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-globe"></i>
+        <div class="contact-item-text">
+          <strong>Website</strong>
+          reginaslovingarms.com
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="contact-item-text">
+          <strong>Address</strong>
+          2020 N Lincoln Park West<br>Suite 18H, Chicago, IL 60614
+        </div>
+      </div>
+
+      <div class="back-section-title">Coverage &amp; Payment</div>
+      <p class="body-text" style="margin-bottom: 0.1in;">We work with a broad range of payment sources to make quality care accessible to every family.</p>
+
+      <div class="payment-grid">
+        <div class="payment-item">
+          <i class="fas fa-id-card"></i>
+          <span>Medicaid</span>
+        </div>
+        <div class="payment-item">
+          <i class="fas fa-hospital"></i>
+          <span>Medicare</span>
+        </div>
+        <div class="payment-item">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <span>Private Insurance</span>
+        </div>
+        <div class="payment-item">
+          <i class="fas fa-wallet"></i>
+          <span>Private Pay</span>
+        </div>
+        <div class="payment-item" style="grid-column: 1 / -1;">
+          <i class="fas fa-file-contract"></i>
+          <span>Long-Term Care Insurance</span>
+        </div>
+      </div>
+
+      <p class="body-text" style="margin-top: 0.1in;">Contact us to verify your benefits or discuss flexible payment arrangements before service begins.</p>
+
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; margin: 0.14in 0;">
+        <div style="font-family:'Lato',sans-serif; font-size:7pt; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--secondary); text-align:center; margin-bottom:10px;">Why Families Choose Us</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <div style="background:var(--primary); border-radius:8px; padding:14px 8px; text-align:center;">
+            <div style="font-family:'Playfair Display',serif; font-size:19pt; font-weight:700; color:var(--secondary); line-height:1;">24/7</div>
+            <div style="font-family:'Lato',sans-serif; font-size:6.5pt; color:rgba(255,255,255,0.75); text-transform:uppercase; letter-spacing:1px; margin-top:4px; line-height:1.3;">Always Available</div>
+          </div>
+          <div style="background:var(--primary); border-radius:8px; padding:14px 8px; text-align:center;">
+            <div style="font-family:'Playfair Display',serif; font-size:19pt; font-weight:700; color:var(--secondary); line-height:1;">Free</div>
+            <div style="font-family:'Lato',sans-serif; font-size:6.5pt; color:rgba(255,255,255,0.75); text-transform:uppercase; letter-spacing:1px; margin-top:4px; line-height:1.3;">In-Home Consultation</div>
+          </div>
+          <div style="background:var(--accent); border-radius:8px; padding:14px 8px; text-align:center;">
+            <div style="font-family:'Playfair Display',serif; font-size:10.5pt; font-weight:700; color:var(--primary); line-height:1.15;">Trusted</div>
+            <div style="font-family:'Lato',sans-serif; font-size:6.5pt; color:var(--text-light); text-transform:uppercase; letter-spacing:1px; margin-top:4px; line-height:1.3;">Quality Care</div>
+          </div>
+          <div style="background:var(--accent); border-radius:8px; padding:14px 8px; text-align:center;">
+            <div style="font-family:'Playfair Display',serif; font-size:10.5pt; font-weight:700; color:var(--primary); line-height:1.15;">Personal</div>
+            <div style="font-family:'Lato',sans-serif; font-size:6.5pt; color:var(--text-light); text-transform:uppercase; letter-spacing:1px; margin-top:4px; line-height:1.3;">Care Plans</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-footer" style="margin-top: 0;">
+        <p>&copy; 2026 Regina's Loving Arms Home Health Care, LLC.<br>All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel C: Front Cover -->
+  <div class="panel panel-cover">
+    <div class="cover-photo">
+      <img src="https://images.pexels.com/photos/7345474/pexels-photo-7345474.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop" alt="Caregiver checking blood pressure of elderly patient">
+    </div>
+    <div class="cover-texture"></div>
+    <div class="cover-arc cover-arc-1"></div>
+    <div class="cover-arc cover-arc-2"></div>
+    <div class="cover-arc cover-arc-3"></div>
+    <div class="cover-top-bar"></div>
+
+    <div class="cover-inner">
+      <div class="cover-monogram">
+        <span>R</span>
+      </div>
+
+      <div class="cover-brand-name">Regina's<br>Loving Arms</div>
+      <div class="cover-subtitle">Home Health Care, LLC</div>
+      <div class="cover-gold-rule"></div>
+
+      <div class="cover-tagline">
+        Compassionate Care,<br>Delivered at Home.
+      </div>
+
+      <div style="flex: 1;"></div>
+
+      <div class="cover-city">Chicago Metropolitan Area</div>
+      <div class="cover-phone-block">
+        <i class="fas fa-phone-alt"></i>
+        <span>312-773-5553</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /sheet-outside -->
+
+
+<!-- ══════════════════════════════════
+     SHEET 2 — INSIDE
+     Left to right: Panel D | Panel E | Panel F
+     (Unfolds as one continuous spread)
+══════════════════════════════════ -->
+<p class="sheet-label">Sheet 2 — Inside (Print second, flip on long edge) &nbsp;|&nbsp; Unfolds as a continuous spread: About · Services · CTA</p>
+<div class="sheet" id="sheet-inside">
+
+  <!-- Panel D: About Us -->
+  <div class="panel panel-about">
+    <div class="panel-inner">
+      <div class="section-eyebrow">Our Story</div>
+      <h2 class="panel-title">Built on a<br>Promise to Serve</h2>
+      <div class="divider"></div>
+
+      <p class="body-text">Regina's Loving Arms was born from a deeply personal calling. After years of clinical nursing experience — and witnessing firsthand how the right care at the right moment can transform a life — our founder set out to build an agency rooted not in transactions, but in relationships.</p>
+
+      <p class="body-text">We serve clients across the Chicago metropolitan area with a singular focus: to provide the kind of care we would want for our own family members.</p>
+
+      <div class="about-image-strip">
+        <img src="https://images.pexels.com/photos/7551665/pexels-photo-7551665.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Caregiver sharing a warm moment with elderly client at home">
+      </div>
+
+      <div class="founder-quote-block">
+        <blockquote>"I started this agency because I believed home care could be more than a service — it could be a lifeline. Every client we serve is someone's mother, father, grandparent, or child. We never forget that."</blockquote>
+        <cite>— Regina, Founder &amp; CEO</cite>
+      </div>
+
+      <div class="section-eyebrow" style="margin-top: 0.12in;">Core Values</div>
+      <div class="values-compact">
+        <div class="value-chip">
+          <i class="fas fa-heart"></i>
+          <span>Compassion</span>
+        </div>
+        <div class="value-chip">
+          <i class="fas fa-shield-alt"></i>
+          <span>Integrity</span>
+        </div>
+        <div class="value-chip">
+          <i class="fas fa-star"></i>
+          <span>Excellence</span>
+        </div>
+        <div class="value-chip">
+          <i class="fas fa-user"></i>
+          <span>Dignity</span>
+        </div>
+        <div class="value-chip">
+          <i class="fas fa-hands-helping"></i>
+          <span>Community</span>
+        </div>
+        <div class="value-chip">
+          <i class="fas fa-lightbulb"></i>
+          <span>Innovation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel E: Services -->
+  <div class="panel panel-services">
+    <div class="panel-inner">
+      <div class="section-eyebrow">What We Offer</div>
+      <h2 class="panel-title">Comprehensive<br>Care at Home</h2>
+      <div class="divider"></div>
+
+      <!-- Caregiver Services -->
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon"><i class="fas fa-hands-holding-heart"></i></div>
+          <h3>Caregiver Services</h3>
+        </div>
+        <p class="service-card-desc">Hands-on daily support that preserves dignity and independence — carefully matched to each client's needs, schedule, and personality.</p>
+        <ul class="service-bullets">
+          <li>Bathing &amp; grooming</li>
+          <li>Dressing &amp; mobility</li>
+          <li>Meal preparation</li>
+          <li>Light housekeeping</li>
+          <li>Grocery &amp; errands</li>
+          <li>Transportation</li>
+          <li>Medication reminders</li>
+          <li>Companionship</li>
+        </ul>
+      </div>
+
+      <!-- Companion Care -->
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon"><i class="fas fa-comments"></i></div>
+          <h3>Companion Care</h3>
+        </div>
+        <p class="service-card-desc">Meaningful social connection that combats isolation, keeps clients mentally engaged, and brings genuine warmth into daily life.</p>
+        <ul class="service-bullets">
+          <li>Social engagement</li>
+          <li>Cognitive activities</li>
+          <li>Memory care support</li>
+          <li>Emotional support</li>
+          <li>Community outings</li>
+          <li>Family updates</li>
+          <li>Hobby supervision</li>
+          <li>Caregiver respite</li>
+        </ul>
+      </div>
+
+      <!-- 24-Hour Care -->
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon"><i class="fas fa-moon"></i></div>
+          <h3>24-Hour Live-In Care</h3>
+        </div>
+        <p class="service-card-desc">Round-the-clock oversight for clients who need continuous supervision — a qualified caregiver always present, day and night.</p>
+        <ul class="service-bullets">
+          <li>Overnight supervision</li>
+          <li>Live-in placement</li>
+          <li>Dementia &amp; Alzheimer's</li>
+          <li>Fall-risk monitoring</li>
+          <li>Night toileting</li>
+          <li>Emergency response</li>
+          <li>Shift-based teams</li>
+          <li>Daily care logs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel F: Who We Serve + CTA -->
+  <div class="panel panel-cta">
+    <div class="panel-inner">
+      <div class="section-eyebrow">Our Clients</div>
+      <h2 class="panel-title">Who We<br>Serve</h2>
+      <div class="divider"></div>
+
+      <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="serve-item">
+          <div class="serve-icon"><i class="fas fa-walking"></i></div>
+          <div class="serve-text">
+            <h4>Seniors &amp; Older Adults</h4>
+            <p>Supporting independence, safety, and quality of life for aging individuals who wish to remain comfortably in their own homes.</p>
+          </div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon"><i class="fas fa-heartbeat"></i></div>
+          <div class="serve-text">
+            <h4>Individuals with Chronic Illness</h4>
+            <p>Ongoing management and support for clients living with diabetes, heart failure, COPD, multiple sclerosis, and more.</p>
+          </div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon"><i class="fas fa-procedures"></i></div>
+          <div class="serve-text">
+            <h4>Post-Acute Recovery</h4>
+            <p>Transitional care for those returning home after a hospital stay, surgery, or inpatient rehabilitation program.</p>
+          </div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon"><i class="fas fa-hospital-user"></i></div>
+          <div class="serve-text">
+            <h4>Seniors in Rehab &amp; Senior Centers</h4>
+            <p>Supplemental care and companionship for seniors residing in rehabilitation facilities or senior living communities.</p>
+          </div>
+        </div>
+        <div class="serve-item" style="border-bottom: none;">
+          <div class="serve-icon"><i class="fas fa-brain"></i></div>
+          <div class="serve-text">
+            <h4>Memory Care &amp; Dementia</h4>
+            <p>Specialized support for clients with Alzheimer's or dementia — structured routines, safety monitoring, and compassionate presence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <div class="cta-eyebrow">Get Started Today</div>
+        <h3>Ready<br>to Begin?</h3>
+        <div class="cta-phone">
+          <i class="fas fa-phone-alt"></i>
+          312-773-5553
+        </div>
+        <span class="cta-button">Schedule a Free Consultation</span>
+        <p class="cta-mission">"To Reshape Lives Through Compassionate, Expert Home Care."</p>
+        <div class="cta-web">reginaslovingarms.com</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /sheet-inside -->
+
+</body>
+</html>
