@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# macOS zip metadata
+__MACOSX/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Local Claude Code settings
+.claude/settings.local.json
