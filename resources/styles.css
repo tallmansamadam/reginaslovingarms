@@ -368,8 +368,14 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .header .btn-primary { padding: 10px 20px; font-size: 0.8rem; }
     .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
 }
+@media (max-width: 1100px) {
+    /* Let the logo wrapper shrink so the nav + CTA fit inside the viewport.
+       Above 1100px the fixed 400px width still applies. */
+    .logo-wrapper { width: auto; max-width: 320px; flex: 0 1 320px; min-width: 0; }
+}
 @media (max-width: 1024px) {
     .logo img { height: 190px; }
+    .logo-wrapper { max-width: 280px; flex-basis: 280px; }
     .nav { gap: 18px; }
     .nav a { font-size: 0.85rem; }
     .header-phone { display: none; }
