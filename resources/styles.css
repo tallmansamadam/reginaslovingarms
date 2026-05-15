@@ -369,9 +369,21 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .services-preview-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 1100px) {
-    /* Let the logo wrapper shrink so the nav + CTA fit inside the viewport.
-       Above 1100px the fixed 400px width still applies. */
+    /* Below 1100px there isn't enough room for the full horizontal nav
+       (esp. "Wellness Resources") + logo + CTA on small laptops, landscape
+       tablets, and Windows DPI-scaled displays. Collapse to the hamburger
+       menu here instead of waiting for the mobile (≤768px) breakpoint. */
     .logo-wrapper { width: auto; max-width: 320px; flex: 0 1 320px; min-width: 0; }
+    .nav { display: none; }
+    .nav.nav--open {
+        display: flex; flex-direction: column; position: absolute;
+        top: 100%; left: 0; right: 0; background: var(--white);
+        box-shadow: 0 8px 24px rgba(42,125,125,0.15); z-index: 999;
+        gap: 0; padding: 6px 0;
+    }
+    .nav.nav--open a { padding: 13px 24px; border-bottom: 1px solid #eef4f4; font-size: 1rem; white-space: normal; }
+    .nav.nav--open a:last-child { border-bottom: none; }
+    .mobile-menu-btn { display: flex !important; }
 }
 @media (max-width: 1024px) {
     .logo img { height: 190px; }
