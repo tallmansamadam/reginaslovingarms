@@ -1,0 +1,77 @@
+<!--
+  Single services section for index.html replacing the two duplicates:
+    1. <section class="services-preview"> ("Our Home Care Services")
+    2. <section id="services" class="services"> ("Comprehensive Home Care Services")
+
+  This consolidated version:
+    - Keeps the photo-card aesthetic of the preview.
+    - Names the same three services (Caregiver Services, IDoA Senior
+      Program, 24-Hour & Specialty Care).
+    - Each card links to a deep anchor on services.html rather than to
+      #contact, so visitors get details before they're asked to convert.
+    - Drops the redundant lead paragraph repeats.
+
+  Reuses existing .service-preview-card / .service-preview-image /
+  .service-preview-content classes from styles.css. No new CSS needed.
+
+  Place this in index.html in place of BOTH <section class="services-preview">
+  AND <section id="services" class="services">.
+-->
+
+<section id="services" class="services-preview">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Offer</span>
+      <h2>Home care for every level of need</h2>
+      <p>From a few hours of companionship a week to round-the-clock live-in care — every plan is built around your loved one.</p>
+    </div>
+    <div class="services-preview-grid">
+
+      <a href="services.html#caregiver-services" class="service-preview-card">
+        <div class="service-preview-image">
+          <img loading="lazy"
+               src="resources/images/caregiver-personal-care.jpg"
+               alt="Caregiver helping an elderly woman with personal care at home">
+        </div>
+        <div class="service-preview-content">
+          <h3>Caregiver Services</h3>
+          <p>Personal care, meals, housekeeping, and transportation — daily support that keeps your loved one independent.</p>
+          <span class="service-link">See what's included <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+
+      <a href="services.html#idoa" class="service-preview-card">
+        <div class="service-preview-image">
+          <img loading="lazy"
+               src="resources/images/idoa-senior-care.jpg"
+               alt="Senior receiving in-home care through the Illinois Department on Aging program">
+        </div>
+        <div class="service-preview-content">
+          <h3>IDoA Senior Program</h3>
+          <p>State-supported care for older Illinois residents. We handle the paperwork and pair you with a caregiver you'll see week after week.</p>
+          <span class="service-link">Check eligibility <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+
+      <a href="services.html#live-in" class="service-preview-card">
+        <div class="service-preview-image">
+          <img loading="lazy"
+               src="resources/images/live-in-24hr-care.jpg"
+               alt="Live-in caregiver providing 24-hour support at home">
+        </div>
+        <div class="service-preview-content">
+          <h3>24-Hour &amp; Live-In Care</h3>
+          <p>Continuous supervision for dementia, fall risk, or post-hospital recovery. A trained caregiver is always present.</p>
+          <span class="service-link">When this fits <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <a href="services.html" class="btn btn-outline-primary">
+        See all services
+      </a>
+    </div>
+  </div>
+</section>

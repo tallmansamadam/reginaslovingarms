@@ -1,0 +1,60 @@
+<!--
+  Proposed replacement for the homepage hero block.
+  Drop in over the existing <section class="hero">…</section> in index.html.
+
+  Changes from the current version:
+    1. Headline leads with what the visitor wants ("help your parent stay home")
+       instead of restating our values triplet.
+    2. Subhead drops the love/compassion/safety repeat, names three concrete
+       reassurances (24/7, insurance, free assessment).
+    3. Single primary CTA: free assessment. Phone is secondary, services link
+       moves out of the hero (it's two scrolls down anyway).
+    4. Section label tightened: "Chicagoland's Trusted Home Care Agency"
+       → "Chicagoland home care".
+    5. Mobile call CTA kept (it converts well), but the redundant
+       "Tap to Call Now" preface is removed — the number itself is the CTA.
+
+  No new CSS needed — reuses existing .hero, .section-label, .btn classes.
+-->
+
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-slider">
+    <!-- Replace these with locally-hosted images (see suggestions/technical.md) -->
+    <div class="hero-slide active">
+      <img src="resources/images/hero-1.jpg"
+           alt=""
+           fetchpriority="high">
+    </div>
+    <!-- If keeping a slider, add 1-2 more slides; if dropping, remove .hero-slider entirely -->
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="section-label"
+            style="background:rgba(255,255,255,0.15);color:var(--secondary);">
+        Chicagoland home care
+      </span>
+      <h1 id="hero-heading">
+        Help your loved one stay home<br>
+        — with care your family can trust.
+      </h1>
+      <p>
+        Caregivers, companions, and nurses across the Chicago area.
+        Available 24 hours a day. Most insurance accepted. Free in-home
+        assessment before any commitment.
+      </p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-secondary">
+          Schedule a Free Assessment
+        </a>
+        <a href="tel:3127735553" class="btn btn-outline">
+          Call 312-773-5553
+        </a>
+      </div>
+      <!-- Mobile-only direct-call shortcut (already styled in styles.css) -->
+      <a href="tel:3127735553" class="hero-mobile-call">
+        <i class="fas fa-phone-alt" aria-hidden="true"></i> 312-773-5553
+      </a>
+    </div>
+  </div>
+</section>
