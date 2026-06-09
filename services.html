@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="resources/styles.css?v=8">
+    <link rel="stylesheet" href="resources/styles.css?v=9">
     <link rel="icon" type="image/svg+xml" href="resources/favicon.svg">
     <style>
         .service-detail-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); display: grid; grid-template-columns: 320px 1fr; }
@@ -38,6 +38,7 @@
         .service-detail-body ul li::before { content: ''; width: 8px; height: 8px; background: var(--secondary); border-radius: 50%; flex-shrink: 0; }
         .services-full { padding: 100px 0 40px; background: var(--bg-light); }
         .who-we-serve { padding: 40px 0 100px; }
+        .serve-grid { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto; }
         .services-full-stack { display: flex; flex-direction: column; gap: 30px; }
         .payment-section { padding: 100px 0; background: var(--white); }
         .payment-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
@@ -56,6 +57,7 @@
             .service-detail-body { padding: 30px 25px; }
             .service-detail-body ul { grid-template-columns: 1fr; }
             .payment-grid { grid-template-columns: 1fr; }
+            .serve-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) { .header { padding: 5px 0; } .logo-wrapper { flex: 1 1 auto; justify-content: center; min-width: 0; } .logo { overflow: hidden; } .logo img { width: 100%; height: auto; margin: -22% 0; } }
     </style>
