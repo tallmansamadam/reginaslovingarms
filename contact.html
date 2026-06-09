@@ -76,7 +76,7 @@
                     </div>
                     <div class="topbar-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@reginaslovingarms.com">info@reginaslovingarms.com</a>
+                        <a href="contact.html#contact-form">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -158,7 +158,7 @@
     </section>
 
     <!-- Contact Form + Info -->
-    <section class="contact-full">
+    <section id="contact-form" class="contact-full">
         <div class="container">
             <div class="contact-full-grid">
 
@@ -224,30 +224,31 @@
                 <div class="contact-form-wrap">
                     <h3>Request a Free Care Assessment</h3>
                     <p>Complete the form below and a care coordinator will contact you within one business day — often the same day.</p>
-                    <form>
+                    <form action="https://formspree.io/f/xdalqznp" method="POST">
+                        <input type="hidden" name="_subject" value="New Care Assessment Request (Contact Page)">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="c-fname">First Name *</label>
-                                <input type="text" id="c-fname" required placeholder="Jane">
+                                <input type="text" id="c-fname" name="firstName" required placeholder="Jane">
                             </div>
                             <div class="form-group">
                                 <label for="c-lname">Last Name *</label>
-                                <input type="text" id="c-lname" required placeholder="Smith">
+                                <input type="text" id="c-lname" name="lastName" required placeholder="Smith">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="c-email">Email Address *</label>
-                                <input type="email" id="c-email" required placeholder="jane@email.com">
+                                <input type="email" id="c-email" name="email" required placeholder="jane@email.com">
                             </div>
                             <div class="form-group">
                                 <label for="c-phone">Phone Number *</label>
-                                <input type="tel" id="c-phone" required placeholder="(312) 000-0000">
+                                <input type="tel" id="c-phone" name="phone" required placeholder="(312) 000-0000">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="c-relation">Your Relationship to the Client *</label>
-                            <select id="c-relation" required>
+                            <select id="c-relation" name="relationship" required>
                                 <option value="">Select...</option>
                                 <option>I am the client</option>
                                 <option>Adult child / family member</option>
@@ -259,7 +260,7 @@
                         </div>
                         <div class="form-group">
                             <label for="c-service">Service of Interest *</label>
-                            <select id="c-service" required>
+                            <select id="c-service" name="service" required>
                                 <option value="">Select a service...</option>
                                 <option>Caregiver Services</option>
                                 <option>IDoA Senior Program</option>
@@ -270,7 +271,7 @@
                         </div>
                         <div class="form-group">
                             <label for="c-urgency">How Soon Is Care Needed? *</label>
-                            <select id="c-urgency" required>
+                            <select id="c-urgency" name="urgency" required>
                                 <option value="">Select...</option>
                                 <option>Immediately (within 48 hours)</option>
                                 <option>Within the next week</option>
@@ -280,11 +281,11 @@
                         </div>
                         <div class="form-group">
                             <label for="c-message">Tell Us About Your Situation</label>
-                            <textarea id="c-message" placeholder="Please share any relevant details about the care needed, current health status, location, or questions you'd like us to address..."></textarea>
+                            <textarea id="c-message" name="message" placeholder="Please share any relevant details about the care needed, current health status, location, or questions you'd like us to address..."></textarea>
                         </div>
                         <div class="form-group">
                             <label class="consent-label">
-                                <input type="checkbox" required>
+                                <input type="checkbox" name="consent" value="yes" required>
                                 I consent to be contacted by Regina's Loving Arms regarding my care inquiry. I understand this information will be kept confidential in accordance with HIPAA regulations.
                             </label>
                         </div>
@@ -387,9 +388,18 @@
         // Contact form success
         const cForm = document.querySelector('.contact-form-wrap form');
         if (cForm) {
-            cForm.addEventListener('submit', function(e) {
+            cForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                this.closest('.contact-form-wrap').innerHTML = '<div class="form-success"><i class="fas fa-check-circle"></i><h3>Request Received!</h3><p>Thank you — a care coordinator will be in touch within one business day.<br>For urgent needs, call <a href="tel:3127735553">312-773-5553</a>.</p></div>';
+                const btn = this.querySelector('[type=submit]');
+                const original = btn.textContent;
+                btn.textContent = 'Sending…';
+                btn.disabled = true;
+                try {
+                    const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
+                    if (res.ok) {
+                        this.closest('.contact-form-wrap').innerHTML = '<div class="form-success"><i class="fas fa-check-circle"></i><h3>Request Received!</h3><p>Thank you — a care coordinator will be in touch within one business day.<br>For urgent needs, call <a href="tel:3127735553">312-773-5553</a>.</p></div>';
+                    } else { btn.textContent = original; btn.disabled = false; }
+                } catch { btn.textContent = original; btn.disabled = false; }
             });
         }
     </script>
