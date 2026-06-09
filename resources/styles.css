@@ -397,8 +397,8 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
 @media (max-width: 900px) {
     .topbar-left { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2px 16px; width: 100%; }
     .topbar-left .topbar-item:nth-child(1) { grid-row: 2; grid-column: 1 / -1; justify-self: center; }
-    .topbar-left .topbar-item:nth-child(2) { grid-row: 1; grid-column: 1; justify-self: start; }
-    .topbar-left .topbar-item:nth-child(3) { grid-row: 1; grid-column: 2; justify-self: end; }
+    .topbar-left .topbar-item:nth-child(2) { grid-row: 1; grid-column: 1; justify-self: end; }
+    .topbar-left .topbar-item:nth-child(3) { grid-row: 1; grid-column: 2; justify-self: start; }
     .nav { gap: 12px; }
     .nav a { font-size: 0.8rem; }
     .header-content { gap: 12px; }
