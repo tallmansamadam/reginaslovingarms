@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="resources/styles.css?v=9">
+    <link rel="stylesheet" href="resources/styles.css?v=10">
     <link rel="icon" type="image/svg+xml" href="resources/favicon.svg">
     <style>/* Index-only overrides — shared styles live in resources/styles.css */
         :root {
@@ -65,6 +65,7 @@
         .topbar-item { display: flex; align-items: center; gap: 10px; font-weight: 500; }
         .topbar-item i { color: var(--secondary); font-size: 1rem; }
         .topbar-item a:hover { color: var(--secondary); }
+        .topbar-left .topbar-item:first-child { white-space: nowrap; }
 
         /* Header */
         .header { background: var(--white); padding: 8px 0; overflow: visible; }
@@ -321,11 +322,12 @@
             .serve-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
+        @media (max-width: 900px) {
+            .topbar-left { flex-direction: column; align-items: center; gap: 8px; }
+        }
         @media (max-width: 768px) {
             .topbar-content { justify-content: center; text-align: center; }
-            .topbar-left { justify-content: center; gap: 15px; }
             .topbar-item { font-size: 0.8rem; }
-            .addr-city { display: block; }
             .header { padding: 5px 0; }
             .header-content { display: flex; justify-content: space-between; }
             .logo-wrapper { flex: 1 1 auto; justify-content: center; min-width: 0; }
@@ -354,8 +356,6 @@
             .nav.nav--open a:last-child { border-bottom: none; }
             .mobile-menu-btn { display: flex !important; }
             .header-cta .btn-primary { display: none; }
-            .topbar-left .topbar-item:first-child { align-items: flex-start; }
-            .topbar-left .topbar-item:first-child i { margin-top: 3px; }
             .hero { min-height: 520px; }
             .hero-content { text-align: center; }
             .hero-content h1 { font-size: 2.2rem; }
@@ -449,6 +449,9 @@
     @media (max-width: 768px) {
         .privacy-modal-body { padding: 20px; }
         .privacy-modal-header { padding: 18px 20px; }
+    }
+    @media (max-width: 480px) {
+        .topbar-item { font-size: 0.66rem; gap: 6px; }
     }
     </style>
     <script type="application/ld+json">
