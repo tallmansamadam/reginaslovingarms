@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="resources/styles.css?v=11">
+    <link rel="stylesheet" href="resources/styles.css?v=12">
     <link rel="icon" type="image/svg+xml" href="resources/favicon.svg">
     <style>/* Index-only overrides — shared styles live in resources/styles.css */
         :root {
@@ -65,7 +65,7 @@
         .topbar-item { display: flex; align-items: center; gap: 10px; font-weight: 500; }
         .topbar-item i { color: var(--secondary); font-size: 1rem; }
         .topbar-item a:hover { color: var(--secondary); }
-        .topbar-left .topbar-item:first-child { white-space: nowrap; }
+        .topbar-left .topbar-item:first-child { white-space: nowrap; order: 3; }
 
         /* Header */
         .header { background: var(--white); padding: 8px 0; overflow: visible; }
@@ -323,7 +323,7 @@
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 900px) {
-            .topbar-left { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8px 16px; width: 100%; }
+            .topbar-left { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2px 16px; width: 100%; }
             .topbar-left .topbar-item:nth-child(1) { grid-row: 2; grid-column: 1 / -1; justify-self: center; }
             .topbar-left .topbar-item:nth-child(2) { grid-row: 1; grid-column: 1; justify-self: start; }
             .topbar-left .topbar-item:nth-child(3) { grid-row: 1; grid-column: 2; justify-self: end; }
