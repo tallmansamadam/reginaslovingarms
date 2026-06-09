@@ -52,6 +52,7 @@ img { max-width: 100%; height: auto; }
 .topbar-item { display: flex; align-items: center; gap: 10px; font-weight: 500; }
 .topbar-item i { color: var(--secondary); font-size: 1rem; }
 .topbar-item a:hover { color: var(--secondary); }
+.topbar-left .topbar-item:first-child { white-space: nowrap; }
 
 /* ── Header ── */
 .header { background: var(--white); padding: 8px 0; overflow: visible; }
@@ -394,6 +395,7 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .header-content { gap: 16px; }
 }
 @media (max-width: 900px) {
+    .topbar-left { flex-direction: column; align-items: center; gap: 8px; }
     .nav { gap: 12px; }
     .nav a { font-size: 0.8rem; }
     .header-content { gap: 12px; }
@@ -414,9 +416,7 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
 }
 @media (max-width: 768px) {
     .topbar-content { justify-content: center; text-align: center; }
-    .topbar-left { justify-content: center; gap: 15px; }
     .topbar-item { font-size: 0.8rem; }
-    .addr-city { display: block; }
     .header { padding: 5px 0; }
     .header-content { display: flex; justify-content: space-between; align-items: center; }
     .logo-wrapper { flex: 1 1 auto; justify-content: center; min-width: 0; }
@@ -433,8 +433,6 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .nav.nav--open a:last-child { border-bottom: none; }
     .mobile-menu-btn { display: flex !important; }
     .header-cta .btn-primary { display: none; }
-    .topbar-left .topbar-item:first-child { align-items: flex-start; }
-    .topbar-left .topbar-item:first-child i { margin-top: 3px; }
     .hero { min-height: 520px; }
     .hero-content { text-align: center; }
     .hero-content h1 { font-size: 2.2rem; }
@@ -458,4 +456,7 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .apply-form-inner { padding: 28px; }
     .privacy-modal-body { padding: 20px; }
     .privacy-modal-header { padding: 18px 20px; }
+}
+@media (max-width: 480px) {
+    .topbar-item { font-size: 0.66rem; gap: 6px; }
 }
