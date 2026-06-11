@@ -318,7 +318,8 @@ img { max-width: 100%; height: auto; }
 .footer-links li:has(i) { display: flex; align-items: flex-start; }
 .footer-links li:has(i) > a { display: inline-flex; align-items: flex-start; }
 .footer-links li i { width: 1.25em; text-align: right; flex-shrink: 0; line-height: inherit; }
-@media (max-width: 768px) { .footer-links li:has(i) { justify-content: center; } }
+/* Narrow screens: flow the icon inline with the text so the wrapping address centers tight to its icon instead of being pushed to the middle of a full-width flex item */
+@media (max-width: 768px) { .footer-links li:has(i) { display: block; } }
 .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 .footer-bottom a { color: var(--secondary); }
 
