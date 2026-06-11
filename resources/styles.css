@@ -314,6 +314,9 @@ img { max-width: 100%; height: auto; }
 .footer-links li { margin-bottom: 12px; }
 .footer-links a { color: rgba(255,255,255,0.8); }
 .footer-links a:hover { color: var(--secondary); padding-left: 5px; }
+/* Footer contact rows: keep the icon and everything after it on one vertically-centered horizontal line */
+.footer-links li:has(> i) { display: flex; align-items: center; }
+@media (max-width: 768px) { .footer-links li:has(> i) { justify-content: center; } }
 .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
 .footer-bottom a { color: var(--secondary); }
 
