@@ -53,8 +53,6 @@ img { max-width: 100%; height: auto; }
 .topbar-item i { color: var(--secondary); font-size: 1rem; }
 .topbar-item a:hover { color: var(--secondary); }
 .topbar-left .topbar-item:first-child { white-space: nowrap; order: 3; }
-/* Fax appears in the top bar only on the wide layout where every item fits on a single line */
-@media (max-width: 1000px) { .topbar-fax { display: none; } }
 
 /* ── Header ── */
 .header { background: var(--white); padding: 8px 0; overflow: visible; }
