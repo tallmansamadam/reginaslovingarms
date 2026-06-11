@@ -30,7 +30,10 @@
       "WebFetch(domain:api.unsplash.com)",
       "WebFetch(domain:api.pexels.com)",
       "WebFetch(domain:webcache.googleusercontent.com)",
-      "Bash(start:*)"
+      "Bash(start:*)",
+      "Bash(python -)",
+      "Bash(python -c \"import xml.dom.minidom as m; d=m.parse\\('resources/favicon.svg'\\); print\\('valid SVG; viewBox =', d.documentElement.getAttribute\\('viewBox'\\)\\)\")",
+      "Bash(Select-Object -First 1)"
     ]
   }
 }
