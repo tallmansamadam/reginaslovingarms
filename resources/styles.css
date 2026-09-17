@@ -176,7 +176,7 @@ img { max-width: 100%; height: auto; }
 
 /* ── Services Full ── */
 .services { padding: 100px 0; background: var(--bg-light); }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
 .service-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
 .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
 .service-image { height: 240px; overflow: hidden; position: relative; background: var(--bg-light); }
