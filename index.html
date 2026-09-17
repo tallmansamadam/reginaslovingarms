@@ -10,17 +10,21 @@
     <meta property="og:url" content="https://reginaslovingarms.com/">
     <meta property="og:title" content="Regina's Loving Arms Home Health Care, LLC | Chicago, IL">
     <meta property="og:description" content="Regina's Loving Arms provides compassionate home health care services in the Chicago area including caregiver services, IDoA senior programs, companion care, and 24-hour home care.">
-    <meta property="og:image" content="https://reginaslovingarms.com/resources/Logo.svg">
+    <meta property="og:image" content="https://reginaslovingarms.com/resources/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Regina's Loving Arms Home Health Care — compassionate in-home care in Chicagoland">
     <meta property="og:site_name" content="Regina's Loving Arms Home Health Care, LLC">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Regina's Loving Arms Home Health Care, LLC | Chicago, IL">
     <meta name="twitter:description" content="Regina's Loving Arms provides compassionate home health care services in the Chicago area including caregiver services, IDoA senior programs, companion care, and 24-hour home care.">
-    <meta name="twitter:image" content="https://reginaslovingarms.com/resources/Logo.png">
+    <meta name="twitter:image" content="https://reginaslovingarms.com/resources/og-image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="resources/styles.css?v=20">
+    <link rel="stylesheet" href="resources/styles.css?v=21">
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <style>/* Index-only overrides — shared styles live in resources/styles.css */
         :root {
@@ -194,7 +198,7 @@
 
         /* Services Full */
         .services { padding: 100px 0; background: var(--bg-light); }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
         .service-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
         .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
         .service-image { height: 240px; overflow: hidden; position: relative; background: var(--bg-light); }
@@ -482,13 +486,15 @@
         "Caregiver Services",
         "IDoA Senior Program",
         "Companion Care",
-        "24-Hour Home Care"
+        "24-Hour Home Care",
+        "Pet Care Assistance"
       ],
       "knowsAbout": [
         "Home Health Care",
         "Senior Care",
         "Companion Care",
-        "Caregiver Services"
+        "Caregiver Services",
+        "Pet Care Assistance for Seniors"
       ],
       "sameAs": [
         "https://github.com/tallmansamadam/reginaslovingarms"
@@ -554,7 +560,7 @@
     <section id="main-content" class="hero">
         <div class="hero-slider">
             <div class="hero-slide active">
-                <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80" alt="Nurse providing attentive home health care to an elderly patient in Chicago">
+                <img src="https://images.pexels.com/photos/7551610/pexels-photo-7551610.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Caregiver sitting and reading with an elderly client at home in Chicago">
             </div>
             <div class="hero-slide">
                 <img src="https://images.pexels.com/photos/271353/pexels-photo-271353.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Caregiver in scrubs leaning in warmly to assist an elderly person outdoors">
@@ -785,6 +791,17 @@
                     <div class="service-content">
                         <h3>IDoA Senior Program</h3>
                         <p>State-supported care services designed to help seniors live safely and independently. As a proud partner of the Illinois Department on Aging, we deliver state-approved care with compassion and dignity.</p>
+                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img loading="lazy" src="https://images.pexels.com/photos/10117258/pexels-photo-10117258.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Senior woman at home spending time with her dog">
+                        <div class="service-icon"><i class="fas fa-paw"></i></div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pet Care Assistance</h3>
+                        <p>A beloved pet is family — and often a client's best reason to stay active and engaged. Our caregivers help with feeding, walking, litter and cage cleanup, and trips to the vet, so treasured companions stay right where they belong: at home.</p>
                         <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -1114,6 +1131,7 @@
                         <li><a href="#services">Overnight Caregivers</a></li>
                         <li><a href="#services">Physical Therapy</a></li>
                         <li><a href="#services">Hospice Care</a></li>
+                        <li><a href="#services">Pet Care Assistance</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -1222,6 +1240,9 @@
         </div>
     </div>
 
+    <a href="tel:3127735553" class="mobile-call-bar"><i class="fas fa-phone-alt"></i> Call Now — 312-773-5553</a>
+    <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
     <script>
         const slides = document.querySelectorAll('.hero-slide');
         let currentSlide = 0;
@@ -1288,11 +1309,10 @@
 
         // Back to top
         const btt = document.querySelector('.back-to-top');
-        window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
-        btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        if (btt) {
+            window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+            btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
     </script>
-
-    <a href="tel:3127735553" class="mobile-call-bar"><i class="fas fa-phone-alt"></i> Call Now — 312-773-5553</a>
-    <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 </body>
 </html>
