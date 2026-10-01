@@ -220,6 +220,18 @@
         /* Who We Serve */
         .who-we-serve { padding: 100px 0; background: var(--bg-light); }
         .serve-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; max-width: 760px; margin: 0 auto; }
+        .serve-feature { display: grid; grid-template-columns: 380px 1fr; max-width: 960px; margin: 0 auto; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
+        .serve-feature:hover { box-shadow: var(--shadow-lg); }
+        .serve-feature-image { overflow: hidden; min-height: 320px; }
+        .serve-feature-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: var(--transition); }
+        .serve-feature:hover .serve-feature-image img { transform: scale(1.06); }
+        .serve-feature-body { padding: 45px; display: flex; flex-direction: column; justify-content: center; }
+        .serve-feature-body > i { font-size: 2rem; color: var(--primary); margin-bottom: 14px; }
+        .serve-feature-body h3 { font-size: 1.6rem; color: var(--primary); margin-bottom: 12px; }
+        .serve-feature-body p { color: var(--text-light); font-size: 1rem; line-height: 1.8; margin-bottom: 22px; }
+        .serve-feature-body .btn { align-self: flex-start; }
+        @media (max-width: 1024px) { .serve-feature { grid-template-columns: 1fr; } .serve-feature-image { height: 280px; min-height: 0; } }
+        @media (max-width: 768px) { .serve-feature-body { padding: 30px 25px; } }
         .serve-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); text-align: center; }
         .serve-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
         .serve-image { position: relative; width: 100%; padding-bottom: 75%; overflow: hidden; height: 0; }
@@ -835,7 +847,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Additional Services</h3>
-                        <p>Home Health Aide, Live-In Care,<br>24-Hour Home Care, Overnight Caregivers, Homemaker Services, and hospice support, with care that can scale up or down as your needs change.</p>
+                        <p>Home Health Aide, Live-In Care,<br>24-Hour Home Care, Overnight Caregivers, and Homemaker Services, with care that can scale up or down as your needs change.</p>
                         <a href="services.html" class="service-link">See all services <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -898,26 +910,15 @@
                 <h2>Care for every stage of life</h2>
                 <p>We provide home care for individuals and families, shaped around each person's needs.</p>
             </div>
-            <div class="serve-grid">
-                <div class="serve-card">
-                    <div class="serve-image">
-                        <img loading="lazy" src="https://images.pexels.com/photos/7545351/pexels-photo-7545351.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Elderly couple staying independent and connected at home with support from Regina's Loving Arms">
-                    </div>
-                    <div class="serve-content">
-                        <i class="fas fa-user-friends"></i>
-                        <h3>Seniors &amp; older adults</h3>
-                        <p>Supporting independence and dignity for older adults in the comfort of home.</p>
-                    </div>
+            <div class="serve-feature">
+                <div class="serve-feature-image">
+                    <img loading="lazy" src="https://images.pexels.com/photos/7545351/pexels-photo-7545351.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Elderly couple staying independent and connected at home with support from Regina's Loving Arms">
                 </div>
-                <div class="serve-card">
-                    <div class="serve-image">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=500&q=80" alt="Home care support for seniors managing chronic illness">
-                    </div>
-                    <div class="serve-content">
-                        <i class="fas fa-heartbeat"></i>
-                        <h3>Chronic illness</h3>
-                        <p>Ongoing care and support for those managing long-term health conditions.</p>
-                    </div>
+                <div class="serve-feature-body">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Seniors &amp; older adults</h3>
+                    <p>Supporting independence and dignity for older adults in the comfort of home, from a few hours of help each week to around-the-clock care.</p>
+                    <a href="services.html" class="btn btn-primary">Explore Our Services</a>
                 </div>
             </div>
         </div>
@@ -995,7 +996,7 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">How do I know if home health care is right for my loved one?</div>
-                    <div class="faq-answer"><p>Home health care is a great fit when a loved one needs consistent support with daily activities, personal care, or companionship but prefers to remain in the comfort of their own home. If they're recovering from an illness, managing a chronic condition, or simply need a helping hand day-to-day, we can help. Our free in-home assessment will give you a clear picture of what care level makes sense.</p></div>
+                    <div class="faq-answer"><p>Home health care is a great fit when a loved one needs consistent support with daily activities, personal care, or companionship but prefers to remain in the comfort of their own home. If they're recovering from an illness or simply need a helping hand day-to-day, we can help. Our free in-home assessment will give you a clear picture of what care level makes sense.</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">What areas do you serve?</div>
@@ -1090,7 +1091,6 @@
                                 <option value="caregiver">Caregiver Services</option>
                                 <option value="idoa">IDoA Senior Program</option>
                                 <option value="live-in">Live-In Care</option>
-                                <option value="hospice">Hospice Support</option>
                                 <option value="other">Other Services</option>
                             </select>
                         </div>
@@ -1148,8 +1148,6 @@
                         <li><a href="#services">Home Health Aide</a></li>
                         <li><a href="#services">Live-In Care</a></li>
                         <li><a href="#services">Overnight Caregivers</a></li>
-                        <li><a href="#services">Physical Therapy</a></li>
-                        <li><a href="#services">Hospice Care</a></li>
                         <li><a href="#services">Pet Care Assistance</a></li>
                     </ul>
                 </div>

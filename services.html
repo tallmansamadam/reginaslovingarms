@@ -42,7 +42,18 @@
         .service-detail-body ul li::before { content: ''; width: 8px; height: 8px; background: var(--secondary); border-radius: 50%; flex-shrink: 0; }
         .services-full { padding: 100px 0 40px; background: var(--bg-light); }
         .who-we-serve { padding: 40px 0 100px; }
-        .serve-grid { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto; }
+        .serve-feature { display: grid; grid-template-columns: 380px 1fr; max-width: 960px; margin: 0 auto; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
+        .serve-feature:hover { box-shadow: var(--shadow-lg); }
+        .serve-feature-image { overflow: hidden; min-height: 320px; }
+        .serve-feature-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: var(--transition); }
+        .serve-feature:hover .serve-feature-image img { transform: scale(1.06); }
+        .serve-feature-body { padding: 45px 45px; display: flex; flex-direction: column; justify-content: center; }
+        .serve-feature-body > i { font-size: 2rem; color: var(--primary); margin-bottom: 14px; }
+        .serve-feature-body h3 { font-size: 1.6rem; color: var(--primary); margin-bottom: 12px; }
+        .serve-feature-body p { color: var(--text-light); font-size: 1rem; line-height: 1.8; margin-bottom: 22px; }
+        .serve-feature-body ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
+        .serve-feature-body ul li { color: var(--text-light); font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+        .serve-feature-body ul li::before { content: ''; width: 8px; height: 8px; background: var(--secondary); border-radius: 50%; flex-shrink: 0; }
         .services-full-stack { display: flex; flex-direction: column; gap: 30px; }
         .service-detail-card { scroll-margin-top: 150px; }
         .payment-section { padding: 100px 0; background: var(--white); }
@@ -56,13 +67,16 @@
             .service-detail-card { grid-template-columns: 1fr; }
             .service-detail-card:nth-child(even) { direction: ltr; }
             .service-detail-image { height: 280px; }
+            .serve-feature { grid-template-columns: 1fr; }
+            .serve-feature-image { height: 280px; min-height: 0; }
             .payment-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             .service-detail-body { padding: 30px 25px; }
             .service-detail-body ul { grid-template-columns: 1fr; }
             .payment-grid { grid-template-columns: 1fr; }
-            .serve-grid { grid-template-columns: 1fr; }
+            .serve-feature-body { padding: 30px 25px; }
+            .serve-feature-body ul { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) { .header { padding: 5px 0; } .logo-wrapper { flex: 1 1 auto; justify-content: center; min-width: 0; } .logo { overflow: hidden; } .logo img { width: 100%; height: auto; margin: -22% 0; } }
     </style>
@@ -204,7 +218,7 @@
                     <div class="service-detail-body">
                         <span class="service-tag"><i class="fas fa-moon"></i> Around the Clock</span>
                         <h2>24-Hour Live-In Care</h2>
-                        <p>Some clients require continuous supervision and assistance, whether due to advanced dementia, high fall risk, post-acute recovery, or complex multi-system illness. Our 24-hour and live-in care programs ensure that a qualified caregiver or nurse is always present, providing families with the confidence that their loved one is never alone and always supported, day or night.</p>
+                        <p>Some clients require continuous supervision and assistance, whether due to advanced dementia, high fall risk, or recovery after a hospital stay. Our 24-hour and live-in care programs ensure that a qualified caregiver or nurse is always present, providing families with the confidence that their loved one is never alone and always supported, day or night.</p>
                         <ul>
                             <li>Continuous overnight supervision</li>
                             <li>Live-in caregiver placement</li>
@@ -251,28 +265,24 @@
         <div class="container">
             <div class="section-header">
                 <h2>Who we serve</h2>
-                <p>We provide care across the full spectrum of need, meeting each person where they are.</p>
+                <p>Our care is built for older adults and the families who love them, meeting each person where they are.</p>
             </div>
-            <div class="serve-grid">
-                <div class="serve-card">
-                    <div class="serve-image">
-                        <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=500&q=80" alt="Elderly home care recipient enjoying quality of life at home" loading="lazy">
-                    </div>
-                    <div class="serve-content">
-                        <i class="fas fa-walking"></i>
-                        <h3>Seniors &amp; older adults</h3>
-                        <p>Supporting independence, safety, and quality of life for aging individuals who wish to remain in their homes.</p>
-                    </div>
+            <div class="serve-feature">
+                <div class="serve-feature-image">
+                    <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=700&q=80" alt="Elderly home care recipient enjoying quality of life at home" loading="lazy">
                 </div>
-                <div class="serve-card">
-                    <div class="serve-image">
-                        <img src="https://images.pexels.com/photos/7551660/pexels-photo-7551660.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Caregiver engaging with elderly man by window in his home" loading="lazy">
-                    </div>
-                    <div class="serve-content">
-                        <i class="fas fa-heartbeat"></i>
-                        <h3>Individuals with chronic illness</h3>
-                        <p>Ongoing management and support for clients living with diabetes, heart failure, COPD, multiple sclerosis, and more.</p>
-                    </div>
+                <div class="serve-feature-body">
+                    <i class="fas fa-walking"></i>
+                    <h3>Seniors &amp; older adults</h3>
+                    <p>Supporting independence, safety, and quality of life for aging individuals who wish to remain in their homes, with care that adjusts as their needs change.</p>
+                    <ul>
+                        <li>Help with daily routines</li>
+                        <li>Companionship at home</li>
+                        <li>Memory care support</li>
+                        <li>Around-the-clock coverage</li>
+                        <li>Relief for family caregivers</li>
+                        <li>Keeping beloved pets at home</li>
+                    </ul>
                 </div>
             </div>
         </div>
