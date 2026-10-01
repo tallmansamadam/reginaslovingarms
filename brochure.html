@@ -565,8 +565,14 @@
     justify-content: space-between;
   }
   .panel-services .panel-inner {
-    gap: 0.08in;
+    gap: 0.07in;
   }
+  /* Four services share this panel, so cards run a little tighter */
+  .panel-services .service-card { padding: 9px 12px; }
+  .panel-services .service-card-header { margin-bottom: 5px; }
+  .panel-services .service-card-icon { width: 26px; height: 26px; }
+  .panel-services .service-card-desc { font-size: 7.5pt; line-height: 1.45; margin-bottom: 6px; }
+  .panel-services .service-bullets { gap: 2px 8px; }
 
   .service-card-header {
     display: flex;
@@ -840,7 +846,7 @@
             <div class="step-num">2</div>
             <div class="step-text">
               <h4>Tailored Care Plan</h4>
-              <p>A personalized plan co-developed with client, family, and physician — flexible and evolving.</p>
+              <p>A personalized plan co-developed with client, family, and physician, flexible and evolving.</p>
             </div>
           </div>
           <div class="approach-step" style="margin-bottom: 0;">
@@ -868,6 +874,13 @@
         <div class="contact-item-text">
           <strong>Phone</strong>
           312-773-5553
+        </div>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-fax"></i>
+        <div class="contact-item-text">
+          <strong>Fax</strong>
+          312-940-5933
         </div>
       </div>
       <div class="contact-item">
@@ -1000,7 +1013,7 @@
       <h2 class="panel-title">Built on a<br>Promise to Serve</h2>
       <div class="divider"></div>
 
-      <p class="body-text">Regina's Loving Arms was born from a deeply personal calling. After managing the compassionate care for and hospice needs of his grandmother over the course of three years — our founder set out to build an agency rooted not in transactions, but in relationships.</p>
+      <p class="body-text">Regina's Loving Arms was born from a deeply personal calling. After spending three years managing his grandmother's care, including her hospice care, our founder set out to build an agency rooted not in transactions, but in relationships.</p>
 
       <p class="body-text">We serve clients across the Chicago metropolitan area with a singular focus: to provide the kind of care we would want for our own family members.</p>
 
@@ -1009,8 +1022,8 @@
       </div>
 
       <div class="founder-quote-block">
-        <blockquote>"I started this agency because I believed home care could be more than a service — it could be a lifeline. Every client we serve is someone's mother, father, grandparent, or child. We never forget that."</blockquote>
-        <cite>— David, Founder &amp; President</cite>
+        <blockquote>"I started this agency because I believed home care could be more than a service. It could be a lifeline. Every client we serve is someone's mother, father, grandparent, or child. We never forget that."</blockquote>
+        <cite>David, Founder &amp; President</cite>
       </div>
 
       <div class="section-eyebrow" style="margin-top: 0.12in;">Core Values</div>
@@ -1056,16 +1069,14 @@
           <div class="service-card-icon"><i class="fas fa-hands-holding-heart"></i></div>
           <h3>Caregiver Services</h3>
         </div>
-        <p class="service-card-desc">Hands-on daily support that preserves dignity and independence — carefully matched to each client's needs, schedule, and personality.</p>
+        <p class="service-card-desc">Hands-on daily support that preserves dignity and independence, matched to each client's needs, schedule, and personality.</p>
         <ul class="service-bullets">
           <li>Bathing &amp; grooming</li>
           <li>Dressing &amp; mobility</li>
           <li>Meal preparation</li>
           <li>Light housekeeping</li>
-          <li>Grocery &amp; errands</li>
-          <li>Transportation</li>
+          <li>Errands &amp; transportation</li>
           <li>Medication reminders</li>
-          <li>Companionship</li>
         </ul>
       </div>
 
@@ -1075,15 +1086,13 @@
           <div class="service-card-icon"><i class="fas fa-comments"></i></div>
           <h3>Companion Care</h3>
         </div>
-        <p class="service-card-desc">Meaningful social connection that combats isolation, keeps clients mentally engaged, and brings genuine warmth into daily life.</p>
+        <p class="service-card-desc">Meaningful connection that combats isolation, keeps clients engaged, and brings genuine warmth into daily life.</p>
         <ul class="service-bullets">
           <li>Social engagement</li>
           <li>Cognitive activities</li>
           <li>Memory care support</li>
-          <li>Emotional support</li>
           <li>Community outings</li>
           <li>Family updates</li>
-          <li>Hobby supervision</li>
           <li>Caregiver respite</li>
         </ul>
       </div>
@@ -1094,16 +1103,31 @@
           <div class="service-card-icon"><i class="fas fa-moon"></i></div>
           <h3>24-Hour Live-In Care</h3>
         </div>
-        <p class="service-card-desc">Round-the-clock oversight for clients who need continuous supervision — a qualified caregiver always present, day and night.</p>
+        <p class="service-card-desc">Round-the-clock support for clients who need continuous supervision, with a qualified caregiver present day and night.</p>
         <ul class="service-bullets">
           <li>Overnight supervision</li>
           <li>Live-in placement</li>
           <li>Dementia &amp; Alzheimer's</li>
           <li>Fall-risk monitoring</li>
-          <li>Night toileting</li>
           <li>Emergency response</li>
-          <li>Shift-based teams</li>
           <li>Daily care logs</li>
+        </ul>
+      </div>
+
+      <!-- Pet Care Assistance -->
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon"><i class="fas fa-paw"></i></div>
+          <h3>Pet Care Assistance</h3>
+        </div>
+        <p class="service-card-desc">We take on the physical work of pet care so clients and their beloved companions can stay happy, healthy, and together at home.</p>
+        <ul class="service-bullets">
+          <li>Feeding &amp; fresh water</li>
+          <li>Dog walking</li>
+          <li>Litter &amp; cage cleaning</li>
+          <li>Grooming help</li>
+          <li>Vet appointments</li>
+          <li>Pet supply pickup</li>
         </ul>
       </div>
     </div>
@@ -1125,31 +1149,31 @@
           </div>
         </div>
         <div class="serve-item">
-          <div class="serve-icon"><i class="fas fa-heartbeat"></i></div>
-          <div class="serve-text">
-            <h4>Individuals with Chronic Illness</h4>
-            <p>Ongoing management and support for clients living with diabetes, heart failure, COPD, multiple sclerosis, and more.</p>
-          </div>
-        </div>
-        <div class="serve-item">
-          <div class="serve-icon"><i class="fas fa-procedures"></i></div>
-          <div class="serve-text">
-            <h4>Post-Acute Recovery</h4>
-            <p>Transitional care for those returning home after a hospital stay, surgery, or inpatient rehabilitation program.</p>
-          </div>
-        </div>
-        <div class="serve-item">
-          <div class="serve-icon"><i class="fas fa-hospital-user"></i></div>
-          <div class="serve-text">
-            <h4>Seniors in Rehab &amp; Senior Centers</h4>
-            <p>Supplemental care and companionship for seniors residing in rehabilitation facilities or senior living communities.</p>
-          </div>
-        </div>
-        <div class="serve-item" style="border-bottom: none;">
           <div class="serve-icon"><i class="fas fa-brain"></i></div>
           <div class="serve-text">
             <h4>Memory Care &amp; Dementia</h4>
-            <p>Specialized support for clients with Alzheimer's or dementia — structured routines, safety monitoring, and compassionate presence.</p>
+            <p>Specialized support for Alzheimer's and dementia: structured routines, safety monitoring, and compassionate presence.</p>
+          </div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon"><i class="fas fa-house-chimney"></i></div>
+          <div class="serve-text">
+            <h4>Returning Home</h4>
+            <p>Help with daily routines, meals, and errands while a loved one regains strength at home after a hospital stay.</p>
+          </div>
+        </div>
+        <div class="serve-item">
+          <div class="serve-icon"><i class="fas fa-paw"></i></div>
+          <div class="serve-text">
+            <h4>Pet Owners</h4>
+            <p>A pet friendly agency. We help clients keep a beloved companion at home instead of giving it up.</p>
+          </div>
+        </div>
+        <div class="serve-item" style="border-bottom: none;">
+          <div class="serve-icon"><i class="fas fa-hands-helping"></i></div>
+          <div class="serve-text">
+            <h4>Family Caregivers</h4>
+            <p>Respite support that gives family caregivers time to rest and recharge, knowing their loved one is in good hands.</p>
           </div>
         </div>
       </div>
@@ -1162,7 +1186,7 @@
           312-773-5553
         </div>
         <span class="cta-button">Schedule a Free Consultation</span>
-        <p class="cta-mission">"To Reshape Lives Through Compassionate, Expert Home Care."</p>
+        <p class="cta-mission">"To help people live well at home with expert, caring support."</p>
         <div class="cta-web">reginaslovingarms.com</div>
       </div>
     </div>
