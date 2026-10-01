@@ -779,6 +779,9 @@ body {
   border-bottom: 1px solid rgba(42,125,125,0.1);
 }
 .serve-row:last-of-type { border-bottom: none; }
+/* Rows share the panel height so the list reaches down to the CTA box */
+.serve-list { flex: 1; display: flex; flex-direction: column; }
+.serve-list .serve-row { flex: 1; align-items: center; }
 .serve-ico {
   width: 34px;
   height: 34px;
@@ -1272,7 +1275,7 @@ body {
       <div class="gold-rule"></div>
 
       <div style="flex:1;display:flex;flex-direction:column;justify-content:space-between;">
-        <div>
+        <div class="serve-list">
           <div class="serve-row">
             <div class="serve-ico"><i class="fas fa-walking"></i></div>
             <div class="serve-info">
