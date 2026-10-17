@@ -42,4 +42,42 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <!-- Home care guides: uncomment when each guide is reviewed and its noindex tag is removed
+  <url>
+    <loc>https://reginaslovingarms.com/guides/home-care-vs-home-health.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reginaslovingarms.com/guides/how-to-choose-home-care-agency-chicago.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reginaslovingarms.com/guides/regina-loving-arms-vs-national-home-care-franchises-chicago.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reginaslovingarms.com/guides/home-care-cost-chicago-2026.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reginaslovingarms.com/guides/how-to-pay-for-home-care-illinois.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reginaslovingarms.com/guides/pet-friendly-home-care-chicago.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  -->
 </urlset>
