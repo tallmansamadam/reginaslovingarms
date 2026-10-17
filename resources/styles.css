@@ -69,7 +69,7 @@ img { max-width: 100%; height: auto; }
 .header-phone { display: flex; align-items: center; gap: 10px; color: var(--primary); font-weight: 700; font-size: 1.1rem; }
 .header-phone i { font-size: 1.3rem; }
 .header .btn-primary { padding: 12px 28px; font-size: 0.85rem; }
-.mobile-menu-btn { display: none; background: var(--primary); border: none; color: var(--white); cursor: pointer; width: 46px; height: 46px; border-radius: 10px; font-size: 1.4rem; display: none; align-items: center; justify-content: center; flex-shrink: 0; }
+.mobile-menu-btn { display: none; background: var(--primary); border: none; color: var(--white); cursor: pointer; min-width: 46px; height: 46px; padding: 0 14px; border-radius: 10px; font-size: 1.4rem; display: none; align-items: center; justify-content: center; flex-shrink: 0; }
 
 /* ── Hero (Home) ── */
 .hero { position: relative; min-height: 620px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -543,3 +543,6 @@ dialog.privacy-modal::backdrop { background: rgba(0,0,0,0.55); backdrop-filter: 
     .guide-body h2 { font-size: 1.5rem; }
     .guide-answer { padding: 20px; }
 }
+
+/* Mobile menu button: visible text label so the control is clear even when icon fonts fail to load */
+.mobile-menu-label { font-family: 'Inter', Arial, sans-serif; font-size: 0.95rem; font-weight: 600; margin-left: 8px; }
